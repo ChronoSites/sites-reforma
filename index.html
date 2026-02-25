@@ -1,224 +1,1078 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark-modern">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chrono Sites — Redesign de Sites para Pequenos Negócios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Transformamos o design do seu site em algo moderno, responsivo e profissional. Prévia gratuita em 48h, sem compromisso.">
+  <meta name="theme-color" content="#7c3aed">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a26;
-      --border:rgba(255,255,255,0.07);
-      --text:#f0f0f8;--text2:#8888a8;
-      --accent:#7c3aed;
-      --grad:linear-gradient(135deg,#7c3aed 0%,#3b82f6 100%);
-    }
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-    .nav-brand{font-size:18px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .nav-links{display:flex;gap:24px;font-size:14px;color:var(--text2)}
-    .nav-links a{color:var(--text2)}
-    .nav-links a:hover{color:var(--text)}
-    .nav-cta{padding:8px 18px;background:var(--accent);color:#fff!important;border-radius:8px;font-size:13px;font-weight:600;-webkit-text-fill-color:#fff!important}
-    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px 60px;position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% -5%,rgba(124,58,237,.2),transparent 70%);pointer-events:none}
-    .hero-inner{max-width:780px;position:relative;z-index:1}
-    .hero-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;border-radius:999px;border:1px solid rgba(124,58,237,.35);background:rgba(124,58,237,.1);color:#a78bfa;font-size:12px;font-weight:500;margin-bottom:30px}
-    .hero-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
-    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-    .hero h1{font-size:clamp(32px,6vw,66px);font-weight:800;line-height:1.08;margin-bottom:22px;letter-spacing:-.5px}
-    .hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .hero p{font-size:clamp(15px,2vw,18px);color:var(--text2);max-width:560px;margin:0 auto 40px}
-    .hero-actions{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
-    .btn-primary{padding:13px 30px;background:var(--grad);color:#fff;border-radius:10px;font-size:15px;font-weight:600;transition:opacity .2s,transform .2s;display:inline-flex;align-items:center;gap:8px}
-    .btn-primary:hover{opacity:.9;transform:translateY(-2px)}
-    .btn-ghost{padding:13px 26px;background:transparent;color:var(--text);border-radius:10px;font-size:15px;font-weight:500;border:1px solid var(--border);transition:all .2s;display:inline-flex;align-items:center;gap:8px}
-    .btn-ghost:hover{background:var(--bg2)}
-    .stats{padding:36px 24px;background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .stats-inner{max-width:920px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;text-align:center}
-    .stat-value{font-size:30px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
-    .stat-label{font-size:12px;color:var(--text2);margin-top:5px}
-    section{padding:80px 24px}
-    .section-inner{max-width:1100px;margin:auto}
-    .section-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2.5px;color:#9f5cf7;margin-bottom:10px}
-    .section-title{font-size:clamp(24px,4vw,38px);font-weight:700;margin-bottom:14px;letter-spacing:-.3px}
-    .section-sub{font-size:16px;color:var(--text2);max-width:500px;line-height:1.75}
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:52px}
-    .service-card{padding:28px;background:var(--bg2);border-radius:16px;border:1px solid var(--border);transition:border-color .25s,transform .25s}
-    .service-card:hover{border-color:rgba(124,58,237,.45);transform:translateY(-3px)}
-    .service-icon{font-size:28px;margin-bottom:16px}
-    .service-card h3{font-size:15px;font-weight:600;margin-bottom:8px}
-    .service-card p{font-size:13px;color:var(--text2);line-height:1.65}
-    .portfolio-section{background:var(--bg2)}
-    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:48px}
-    .portfolio-card{background:var(--bg3);border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:border-color .3s,transform .3s}
-    .portfolio-card:hover{border-color:rgba(124,58,237,.55);transform:translateY(-4px)}
-    .portfolio-preview{position:relative;width:100%;height:188px;background:#0e0e18;overflow:hidden;cursor:pointer}
-    .portfolio-preview-inner{position:absolute;top:0;left:0;width:1280px;height:800px;transform:scale(0.234375);transform-origin:top left;pointer-events:none}
-    .portfolio-preview-inner iframe{width:100%;height:100%;border:none}
-    .portfolio-preview-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,15,.9) 0%,rgba(10,10,15,.1) 55%,transparent 100%);transition:background .25s}
-    .portfolio-preview:hover .portfolio-preview-overlay{background:linear-gradient(to top,rgba(10,10,15,.6) 0%,transparent 50%)}
-    .portfolio-badge{position:absolute;top:10px;right:10px;padding:4px 9px;background:rgba(124,58,237,.9);border-radius:6px;font-size:10px;font-weight:600;color:#fff;z-index:2;letter-spacing:.3px}
-    .portfolio-info{padding:16px 20px 20px}
-    .portfolio-title{font-size:14px;font-weight:600;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .portfolio-domain{font-size:11px;color:var(--text2);margin-bottom:14px}
-    .portfolio-actions{display:flex;gap:8px}
-    .portfolio-btn{flex:1;text-align:center;padding:8px 12px;border-radius:8px;font-size:12px;font-weight:600;transition:all .2s}
-    .portfolio-btn-primary{background:var(--accent);color:#fff}
-    .portfolio-btn-primary:hover{background:#9f5cf7}
-    .portfolio-empty{text-align:center;padding:64px 24px;color:var(--text2)}
-    .portfolio-empty h3{font-size:16px;font-weight:600;margin-bottom:8px;color:var(--text)}
-    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px;margin-top:56px}
-    .step-num{width:42px;height:42px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;margin-bottom:18px}
-    .step h3{font-size:16px;font-weight:600;margin-bottom:8px}
-    .step p{font-size:14px;color:var(--text2);line-height:1.7}
-    .cta-section{padding:100px 24px}
-    .cta-box{max-width:680px;margin:auto;text-align:center;padding:64px 48px;background:var(--bg2);border-radius:24px;border:1px solid rgba(124,58,237,.2);position:relative;overflow:hidden}
-    .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -15%,rgba(124,58,237,.12),transparent);pointer-events:none}
-    .cta-box h2{font-size:clamp(22px,4vw,34px);font-weight:700;margin-bottom:14px;position:relative}
-    .cta-box>p{color:var(--text2);margin-bottom:36px;font-size:15px;position:relative}
-    .cta-input-row{display:flex;gap:10px;max-width:440px;margin:0 auto 14px;position:relative}
-    .cta-input{flex:1;padding:12px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:14px;outline:none;font-family:inherit}
-    .cta-input:focus{border-color:rgba(124,58,237,.55)}
-    .cta-input::placeholder{color:var(--text2)}
-    .cta-note{font-size:11px;color:var(--text2);position:relative}
-    footer{padding:32px 24px;border-top:1px solid var(--border);background:var(--bg2)}
-    .footer-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    .footer-brand{font-size:14px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .footer-copy{font-size:12px;color:var(--text2)}
-    @media(max-width:640px){.nav-links{display:none}.hero-actions,.cta-input-row{flex-direction:column;align-items:stretch}.cta-box{padding:36px 20px}}
+/* ══════════════════════════════════════════
+   RESET
+   ══════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+img,svg{display:block;max-width:100%}
+button{cursor:pointer;font-family:inherit}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+
+/* ══════════════════════════════════════════
+   THEME DEFINITIONS
+   ══════════════════════════════════════════ */
+
+/* 1 — Dark Modern */
+[data-theme="dark-modern"]{
+  --bg:#0a0a0f;--bg2:#111118;--bg3:#1a1a26;
+  --border:rgba(255,255,255,0.07);--bw:1px;
+  --text:#f0f0f8;--text2:#8888a8;
+  --accent:#7c3aed;--accent2:#9f5cf7;
+  --abg:rgba(124,58,237,0.1);--abd:rgba(124,58,237,0.35);
+  --grad:linear-gradient(135deg,#7c3aed,#3b82f6);
+  --font:'Inter',system-ui,sans-serif;--fh:'Inter',system-ui,sans-serif;
+  --r:14px;--sh:none;
+  --navbg:rgba(10,10,15,0.88);--btnc:#fff;
+  --htt:none;--hls:-0.3px;
+  --glow:none;--hglow:rgba(124,58,237,0.2);
+  --star:#fbbf24;
+}
+
+/* 2 — Minimal */
+[data-theme="minimal"]{
+  --bg:#ffffff;--bg2:#fafafa;--bg3:#f5f5f5;
+  --border:rgba(0,0,0,0.06);--bw:1px;
+  --text:#111;--text2:#777;
+  --accent:#111;--accent2:#444;
+  --abg:rgba(0,0,0,0.03);--abd:rgba(0,0,0,0.1);
+  --grad:linear-gradient(135deg,#111,#555);
+  --font:'Inter',system-ui,sans-serif;--fh:'Inter',system-ui,sans-serif;
+  --r:8px;--sh:0 1px 3px rgba(0,0,0,0.04);
+  --navbg:rgba(255,255,255,0.92);--btnc:#fff;
+  --htt:none;--hls:-0.3px;
+  --glow:none;--hglow:rgba(0,0,0,0.03);
+  --star:#111;
+}
+
+/* 3 — Brutal */
+[data-theme="brutal"]{
+  --bg:#000;--bg2:#000;--bg3:#111;
+  --border:#fff;--bw:2px;
+  --text:#fff;--text2:#aaa;
+  --accent:#fff;--accent2:#ccc;
+  --abg:transparent;--abd:#fff;
+  --grad:#fff;
+  --font:'Space Mono',monospace;--fh:'Space Mono',monospace;
+  --r:0px;--sh:none;
+  --navbg:#000;--btnc:#000;
+  --htt:uppercase;--hls:2px;
+  --glow:none;--hglow:none;
+  --star:#fff;
+}
+
+/* 4 — Glass */
+[data-theme="glass"]{
+  --bg:#1a0a2e;--bg2:rgba(255,255,255,0.06);--bg3:rgba(255,255,255,0.04);
+  --border:rgba(255,255,255,0.12);--bw:1px;
+  --text:#fff;--text2:rgba(255,255,255,0.6);
+  --accent:#a78bfa;--accent2:#c4b5fd;
+  --abg:rgba(167,139,250,0.1);--abd:rgba(167,139,250,0.25);
+  --grad:linear-gradient(135deg,#a78bfa,#6366f1);
+  --font:'Inter',system-ui,sans-serif;--fh:'Inter',system-ui,sans-serif;
+  --r:20px;--sh:0 8px 32px rgba(0,0,0,0.3);
+  --navbg:rgba(26,10,46,0.7);--btnc:#fff;
+  --htt:none;--hls:-0.3px;
+  --glow:none;--hglow:rgba(167,139,250,0.15);
+  --star:#fbbf24;
+}
+
+/* 5 — Neobrutal */
+[data-theme="neobrutal"]{
+  --bg:#fffdf7;--bg2:#fff;--bg3:#fff5e6;
+  --border:#222;--bw:2px;
+  --text:#222;--text2:#555;
+  --accent:#ff6b35;--accent2:#ff8a5c;
+  --abg:#fff0e6;--abd:#222;
+  --grad:linear-gradient(135deg,#ff6b35,#ff3e6c);
+  --font:'Inter',system-ui,sans-serif;--fh:'Inter',system-ui,sans-serif;
+  --r:12px;--sh:4px 4px 0 #222;
+  --navbg:#fffdf7;--btnc:#fff;
+  --htt:none;--hls:-0.3px;
+  --glow:none;--hglow:rgba(255,107,53,0.08);
+  --star:#ff6b35;
+}
+
+/* 6 — Elegant */
+[data-theme="elegant"]{
+  --bg:#0d0d0d;--bg2:#141414;--bg3:#1a1a1a;
+  --border:rgba(201,168,76,0.15);--bw:1px;
+  --text:#f5f0e8;--text2:rgba(245,240,232,0.5);
+  --accent:#c9a84c;--accent2:#dbbf6a;
+  --abg:rgba(201,168,76,0.08);--abd:rgba(201,168,76,0.3);
+  --grad:linear-gradient(135deg,#c9a84c,#a67c37);
+  --font:'Inter',system-ui,sans-serif;--fh:'Playfair Display',serif;
+  --r:4px;--sh:none;
+  --navbg:rgba(13,13,13,0.92);--btnc:#fff;
+  --htt:none;--hls:1px;
+  --glow:none;--hglow:rgba(201,168,76,0.08);
+  --star:#c9a84c;
+}
+
+/* 7 — Cyber */
+[data-theme="cyber"]{
+  --bg:#0a0a0a;--bg2:#0d0d0d;--bg3:#111;
+  --border:rgba(0,255,65,0.2);--bw:1px;
+  --text:#e0e0e0;--text2:rgba(0,255,65,0.6);
+  --accent:#00ff41;--accent2:#33ff66;
+  --abg:rgba(0,255,65,0.05);--abd:rgba(0,255,65,0.3);
+  --grad:#00ff41;
+  --font:'Space Mono',monospace;--fh:'Space Mono',monospace;
+  --r:2px;--sh:0 0 15px rgba(0,255,65,0.08);
+  --navbg:rgba(10,10,10,0.95);--btnc:#000;
+  --htt:none;--hls:0.5px;
+  --glow:0 0 10px rgba(0,255,65,0.3);--hglow:rgba(0,255,65,0.08);
+  --star:#00ff41;
+}
+
+/* 8 — Aurora */
+[data-theme="aurora"]{
+  --bg:#faf8ff;--bg2:#f3effb;--bg3:#ede8f5;
+  --border:rgba(139,92,246,0.1);--bw:1px;
+  --text:#2d2640;--text2:#8a82a0;
+  --accent:#8b5cf6;--accent2:#a78bfa;
+  --abg:rgba(139,92,246,0.06);--abd:rgba(139,92,246,0.15);
+  --grad:linear-gradient(135deg,#ec4899,#8b5cf6,#3b82f6);
+  --font:'DM Sans',system-ui,sans-serif;--fh:'DM Sans',system-ui,sans-serif;
+  --r:20px;--sh:0 4px 20px rgba(139,92,246,0.06);
+  --navbg:rgba(250,248,255,0.92);--btnc:#fff;
+  --htt:none;--hls:-0.3px;
+  --glow:none;--hglow:rgba(139,92,246,0.1);
+  --star:#8b5cf6;
+}
+
+/* ══════════════════════════════════════════
+   BASE STYLES
+   ══════════════════════════════════════════ */
+body{
+  background:var(--bg);color:var(--text);
+  font-family:var(--font);line-height:1.6;
+  transition:background .5s,color .5s;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{
+  font-family:var(--fh);
+  text-transform:var(--htt);
+  letter-spacing:var(--hls);
+  line-height:1.15;
+}
+section{padding:100px 24px}
+.inner{max-width:1100px;margin:0 auto}
+.label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:2.5px;color:var(--accent);margin-bottom:10px}
+.stitle{font-size:clamp(24px,4vw,40px);font-weight:700;margin-bottom:14px}
+.ssub{font-size:16px;color:var(--text2);max-width:520px;line-height:1.75}
+.gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* ── NAV ─────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;background:var(--navbg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:var(--bw) solid var(--border);transition:background .5s,border-color .5s}
+.nav-brand{font-size:18px;font-weight:800}
+.nav-brand span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-center{display:flex;align-items:center;gap:28px;font-size:14px;color:var(--text2)}
+.nav-center a:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-cta{padding:9px 20px;background:var(--grad);color:var(--btnc);border-radius:var(--r);font-size:13px;font-weight:600;border:none;transition:opacity .2s;display:inline-flex;align-items:center;gap:6px}
+.nav-cta:hover{opacity:.88}
+
+/* Hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px}
+.hamburger span{width:22px;height:2px;background:var(--text);transition:transform .3s,opacity .3s}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* ── HERO ────────────────── */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 55% at 50% -5%,var(--hglow),transparent 70%);pointer-events:none}
+.hero-inner{max-width:800px;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;border:var(--bw) solid var(--abd);background:var(--abg);color:var(--accent);font-size:12px;font-weight:500;margin-bottom:32px;letter-spacing:.3px}
+.hero-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(34px,6.5vw,72px);font-weight:800;margin-bottom:24px}
+.hero h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:clamp(15px,2.2vw,19px);color:var(--text2);margin-bottom:44px;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7}
+.hero-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-p{padding:14px 32px;background:var(--grad);color:var(--btnc);border-radius:var(--r);font-size:15px;font-weight:600;border:none;display:inline-flex;align-items:center;gap:9px;transition:opacity .2s,transform .2s,box-shadow .2s;box-shadow:var(--sh)}
+.btn-p:hover{opacity:.9;transform:translateY(-2px)}
+.btn-g{padding:14px 28px;background:transparent;color:var(--text);border-radius:var(--r);font-size:15px;font-weight:500;border:var(--bw) solid var(--border);transition:all .2s;display:inline-flex;align-items:center;gap:9px;box-shadow:var(--sh)}
+.btn-g:hover{background:var(--bg2);border-color:var(--accent)}
+.scroll-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--text2);font-size:10px;letter-spacing:1px;text-transform:uppercase;animation:fadeUp 1s 1.5s both}
+.scroll-line{width:1px;height:32px;background:linear-gradient(to bottom,var(--accent),transparent)}
+@keyframes fadeUp{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%)}}
+
+/* ── MARQUEE ──────────────── */
+.marquee{overflow:hidden;padding:16px 0;border-top:var(--bw) solid var(--border);border-bottom:var(--bw) solid var(--border);background:var(--bg2);transition:background .5s,border-color .5s}
+.marquee-track{display:flex;gap:32px;width:max-content;animation:scrollX 25s linear infinite;font-size:13px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:1.5px}
+@keyframes scrollX{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── STATS ────────────────── */
+.stats{padding:48px 24px;background:var(--bg2);border-bottom:var(--bw) solid var(--border);transition:background .5s,border-color .5s}
+.stats-grid{max-width:960px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-val{font-size:32px;font-weight:800;line-height:1.1}
+.stat-lbl{font-size:12px;color:var(--text2);margin-top:6px}
+
+/* ── ABOUT ────────────────── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-text{font-size:15px;color:var(--text2);line-height:1.9;margin-bottom:16px}
+.about-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.about-pill{padding:9px 18px;background:var(--abg);border:var(--bw) solid var(--abd);border-radius:999px;font-size:13px;font-weight:500;box-shadow:var(--sh)}
+.about-mockup{width:100%;max-width:400px;background:var(--bg3);border:var(--bw) solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin:0 auto;transition:background .5s,border-color .5s}
+.mockup-bar{padding:12px 16px;display:flex;gap:7px;border-bottom:var(--bw) solid var(--border)}
+.mockup-bar span{width:11px;height:11px;border-radius:50%;background:var(--border)}
+.mockup-body{padding:24px}
+.mockup-ln{height:10px;background:var(--border);border-radius:4px;margin-bottom:8px}
+.mockup-ln.w80{width:80%}.mockup-ln.w60{width:60%}.mockup-ln.w40{width:40%}.mockup-ln.w90{width:90%}
+.mockup-block{height:90px;background:var(--abg);border-radius:8px;margin:18px 0;border:1px dashed var(--abd)}
+.mockup-row{display:flex;gap:10px;margin-top:14px}
+.mockup-sq{width:48px;height:48px;border-radius:8px;background:var(--abg);border:1px dashed var(--abd)}
+
+/* ── SERVICES ────────────── */
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;margin-top:52px}
+.srv-card{padding:28px 24px;background:var(--bg2);border-radius:var(--r);border:var(--bw) solid var(--border);transition:border-color .3s,transform .3s,background .5s,box-shadow .3s;box-shadow:var(--sh)}
+.srv-card:hover{border-color:var(--abd);transform:translateY(-4px)}
+.srv-icon{font-size:30px;margin-bottom:18px;display:block}
+.srv-card h3{font-size:16px;font-weight:600;margin-bottom:10px}
+.srv-card p{font-size:13px;color:var(--text2);line-height:1.7}
+
+/* ── PORTFOLIO ───────────── */
+#portfolio{background:var(--bg2);transition:background .5s}
+.pf-header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:48px;flex-wrap:wrap}
+.pf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.pf-card{background:var(--bg3);border-radius:var(--r);border:var(--bw) solid var(--border);overflow:hidden;transition:border-color .3s,transform .3s,background .5s,box-shadow .3s;box-shadow:var(--sh)}
+.pf-card:hover{border-color:var(--abd);transform:translateY(-5px)}
+.pf-preview{position:relative;width:100%;height:200px;background:var(--bg);overflow:hidden;cursor:pointer}
+.pf-preview-frame{position:absolute;top:0;left:0;width:1280px;height:800px;transform:scale(0.25);transform-origin:top left;pointer-events:none}
+.pf-preview-frame iframe{width:100%;height:100%;border:none}
+.pf-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,rgba(0,0,0,0.1) 55%,transparent 100%);transition:opacity .3s}
+.pf-card:hover .pf-overlay{opacity:.6}
+.pf-badge{position:absolute;top:10px;right:10px;padding:4px 10px;background:var(--accent);border-radius:6px;font-size:10px;font-weight:600;color:var(--btnc);z-index:2;letter-spacing:.3px}
+.pf-info{padding:18px 22px 22px}
+.pf-title{font-size:15px;font-weight:600;margin-bottom:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pf-domain{font-size:12px;color:var(--text2);margin-bottom:16px}
+.pf-actions{display:flex;gap:10px}
+.pf-btn{flex:1;text-align:center;padding:9px 14px;border-radius:var(--r);font-size:12px;font-weight:600;transition:all .2s;border:none}
+.pf-btn-p{background:var(--accent);color:var(--btnc)}
+.pf-btn-p:hover{background:var(--accent2)}
+.pf-empty{text-align:center;padding:64px 24px;color:var(--text2);grid-column:1/-1}
+.pf-empty h3{font-size:16px;font-weight:600;margin-bottom:8px;color:var(--text)}
+
+/* ── PROCESS ─────────────── */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:56px;position:relative}
+.step{position:relative}
+.step-num{width:48px;height:48px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:var(--btnc);margin-bottom:20px;flex-shrink:0;box-shadow:var(--sh)}
+.step h3{font-size:16px;font-weight:600;margin-bottom:10px}
+.step p{font-size:14px;color:var(--text2);line-height:1.75}
+
+/* ── TESTIMONIALS ────────── */
+#depoimentos{background:var(--bg2);transition:background .5s}
+.test-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:48px}
+.test-card{background:var(--bg3);border:var(--bw) solid var(--border);border-radius:var(--r);padding:30px 26px;transition:border-color .3s,transform .3s,background .5s,box-shadow .3s;box-shadow:var(--sh)}
+.test-card:hover{border-color:var(--abd);transform:translateY(-3px)}
+.test-stars{color:var(--star);font-size:14px;margin-bottom:18px;letter-spacing:3px}
+.test-text{font-size:14px;color:var(--text2);line-height:1.8;margin-bottom:22px;font-style:italic}
+.test-author{display:flex;align-items:center;gap:14px}
+.test-avatar{width:44px;height:44px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--btnc);flex-shrink:0}
+.test-name{font-size:13px;font-weight:600}
+.test-role{font-size:11px;color:var(--text2);margin-top:2px}
+
+/* ── PRICING ─────────────── */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px;align-items:start}
+.price-card{background:var(--bg2);border:var(--bw) solid var(--border);border-radius:var(--r);padding:36px 30px;position:relative;transition:border-color .3s,transform .3s,background .5s,box-shadow .3s;box-shadow:var(--sh)}
+.price-card:hover{border-color:var(--abd);transform:translateY(-4px)}
+.price-pop{border-color:var(--accent);transform:scale(1.03)}
+.price-pop:hover{border-color:var(--accent2);transform:scale(1.03) translateY(-4px)}
+.price-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:5px 18px;background:var(--grad);color:var(--btnc);font-size:11px;font-weight:600;border-radius:999px;white-space:nowrap}
+.price-name{font-size:14px;font-weight:600;color:var(--accent);margin-bottom:8px}
+.price-val{font-size:40px;font-weight:800;margin-bottom:4px}
+.price-desc{font-size:13px;color:var(--text2);margin-bottom:28px;padding-bottom:28px;border-bottom:var(--bw) solid var(--border)}
+.price-features li{padding:7px 0;font-size:13px;color:var(--text2);display:flex;align-items:center;gap:10px}
+.price-features li::before{content:'✓';color:var(--accent);font-weight:700;font-size:13px}
+.price-features{margin-bottom:32px}
+.price-card .btn-p{width:100%;justify-content:center}
+
+/* ── FAQ ──────────────────── */
+.faq-list{max-width:700px;margin:52px auto 0}
+.faq-item{border-bottom:var(--bw) solid var(--border)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:22px 0;background:none;border:none;color:var(--text);font-size:15px;font-weight:500;text-align:left;font-family:inherit;gap:16px;transition:color .2s}
+.faq-q:hover{color:var(--accent)}
+.faq-chevron{width:18px;height:18px;flex-shrink:0;stroke:var(--text2);transition:transform .3s}
+.faq-item.open .faq-chevron{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{padding:0 0 22px;font-size:14px;color:var(--text2);line-height:1.8}
+
+/* ── CTA ──────────────────── */
+.cta-sec{padding:100px 24px}
+.cta-box{max-width:700px;margin:auto;text-align:center;padding:68px 48px;background:var(--bg2);border-radius:calc(var(--r) + 8px);border:var(--bw) solid var(--abd);position:relative;overflow:hidden;transition:background .5s,border-color .5s;box-shadow:var(--sh)}
+.cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 55% at 50% -15%,var(--hglow),transparent);pointer-events:none}
+.cta-box h2{font-size:clamp(22px,4vw,36px);font-weight:700;margin-bottom:16px;position:relative}
+.cta-box>p{color:var(--text2);margin-bottom:36px;font-size:15px;position:relative;line-height:1.7}
+.cta-row{display:flex;gap:12px;max-width:460px;margin:0 auto 16px;position:relative}
+.cta-input{flex:1;padding:13px 18px;background:var(--bg3);border:var(--bw) solid var(--border);border-radius:var(--r);color:var(--text);font-size:14px;outline:none;font-family:inherit;transition:border-color .2s}
+.cta-input:focus{border-color:var(--accent)}
+.cta-input::placeholder{color:var(--text2)}
+.cta-note{font-size:11px;color:var(--text2);position:relative}
+
+/* ── FOOTER ──────────────── */
+footer{padding:40px 24px;border-top:var(--bw) solid var(--border);background:var(--bg2);transition:background .5s,border-color .5s}
+.footer-inner{max-width:1100px;margin:auto}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:32px}
+.footer-brand{font-size:16px;font-weight:800}
+.footer-brand span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-desc{font-size:13px;color:var(--text2);margin-top:8px;max-width:280px;line-height:1.6}
+.footer-links{display:flex;gap:48px}
+.footer-col h4{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;color:var(--accent)}
+.footer-col a{display:block;font-size:13px;color:var(--text2);padding:4px 0;transition:color .2s}
+.footer-col a:hover{color:var(--text)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;border-top:var(--bw) solid var(--border);font-size:12px;color:var(--text2)}
+.footer-social{display:flex;gap:16px}
+.footer-social a{color:var(--text2);transition:color .2s}
+.footer-social a:hover{color:var(--accent)}
+
+/* ── THEME PICKER ────────── */
+.tp{position:fixed;bottom:24px;right:24px;z-index:10000}
+.tp-toggle{width:50px;height:50px;border-radius:50%;border:var(--bw) solid var(--border);background:var(--bg2);color:var(--text);font-size:22px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,.25);transition:transform .3s,background .5s,border-color .5s}
+.tp-toggle:hover{transform:scale(1.1)}
+.tp-panel{position:absolute;bottom:62px;right:0;background:var(--bg2);border:var(--bw) solid var(--border);border-radius:var(--r);padding:18px;min-width:240px;opacity:0;visibility:hidden;transform:translateY(12px);transition:all .3s;box-shadow:0 12px 40px rgba(0,0,0,.35)}
+.tp-panel.open{opacity:1;visibility:visible;transform:translateY(0)}
+.tp-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--text2);margin-bottom:14px;display:block}
+.tp-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.tp-btn{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:8px;border:1px solid transparent;background:transparent;color:var(--text);font-size:12px;cursor:pointer;transition:background .2s,border-color .2s;font-family:inherit;white-space:nowrap}
+.tp-btn:hover{background:var(--bg3)}
+.tp-btn.active{border-color:var(--accent);background:var(--abg)}
+.tp-dot{width:18px;height:18px;border-radius:50%;flex-shrink:0;border:1px solid rgba(128,128,128,.2)}
+
+/* ── SCROLL REVEAL ───────── */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ══════════════════════════════════════════
+   THEME-SPECIFIC OVERRIDES
+   ══════════════════════════════════════════ */
+
+/* Brutal — kill all roundness, uppercase */
+[data-theme="brutal"] *{border-radius:0 !important}
+[data-theme="brutal"] .hero h1 em,
+[data-theme="brutal"] .nav-brand span,
+[data-theme="brutal"] .footer-brand span,
+[data-theme="brutal"] .gt{background:none !important;-webkit-text-fill-color:var(--accent) !important;color:var(--accent)}
+[data-theme="brutal"] .stat-val{background:none;-webkit-text-fill-color:var(--accent);color:var(--accent)}
+[data-theme="brutal"] .btn-p,[data-theme="brutal"] .nav-cta{background:var(--accent);color:var(--btnc) !important;-webkit-text-fill-color:var(--btnc) !important}
+[data-theme="brutal"] .hero-badge{border-width:2px}
+[data-theme="brutal"] .marquee{border-width:2px}
+[data-theme="brutal"] .label{border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:3px;letter-spacing:3px}
+
+/* Cyber — glow + scanlines */
+[data-theme="cyber"] h1,[data-theme="cyber"] h2,[data-theme="cyber"] h3{text-shadow:var(--glow)}
+[data-theme="cyber"] .stat-val{background:none;-webkit-text-fill-color:var(--accent);color:var(--accent);text-shadow:0 0 20px rgba(0,255,65,.4)}
+[data-theme="cyber"] .nav-brand span,[data-theme="cyber"] .footer-brand span,[data-theme="cyber"] .gt{background:none !important;-webkit-text-fill-color:var(--accent) !important;color:var(--accent) !important;text-shadow:var(--glow)}
+[data-theme="cyber"] .hero h1 em{background:none;-webkit-text-fill-color:var(--accent);text-shadow:0 0 30px rgba(0,255,65,.5)}
+[data-theme="cyber"] .btn-p,[data-theme="cyber"] .nav-cta{background:var(--accent);color:var(--btnc) !important;-webkit-text-fill-color:var(--btnc) !important;text-shadow:none}
+[data-theme="cyber"] .label::before{content:'> '}
+[data-theme="cyber"] .test-stars{text-shadow:0 0 8px rgba(0,255,65,.4)}
+
+/* Glass — blur on cards, mesh bg */
+[data-theme="glass"] body{background:radial-gradient(ellipse at 20% 20%,rgba(99,102,241,.15),transparent 50%),radial-gradient(ellipse at 80% 50%,rgba(139,92,246,.12),transparent 50%),radial-gradient(ellipse at 40% 80%,rgba(236,72,153,.08),transparent 50%),var(--bg)}
+[data-theme="glass"] .srv-card,[data-theme="glass"] .pf-card,[data-theme="glass"] .test-card,[data-theme="glass"] .price-card,[data-theme="glass"] .cta-box,[data-theme="glass"] .nav,[data-theme="glass"] .about-mockup,[data-theme="glass"] .tp-panel{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+
+/* Neobrutal — thick shadows, hover pop */
+[data-theme="neobrutal"] .srv-card,[data-theme="neobrutal"] .pf-card,[data-theme="neobrutal"] .test-card,[data-theme="neobrutal"] .price-card,[data-theme="neobrutal"] .cta-box,[data-theme="neobrutal"] .about-mockup{border:var(--bw) solid var(--border);box-shadow:var(--sh)}
+[data-theme="neobrutal"] .srv-card:hover,[data-theme="neobrutal"] .pf-card:hover,[data-theme="neobrutal"] .test-card:hover,[data-theme="neobrutal"] .price-card:hover{transform:translate(-2px,-2px) !important;box-shadow:6px 6px 0 var(--border) !important}
+[data-theme="neobrutal"] .btn-p,[data-theme="neobrutal"] .nav-cta{border:2px solid #222;box-shadow:3px 3px 0 #222}
+[data-theme="neobrutal"] .btn-g{border:2px solid #222;box-shadow:3px 3px 0 #222}
+
+/* Elegant — serif headings, gold lines */
+[data-theme="elegant"] .nav-brand{font-family:var(--fh)}
+[data-theme="elegant"] .footer-brand{font-family:var(--fh)}
+[data-theme="elegant"] .label{letter-spacing:4px}
+[data-theme="elegant"] .hero-badge{letter-spacing:1.5px}
+
+/* Aurora — soft blobs */
+[data-theme="aurora"] .hero::before{background:radial-gradient(circle at 25% 35%,rgba(236,72,153,.12),transparent 45%),radial-gradient(circle at 75% 55%,rgba(139,92,246,.12),transparent 45%),radial-gradient(circle at 50% 85%,rgba(59,130,246,.08),transparent 40%)}
+
+/* Scanlines overlay (cyber) */
+.theme-overlay{position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0;transition:opacity .5s}
+[data-theme="cyber"] .theme-overlay{opacity:1;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,65,.012) 2px,rgba(0,255,65,.012) 4px)}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════ */
+@media(max-width:900px){
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-visual{order:-1}
+  .footer-top{flex-direction:column}
+  .footer-links{gap:32px}
+}
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-center{position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--bg);flex-direction:column;padding:40px 24px;gap:24px;font-size:18px;transform:translateX(100%);transition:transform .35s;z-index:99}
+  .nav-center.open{transform:translateX(0)}
+  .nav-right .nav-cta{display:none}
+  .price-grid{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}
+  .price-pop{transform:none}
+  .price-pop:hover{transform:translateY(-4px)}
+}
+@media(max-width:640px){
+  .pf-grid{grid-template-columns:1fr}
+  .test-grid{grid-template-columns:1fr}
+  .cta-row{flex-direction:column}
+  .hero-btns{flex-direction:column;align-items:stretch;max-width:300px;margin-left:auto;margin-right:auto}
+  .cta-box{padding:40px 24px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .footer-links{flex-direction:column;gap:24px}
+  section{padding:72px 20px}
+}
+@media(max-width:420px){
+  .stats-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .srv-grid{grid-template-columns:1fr}
+}
   </style>
 </head>
 <body>
 
+<!-- SCANLINE OVERLAY (cyber theme) -->
+<div class="theme-overlay" aria-hidden="true"></div>
+
+<!-- ═══ NAV ═══ -->
 <nav class="nav">
-  <span class="nav-brand">Chrono Sites</span>
-  <div class="nav-links">
+  <div class="nav-brand"><span>Chrono Sites</span></div>
+  <div class="nav-center" id="navLinks">
+    <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
     <a href="#portfolio">Portfólio</a>
-    <a href="#como-funciona">Como funciona</a>
-    <a href="#contato" class="nav-cta">Falar conosco</a>
+    <a href="#como-funciona">Processo</a>
+    <a href="#precos">Preços</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato" class="nav-cta" style="display:inline-flex">Falar conosco</a>
+  </div>
+  <div class="nav-right">
+    <a href="#contato" class="nav-cta">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Falar conosco
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
+<!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-badge"><span class="hero-dot"></span>Agência de redesign de sites</div>
+    <div class="hero-badge">
+      <span class="hero-dot"></span>
+      Agência de redesign de sites
+    </div>
     <h1>Seu site <em>repaginado</em>,<br>sem compromisso</h1>
     <p>Transformamos o design do seu site em algo moderno, responsivo e profissional. Você vê a prévia antes de decidir — e só paga se gostar.</p>
-    <div class="hero-actions">
-      <a href="#contato" class="btn-primary">✦ Quero ver meu site novo</a>
-      <a href="#portfolio" class="btn-ghost">⊞ Ver portfólio</a>
+    <div class="hero-btns">
+      <a href="#contato" class="btn-p">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Quero ver meu site novo
+      </a>
+      <a href="#portfolio" class="btn-g">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Ver portfólio
+      </a>
     </div>
   </div>
+  <div class="scroll-hint"><div class="scroll-line"></div>scroll</div>
 </section>
 
-<div class="stats">
-  <div class="stats-inner">
-    <div><div class="stat-value">1+</div><div class="stat-label">Projetos entregues</div></div>
-    <div><div class="stat-value">100%</div><div class="stat-label">Prévia antes de pagar</div></div>
-    <div><div class="stat-value">48h</div><div class="stat-label">Prazo médio para prévia</div></div>
-    <div><div class="stat-value">R$ 0</div><div class="stat-label">Cobrança antecipada</div></div>
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Design Moderno</span><span>·</span>
+    <span>Responsivo</span><span>·</span>
+    <span>Performance</span><span>·</span>
+    <span>SEO Otimizado</span><span>·</span>
+    <span>Prévia Grátis</span><span>·</span>
+    <span>Sem Compromisso</span><span>·</span>
+    <span>Entrega Rápida</span><span>·</span>
+    <span>Suporte Contínuo</span><span>·</span>
+    <span>Design Moderno</span><span>·</span>
+    <span>Responsivo</span><span>·</span>
+    <span>Performance</span><span>·</span>
+    <span>SEO Otimizado</span><span>·</span>
+    <span>Prévia Grátis</span><span>·</span>
+    <span>Sem Compromisso</span><span>·</span>
+    <span>Entrega Rápida</span><span>·</span>
+    <span>Suporte Contínuo</span><span>·</span>
   </div>
 </div>
 
-<section id="servicos">
-  <div class="section-inner">
-    <div class="section-label">O que fazemos</div>
-    <h2 class="section-title">Redesign completo do seu site</h2>
-    <p class="section-sub">Modernizamos o visual e a estrutura de sites institucionais de pequenos negócios, preservando toda a essência da sua marca.</p>
-    <div class="services-grid">
-      <div class="service-card"><div class="service-icon">🎨</div><h3>Design Moderno</h3><p>Layout atual, limpo e profissional, adaptado ao perfil do seu negócio.</p></div>
-      <div class="service-card"><div class="service-icon">📱</div><h3>100% Responsivo</h3><p>Funciona perfeitamente em celular, tablet e computador.</p></div>
-      <div class="service-card"><div class="service-icon">⚡</div><h3>Prévia Gratuita</h3><p>Você vê o novo design antes de tomar qualquer decisão. Sem custo, sem obrigação.</p></div>
-      <div class="service-card"><div class="service-icon">🔒</div><h3>Sem Risco</h3><p>Nenhum pagamento adiantado. Só prosseguimos se você aprovar a prévia.</p></div>
-    </div>
+<!-- ═══ STATS ═══ -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="reveal"><div class="stat-val gt">50+</div><div class="stat-lbl">Projetos entregues</div></div>
+    <div class="reveal"><div class="stat-val gt">100%</div><div class="stat-lbl">Prévia antes de pagar</div></div>
+    <div class="reveal"><div class="stat-val gt">48h</div><div class="stat-lbl">Prazo médio da prévia</div></div>
+    <div class="reveal"><div class="stat-val gt">97%</div><div class="stat-lbl">Taxa de aprovação</div></div>
   </div>
-</section>
+</div>
 
-<section id="portfolio" class="portfolio-section">
-  <div class="section-inner">
-    <div class="section-label">Portfólio</div>
-    <h2 class="section-title">Trabalhos recentes</h2>
-    <p class="section-sub">Veja exemplos reais de redesigns que realizamos para pequenos negócios.</p>
-    <div class="portfolio-grid" id="portfolioGrid">
-      <div class="portfolio-card">
-        <div class="portfolio-preview" onclick="window.open('https://sites-reforma.vercel.app/masterhousesolucoes/','_blank')">
-          <div class="portfolio-preview-inner"><iframe data-src="https://sites-reforma.vercel.app/masterhousesolucoes/" loading="lazy" title="Master House Soluções" sandbox="allow-scripts allow-same-origin"></iframe></div>
-          <div class="portfolio-preview-overlay"></div>
-          <span class="portfolio-badge">Prévia</span>
+<!-- ═══ ABOUT ═══ -->
+<section id="sobre" class="reveal">
+  <div class="inner">
+    <div class="about-grid">
+      <div>
+        <div class="label">Sobre nós</div>
+        <h2 class="stitle">A agência que moderniza<br>seu negócio online</h2>
+        <p class="about-text">A <strong>Chrono Sites</strong> nasceu com uma missão clara: tornar o design profissional de sites acessível para pequenos e médios negócios. Acreditamos que toda empresa merece uma presença online que transmita credibilidade e profissionalismo.</p>
+        <p class="about-text">Nossa abordagem é única: criamos uma prévia visual completa do seu novo site antes de qualquer compromisso financeiro. Você vê exatamente como ficará — e só avança se gostar. Sem letras miúdas, sem surpresas.</p>
+        <p class="about-text">Combinamos tecnologia de ponta com design centrado no usuário para criar experiências web que encantam visitantes e convertem clientes.</p>
+        <div class="about-pills">
+          <span class="about-pill">🎯 Transparência total</span>
+          <span class="about-pill">⚡ Entrega ágil</span>
+          <span class="about-pill">✨ Qualidade premium</span>
+          <span class="about-pill">🤝 Parceria genuína</span>
         </div>
-        <div class="portfolio-info">
-          <div class="portfolio-title">Master House Soluções</div>
-          <div class="portfolio-domain">masterhousesolucoes</div>
-          <div class="portfolio-actions"><a href="https://sites-reforma.vercel.app/masterhousesolucoes/" target="_blank" rel="noopener" class="portfolio-btn portfolio-btn-primary">Ver prévia</a></div>
+      </div>
+      <div class="about-visual">
+        <div class="about-mockup">
+          <div class="mockup-bar"><span></span><span></span><span></span></div>
+          <div class="mockup-body">
+            <div class="mockup-ln w80"></div>
+            <div class="mockup-ln w60"></div>
+            <div class="mockup-block"></div>
+            <div class="mockup-ln w90"></div>
+            <div class="mockup-ln w40"></div>
+            <div class="mockup-row">
+              <div class="mockup-sq"></div>
+              <div class="mockup-sq"></div>
+              <div class="mockup-sq"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="como-funciona">
-  <div class="section-inner">
-    <div class="section-label">Processo</div>
-    <h2 class="section-title">Como funciona</h2>
-    <p class="section-sub">Do primeiro contato à entrega da prévia em três etapas simples e sem burocracia.</p>
-    <div class="steps">
-      <div class="step"><div class="step-num">1</div><h3>Analisamos seu site</h3><p>Nossa equipe avalia o design atual e identifica os pontos de melhoria mais impactantes para seu negócio.</p></div>
-      <div class="step"><div class="step-num">2</div><h3>Criamos uma prévia</h3><p>Em até 48 horas você recebe uma prévia visual completa do novo design — gratuitamente e sem compromisso.</p></div>
-      <div class="step"><div class="step-num">3</div><h3>Você decide</h3><p>Gostou da prévia? Conversamos sobre os próximos passos. Sem surpresas, sem pressão.</p></div>
+<!-- ═══ SERVICES ═══ -->
+<section id="servicos" class="reveal">
+  <div class="inner">
+    <div class="label">O que fazemos</div>
+    <h2 class="stitle">Soluções completas para seu site</h2>
+    <p class="ssub">Do design à performance, cuidamos de cada detalhe para que seu site não apenas pareça incrível — mas funcione de verdade.</p>
+    <div class="srv-grid">
+      <div class="srv-card">
+        <span class="srv-icon">🎨</span>
+        <h3>Redesign Completo</h3>
+        <p>Reformulação total do visual do seu site com layout moderno, tipografia profissional e uma estética que reflete a identidade da sua marca.</p>
+      </div>
+      <div class="srv-card">
+        <span class="srv-icon">📱</span>
+        <h3>Design Responsivo</h3>
+        <p>Sites que funcionam perfeitamente em qualquer dispositivo — celular, tablet ou desktop. Seus clientes terão a melhor experiência, sempre.</p>
+      </div>
+      <div class="srv-card">
+        <span class="srv-icon">⚡</span>
+        <h3>Performance &amp; SEO</h3>
+        <p>Otimização de velocidade de carregamento e técnicas de SEO para melhorar seu posicionamento no Google e atrair mais visitantes.</p>
+      </div>
+      <div class="srv-card">
+        <span class="srv-icon">🎯</span>
+        <h3>Foco em Conversão</h3>
+        <p>Cada elemento é pensado estrategicamente para guiar o visitante até a ação desejada: contato, compra ou agendamento.</p>
+      </div>
+      <div class="srv-card">
+        <span class="srv-icon">🔍</span>
+        <h3>Prévia Antes de Pagar</h3>
+        <p>Veja como ficará seu novo site antes de investir qualquer valor. Se não gostar, sem problema — você não paga nada.</p>
+      </div>
+      <div class="srv-card">
+        <span class="srv-icon">🛡️</span>
+        <h3>Suporte Contínuo</h3>
+        <p>Não te abandonamos após a entrega. Oferecemos suporte para ajustes, dúvidas e melhorias contínuas do seu site.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="cta-section" id="contato">
+<!-- ═══ PORTFOLIO ═══ -->
+<section id="portfolio" class="reveal">
+  <div class="inner">
+    <div class="pf-header">
+      <div>
+        <div class="label">Portfólio</div>
+        <h2 class="stitle">Trabalhos recentes</h2>
+        <p class="ssub">Veja exemplos reais de redesigns que realizamos. Cada projeto é uma transformação única.</p>
+      </div>
+    </div>
+    <div class="pf-grid">
+      <div class="pf-card">
+        <div class="pf-preview" onclick="window.open('https://sites-reforma.vercel.app/masterhousesolucoes/','_blank')">
+          <div class="pf-preview-frame">
+            <iframe data-src="https://sites-reforma.vercel.app/masterhousesolucoes/" loading="lazy" title="Master House Soluções" sandbox="allow-scripts allow-same-origin"></iframe>
+          </div>
+          <div class="pf-overlay"></div>
+          <span class="pf-badge">Prévia</span>
+        </div>
+        <div class="pf-info">
+          <div class="pf-title">Master House Soluções</div>
+          <div class="pf-domain">masterhousesolucoes</div>
+          <div class="pf-actions">
+            <a href="https://sites-reforma.vercel.app/masterhousesolucoes/" target="_blank" rel="noopener" class="pf-btn pf-btn-p">Ver prévia</a>
+          </div>
+        </div>
+      </div>
+      <!-- Additional portfolio cards will be dynamically added when more projects are deployed -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section id="como-funciona" class="reveal">
+  <div class="inner">
+    <div class="label">Como funciona</div>
+    <h2 class="stitle">Do seu site atual ao novo design</h2>
+    <p class="ssub">Um processo claro, transparente e sem burocracia. Você tem o controle do início ao fim.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Envie seu site</h3>
+        <p>Compartilhe o link do seu site atual via WhatsApp ou pelo formulário. Sem cadastro, sem complicação.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Análise completa</h3>
+        <p>Nossa equipe avalia o design, a estrutura, o conteúdo e a performance do seu site atual em detalhes.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Prévia em até 48h</h3>
+        <p>Você recebe um link exclusivo com a prévia visual completa do novo design. Navegue como se fosse o site final.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Aprovação e publicação</h3>
+        <p>Aprovou? Finalizamos, otimizamos e publicamos. Não aprovou? Sem custo algum — sem ressentimentos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="depoimentos" class="reveal">
+  <div class="inner">
+    <div class="label">Depoimentos</div>
+    <h2 class="stitle">O que nossos clientes dizem</h2>
+    <p class="ssub">A satisfação dos nossos clientes é o melhor reflexo do nosso trabalho.</p>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Fiquei impressionado com a qualidade da prévia. O novo design ficou muito mais profissional e moderno. Já recebi elogios dos meus clientes e notei um aumento nas consultas pelo site."</p>
+        <div class="test-author">
+          <div class="test-avatar">CE</div>
+          <div>
+            <div class="test-name">Carlos Eduardo</div>
+            <div class="test-role">Master House Soluções · Construção</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"O melhor foi poder ver como ficaria antes de pagar. Amei o resultado e as minhas clientes também! O agendamento online ficou muito mais fluido."</p>
+        <div class="test-author">
+          <div class="test-avatar">AS</div>
+          <div>
+            <div class="test-name">Ana Silva</div>
+            <div class="test-role">Bella Estética · Beleza &amp; Bem-estar</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Profissionalismo do início ao fim. A prévia ficou incrível, muito melhor do que eu imaginava. Aprovei de primeira e o site novo já está trazendo muito mais contatos."</p>
+        <div class="test-author">
+          <div class="test-avatar">RM</div>
+          <div>
+            <div class="test-name">Ricardo Mendes</div>
+            <div class="test-role">Pet Shop Amigo Fiel · Pet Shop</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section id="precos" class="reveal">
+  <div class="inner">
+    <div class="label">Investimento</div>
+    <h2 class="stitle">Planos para cada necessidade</h2>
+    <p class="ssub">Escolha o plano ideal para o seu negócio. Todos incluem prévia gratuita — você só paga se aprovar.</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-name">Starter</div>
+        <div class="price-val">R$ 497</div>
+        <div class="price-desc">Ideal para quem precisa de uma landing page profissional</div>
+        <ul class="price-features">
+          <li>1 página redesenhada</li>
+          <li>Design 100% responsivo</li>
+          <li>Prévia gratuita antes de pagar</li>
+          <li>Entrega em até 5 dias úteis</li>
+          <li>1 rodada de ajustes</li>
+        </ul>
+        <a href="#contato" class="btn-p">Solicitar prévia</a>
+      </div>
+      <div class="price-card price-pop">
+        <div class="price-badge">Mais popular</div>
+        <div class="price-name">Profissional</div>
+        <div class="price-val">R$ 997</div>
+        <div class="price-desc">Site institucional completo para seu negócio crescer</div>
+        <ul class="price-features">
+          <li>Até 5 páginas redesenhadas</li>
+          <li>Design 100% responsivo</li>
+          <li>Otimização SEO básica</li>
+          <li>Prévia gratuita antes de pagar</li>
+          <li>Entrega em até 10 dias úteis</li>
+          <li>3 rodadas de ajustes</li>
+          <li>1 mês de suporte gratuito</li>
+        </ul>
+        <a href="#contato" class="btn-p">Solicitar prévia</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Premium</div>
+        <div class="price-val">R$ 1.997</div>
+        <div class="price-desc">Solução completa sob medida com máxima qualidade</div>
+        <ul class="price-features">
+          <li>Páginas ilimitadas</li>
+          <li>Design 100% responsivo</li>
+          <li>SEO avançado + analytics</li>
+          <li>Animações e microinterações</li>
+          <li>Prévia gratuita antes de pagar</li>
+          <li>Entrega em até 15 dias úteis</li>
+          <li>Rodadas ilimitadas de ajustes</li>
+          <li>3 meses de suporte gratuito</li>
+          <li>Prioridade máxima de atendimento</li>
+        </ul>
+        <a href="#contato" class="btn-p">Solicitar prévia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq" class="reveal">
+  <div class="inner" style="text-align:center">
+    <div class="label">Perguntas frequentes</div>
+    <h2 class="stitle">Tire suas dúvidas</h2>
+    <p class="ssub" style="margin:0 auto 8px">Reunimos as perguntas mais comuns sobre nosso processo e serviço.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <span>Quanto tempo leva para receber a prévia?</span>
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a"><p>Em média, entregamos a prévia visual completa em até 48 horas úteis após o envio do link do seu site atual. Para projetos mais complexos, o prazo pode ser de 72 horas.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <span>Preciso pagar algo adiantado?</span>
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a"><p>Não. A prévia é 100% gratuita e sem compromisso. Você só paga se aprovar o design e quiser seguir com a implementação. Se não gostar, não paga absolutamente nada.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <span>E se eu não gostar da prévia?</span>
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a"><p>Sem problema! A prévia é sem compromisso. Se o resultado não agradar, você pode solicitar ajustes ou simplesmente declinar — sem custo algum. Nosso risco é nosso investimento em conquistar sua confiança.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <span>Vocês mexem no meu site atual?</span>
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a"><p>Não. A prévia é criada em um ambiente separado, em um link exclusivo. Seu site atual continua funcionando normalmente sem nenhuma alteração durante todo o processo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <span>Como funciona a prévia exatamente?</span>
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a"><p>Criamos uma versão navegável do seu novo site hospedada em um link exclusivo. Você pode abrir no celular, tablet ou computador e navegar como se fosse o site final. É a forma mais transparente de mostrar o resultado.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <span>Posso solicitar alterações na prévia?</span>
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a"><p>Sim! Após ver a prévia, você pode solicitar ajustes de cores, fontes, layout e conteúdo. O número de rodadas de ajustes depende do plano escolhido, mas queremos que o resultado final seja perfeito para você.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <span>Qual tecnologia vocês usam?</span>
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a"><p>Utilizamos tecnologias modernas como HTML5, CSS3, JavaScript, React, Next.js e Tailwind CSS. Tudo é hospedado na Vercel — a mesma plataforma usada por empresas como Nike, McDonald's e Washington Post.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <span>Vocês atendem empresas de qualquer segmento?</span>
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a"><p>Sim! Atendemos restaurantes, clínicas, pet shops, escritórios de advocacia, construtoras, academias, salões de beleza e qualquer pequeno ou médio negócio que deseje modernizar sua presença online.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-sec" id="contato">
   <div class="cta-box">
-    <h2>Quer ver como ficaria seu site <em style="font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">reformado?</em></h2>
-    <p>Informe o endereço do seu site e receba uma prévia gratuita em até 48 horas.</p>
-    <div class="cta-input-row">
+    <h2>Quer ver como seu site ficaria <em style="font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">reformado?</em></h2>
+    <p>Informe o endereço do seu site e receba uma prévia gratuita em até 48 horas. Zero custo, zero compromisso.</p>
+    <div class="cta-row">
       <input class="cta-input" type="url" placeholder="https://seusite.com.br" id="siteInput">
-      <button class="btn-primary" id="ctaBtn" style="white-space:nowrap">📲 Solicitar prévia</button>
+      <button class="btn-p" id="ctaBtn" style="white-space:nowrap">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        Solicitar prévia
+      </button>
     </div>
     <p class="cta-note">Gratuito, sem compromisso, sem cartão de crédito.</p>
   </div>
 </section>
 
+<!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="footer-inner">
-    <span class="footer-brand">Chrono Sites</span>
-    <span class="footer-copy">© 2026 Chrono Sites — Redesign de sites para pequenos negócios.</span>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand"><span>Chrono Sites</span></div>
+        <p class="footer-desc">Redesign de sites para pequenos negócios. Prévia gratuita, sem compromisso.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <a href="#sobre">Sobre nós</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#como-funciona">Como funciona</a>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos</h4>
+          <a href="#precos">Preços</a>
+          <a href="#faq">FAQ</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Chrono Sites. Todos os direitos reservados.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" aria-label="WhatsApp">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 0 0 .612.616l4.535-1.455A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 0 1-5.39-1.582l-.386-.232-2.683.861.901-2.623-.254-.404A9.935 9.935 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
 
+<!-- ═══ THEME PICKER ═══ -->
+<div class="tp" id="themePicker">
+  <button class="tp-toggle" id="tpToggle" aria-label="Mudar tema visual">🎨</button>
+  <div class="tp-panel" id="tpPanel">
+    <span class="tp-title">Tema visual</span>
+    <div class="tp-grid">
+      <button class="tp-btn active" data-t="dark-modern">
+        <span class="tp-dot" style="background:linear-gradient(135deg,#7c3aed,#3b82f6)"></span>Dark
+      </button>
+      <button class="tp-btn" data-t="minimal">
+        <span class="tp-dot" style="background:#f5f5f5;border-color:#ddd"></span>Minimal
+      </button>
+      <button class="tp-btn" data-t="brutal">
+        <span class="tp-dot" style="background:linear-gradient(135deg,#000 50%,#fff 50%)"></span>Brutal
+      </button>
+      <button class="tp-btn" data-t="glass">
+        <span class="tp-dot" style="background:linear-gradient(135deg,#1a0a2e,#6366f1)"></span>Glass
+      </button>
+      <button class="tp-btn" data-t="neobrutal">
+        <span class="tp-dot" style="background:linear-gradient(135deg,#ff6b35,#ff3e6c)"></span>Neobrutal
+      </button>
+      <button class="tp-btn" data-t="elegant">
+        <span class="tp-dot" style="background:linear-gradient(135deg,#c9a84c,#0d0d0d)"></span>Elegant
+      </button>
+      <button class="tp-btn" data-t="cyber">
+        <span class="tp-dot" style="background:#00ff41"></span>Cyber
+      </button>
+      <button class="tp-btn" data-t="aurora">
+        <span class="tp-dot" style="background:linear-gradient(135deg,#ec4899,#8b5cf6,#3b82f6)"></span>Aurora
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ JAVASCRIPT ═══ -->
 <script>
-  // TODO: troque pelo número real de WhatsApp (formato: 5511999999999)
-  var WA = '5511999999999';
-  document.getElementById('ctaBtn').addEventListener('click', function() {
-    var s = (document.getElementById('siteInput').value || '').trim();
-    var m = s
-      ? 'Olá! Gostaria de ver uma prévia de redesign para o meu site: ' + s
-      : 'Olá! Quero saber mais sobre o redesign da Chrono Sites.';
-    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(m), '_blank');
+(function(){
+  'use strict';
+
+  // ── Theme Picker ──
+  var tpToggle = document.getElementById('tpToggle');
+  var tpPanel = document.getElementById('tpPanel');
+  var tpBtns = document.querySelectorAll('[data-t]');
+  var html = document.documentElement;
+
+  tpToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    tpPanel.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.tp')) tpPanel.classList.remove('open');
+  });
+  tpBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var t = this.getAttribute('data-t');
+      html.setAttribute('data-theme', t);
+      localStorage.setItem('chrono-theme', t);
+      tpBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+    });
+  });
+  // Restore saved theme
+  var saved = localStorage.getItem('chrono-theme');
+  if (saved) {
+    html.setAttribute('data-theme', saved);
+    tpBtns.forEach(function(b) {
+      b.classList.toggle('active', b.getAttribute('data-t') === saved);
+    });
+  }
+
+  // ── Hamburger Menu ──
+  var hamburger = document.getElementById('hamburger');
+  var navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', function() {
+    this.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+    });
   });
 
-  // Lazy-load iframes
+  // ── CTA → WhatsApp ──
+  var WA = '5511999999999';
+  document.getElementById('ctaBtn').addEventListener('click', function() {
+    var site = (document.getElementById('siteInput').value || '').trim();
+    var msg = site
+      ? 'Ol\u00e1! Gostaria de ver uma pr\u00e9via de redesign para o meu site: ' + site
+      : 'Ol\u00e1! Gostaria de saber mais sobre o redesign de sites da Chrono Sites.';
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank');
+  });
+
+  // ── Scroll Reveal ──
   if ('IntersectionObserver' in window) {
-    var obs = new IntersectionObserver(function(entries) {
+    var ro = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          ro.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible'); });
+  }
+
+  // ── Lazy Load Iframes ──
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) {
         if (e.isIntersecting) {
           var f = e.target.querySelector('iframe[data-src]');
           if (f) { f.src = f.dataset.src; f.removeAttribute('data-src'); }
-          obs.unobserve(e.target);
+          io.unobserve(e.target);
         }
       });
-    }, { rootMargin: '300px' });
-    document.querySelectorAll('.portfolio-preview').forEach(function(el) { obs.observe(el); });
+    }, { rootMargin: '400px' });
+    document.querySelectorAll('.pf-preview').forEach(function(el) { io.observe(el); });
   } else {
-    document.querySelectorAll('iframe[data-src]').forEach(function(f) { f.src = f.dataset.src; f.removeAttribute('data-src'); });
+    document.querySelectorAll('iframe[data-src]').forEach(function(f) {
+      f.src = f.dataset.src; f.removeAttribute('data-src');
+    });
   }
+
+  // ── Active Nav Highlight ──
+  var sections = document.querySelectorAll('section[id]');
+  var navAs = document.querySelectorAll('.nav-center a[href^="#"]');
+  window.addEventListener('scroll', function() {
+    var y = window.scrollY + 100;
+    sections.forEach(function(s) {
+      if (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) {
+        navAs.forEach(function(a) {
+          var active = a.getAttribute('href') === '#' + s.id;
+          a.style.color = active ? 'var(--text)' : '';
+          a.style.fontWeight = active ? '600' : '';
+        });
+      }
+    });
+  }, { passive: true });
+
+  // ── Counter Animation for Stats ──
+  function animateCounters() {
+    document.querySelectorAll('.stat-val').forEach(function(el) {
+      var text = el.textContent;
+      var match = text.match(/(\d+)/);
+      if (!match) return;
+      var target = parseInt(match[1]);
+      var suffix = text.replace(match[1], '');
+      var duration = 1500;
+      var start = 0;
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = Math.round(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var statsObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        animateCounters();
+        statsObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  var statsEl = document.querySelector('.stats');
+  if (statsEl) statsObs.observe(statsEl);
+
+  // ── Nav background on scroll ──
+  var nav = document.querySelector('.nav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      nav.style.borderBottomColor = 'var(--border)';
+    }
+  }, { passive: true });
+
+})();
 </script>
 </body>
 </html>
