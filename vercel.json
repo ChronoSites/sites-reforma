@@ -1,3 +1,9 @@
 {
-  "cleanUrls": true
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/:path+",
+      "destination": "/sites/:path+"
+    }
+  ]
 }
