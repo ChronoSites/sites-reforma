@@ -1,8 +1,8 @@
 {
-  "trailingSlash": true,
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/:path+",
+      "source": "/:path((?!index\\\\.html).)+",
       "destination": "/sites/:path+"
     }
   ]
