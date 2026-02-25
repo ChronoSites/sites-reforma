@@ -1,1 +1,9 @@
-{"trailingSlash":true,"rewrites":[{"source":"/:path+","destination":"/sites/:path+"}]}
+{
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/:path+",
+      "destination": "/sites/:path+"
+    }
+  ]
+}
