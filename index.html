@@ -806,6 +806,101 @@ footer{padding:44px 24px;border-top:var(--bw) solid var(--border);background:var
 [data-theme="aurora"] .footer-social a:hover{color:var(--accent)}
 
 /* ════════════════════════════════════════════════
+  FINAL ART DIRECTION PASS — EXTRA DISTINCTIVE
+  ════════════════════════════════════════════════ */
+
+/* 1) DARK MODERN — sharper neon architecture */
+[data-theme="dark-modern"] .nav{background:rgba(6,6,18,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+[data-theme="dark-modern"] .hero h1{letter-spacing:-2px}
+[data-theme="dark-modern"] .hero h1 em{background:linear-gradient(135deg,#7c3aed,#06b6d4,#7c3aed);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:dmGlow 6s ease infinite}
+@keyframes dmGlow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+[data-theme="dark-modern"] .faq-item{border-color:rgba(124,58,237,.2)}
+[data-theme="dark-modern"] .faq-q:hover{text-shadow:0 0 12px rgba(124,58,237,.4)}
+[data-theme="dark-modern"] .tp-toggle{box-shadow:0 0 0 1px rgba(124,58,237,.35),0 0 30px rgba(124,58,237,.2)}
+
+/* 2) MINIMAL — editorial Swiss discipline */
+[data-theme="minimal"] .section{padding-top:120px;padding-bottom:120px}
+[data-theme="minimal"] .nav{background:#fff;border-bottom:1px solid #eee}
+[data-theme="minimal"] .nav-link{font-weight:500;letter-spacing:.4px}
+[data-theme="minimal"] .hero-actions{gap:10px}
+[data-theme="minimal"] .hero p{max-width:64ch}
+[data-theme="minimal"] .faq-item{border-bottom:1px solid #e8e8e8}
+[data-theme="minimal"] .faq-q{font-weight:500}
+[data-theme="minimal"] .tp-toggle{border-radius:0;background:#fff}
+
+/* 3) BRUTAL — CLASSIC web brutalism (not yellow/black) */
+[data-theme="brutal"] body{background:#f7f7f7 !important;color:#0a0a0a !important;font-family:Arial,"Helvetica Neue",Helvetica,sans-serif !important;letter-spacing:0 !important}
+[data-theme="brutal"] .nav,[data-theme="brutal"] .hero,[data-theme="brutal"] .stats,[data-theme="brutal"] #servicos,[data-theme="brutal"] #portfolio,[data-theme="brutal"] #processo,[data-theme="brutal"] #depoimentos,[data-theme="brutal"] #planos,[data-theme="brutal"] #faq,[data-theme="brutal"] .cta-sec,[data-theme="brutal"] footer{background:#fff !important}
+[data-theme="brutal"] *{border-radius:0 !important;box-shadow:none !important;text-shadow:none !important}
+[data-theme="brutal"] .hero::before,[data-theme="brutal"] .hero::after{content:none !important}
+[data-theme="brutal"] .label{color:#000 !important;border-bottom:4px solid #000 !important;letter-spacing:0 !important;font-weight:900 !important}
+[data-theme="brutal"] .nav{border-bottom:4px solid #000 !important}
+[data-theme="brutal"] .nav-brand,[data-theme="brutal"] .footer-brand{font-family:Arial,"Helvetica Neue",Helvetica,sans-serif !important;font-weight:900 !important;text-transform:uppercase !important;letter-spacing:1px !important}
+[data-theme="brutal"] .nav-brand span,[data-theme="brutal"] .footer-brand span,[data-theme="brutal"] .gt{background:none !important;-webkit-text-fill-color:#000 !important;color:#000 !important}
+[data-theme="brutal"] .hero-badge{border:3px solid #000 !important;background:#fff !important;color:#000 !important;font-weight:800 !important;letter-spacing:1px !important}
+[data-theme="brutal"] .hero h1{font-size:clamp(42px,10vw,112px) !important;line-height:.9 !important;font-weight:900 !important;text-transform:uppercase !important;letter-spacing:-2px !important;color:#000 !important;max-width:16ch !important}
+[data-theme="brutal"] .hero h1 em{background:none !important;-webkit-text-fill-color:#d90429 !important;color:#d90429 !important;text-decoration:none !important}
+[data-theme="brutal"] .hero p{font-size:15px !important;line-height:1.6 !important;color:#000 !important;max-width:48ch !important}
+[data-theme="brutal"] .btn-p,[data-theme="brutal"] .nav-cta,[data-theme="brutal"] .pf-btn-p{background:#000 !important;color:#fff !important;-webkit-text-fill-color:#fff !important;border:3px solid #000 !important;font-weight:800 !important;letter-spacing:.4px !important;text-transform:none !important}
+[data-theme="brutal"] .btn-p:hover,[data-theme="brutal"] .nav-cta:hover,[data-theme="brutal"] .pf-btn-p:hover{background:#fff !important;color:#000 !important;-webkit-text-fill-color:#000 !important}
+[data-theme="brutal"] .btn-g{background:#fff !important;color:#000 !important;border:3px solid #000 !important;font-weight:800 !important;letter-spacing:.3px !important;text-transform:none !important}
+[data-theme="brutal"] .btn-g:hover{background:#000 !important;color:#fff !important;-webkit-text-fill-color:#fff !important}
+[data-theme="brutal"] .srv-card,[data-theme="brutal"] .pf-card,[data-theme="brutal"] .test-card,[data-theme="brutal"] .price-card,[data-theme="brutal"] .cta-box,[data-theme="brutal"] .about-mockup{border:3px solid #000 !important;background:#fff !important}
+[data-theme="brutal"] .srv-card:hover,[data-theme="brutal"] .pf-card:hover,[data-theme="brutal"] .test-card:hover,[data-theme="brutal"] .price-card:hover{transform:translate(-6px,-6px) !important}
+[data-theme="brutal"] .srv-card::before,[data-theme="brutal"] .test-card::before{display:none !important}
+[data-theme="brutal"] .price-pop{border:4px solid #000 !important;outline:8px solid #d90429 !important;outline-offset:-8px !important}
+[data-theme="brutal"] .price-name,[data-theme="brutal"] .stitle{color:#000 !important;letter-spacing:-.4px !important;font-weight:900 !important}
+[data-theme="brutal"] .price-features li::before{content:'■' !important;color:#000 !important}
+[data-theme="brutal"] .stat-val{background:none !important;-webkit-text-fill-color:#000 !important;color:#000 !important;font-size:56px !important;font-weight:900 !important;letter-spacing:-1px !important}
+[data-theme="brutal"] .step-num{background:#000 !important;color:#fff !important;border:3px solid #000 !important}
+[data-theme="brutal"] .faq-item{border-bottom:3px solid #000 !important}
+[data-theme="brutal"] .faq-q{font-size:22px !important;font-weight:900 !important;color:#000 !important}
+[data-theme="brutal"] .faq-q:hover{color:#d90429 !important}
+[data-theme="brutal"] .faq-chevron{stroke:#000 !important}
+[data-theme="brutal"] .marquee{border-top:4px solid #000 !important;border-bottom:4px solid #000 !important;background:#fff !important}
+[data-theme="brutal"] .marquee-track{color:#000 !important;font-weight:800 !important;letter-spacing:1px !important}
+[data-theme="brutal"] .marquee-track .sep{color:#d90429 !important}
+[data-theme="brutal"] .tp-toggle{background:#000 !important;color:#fff !important;border:3px solid #000 !important}
+[data-theme="brutal"] .tp-panel{border:3px solid #000 !important;background:#fff !important}
+[data-theme="brutal"] ::-webkit-scrollbar-thumb{background:#000 !important}
+
+/* 4) GLASS — prism depth */
+[data-theme="glass"] .hero h1 em{background:var(--grad2);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:glassHue 8s linear infinite}
+@keyframes glassHue{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
+[data-theme="glass"] .hero-badge,[data-theme="glass"] .about-pill{border-color:rgba(255,255,255,.2)}
+[data-theme="glass"] .srv-card:hover,[data-theme="glass"] .pf-card:hover,[data-theme="glass"] .test-card:hover{transform:translateY(-8px) scale(1.01)}
+[data-theme="glass"] .tp-toggle{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+
+/* 5) NEOBRUTAL — extra playful */
+[data-theme="neobrutal"] .hero h1{font-family:'Syne',var(--fh);font-size:clamp(42px,8.5vw,92px);line-height:.95;letter-spacing:-2px}
+[data-theme="neobrutal"] .hero h1 em{background:linear-gradient(135deg,#1db954,#06b6d4,#f97316);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+[data-theme="neobrutal"] .srv-icon{transform:rotate(-4deg)}
+[data-theme="neobrutal"] .srv-card:hover .srv-icon{transform:rotate(6deg) scale(1.15)}
+[data-theme="neobrutal"] .tp-toggle{box-shadow:4px 4px 0 #1a1a1a;border:2px solid #1a1a1a;border-radius:10px}
+
+/* 6) ELEGANT — haute couture refinement */
+[data-theme="elegant"] .nav{background:rgba(8,8,8,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+[data-theme="elegant"] .hero h1 em{position:relative}
+[data-theme="elegant"] .hero h1 em::after{content:'';position:absolute;left:0;right:0;bottom:-8px;height:1px;background:linear-gradient(90deg,transparent,rgba(212,180,100,.75),transparent)}
+[data-theme="elegant"] .srv-card,[data-theme="elegant"] .test-card,[data-theme="elegant"] .price-card{border-width:1px}
+[data-theme="elegant"] .faq-q{font-family:var(--fh);font-size:19px;font-weight:400}
+
+/* 7) CYBER — harder terminal feel */
+[data-theme="cyber"] .hero h1::after{content:'_';display:inline-block;margin-left:8px;animation:blink .8s steps(1) infinite;color:#00ff41}
+[data-theme="cyber"] .nav-link::before{content:'$ ';opacity:.7}
+[data-theme="cyber"] .srv-card,[data-theme="cyber"] .pf-card,[data-theme="cyber"] .test-card,[data-theme="cyber"] .price-card{border-width:2px}
+[data-theme="cyber"] .faq-q{font-family:'Space Mono',monospace}
+[data-theme="cyber"] .tp-toggle{border-color:#00ff41;box-shadow:0 0 18px rgba(0,255,65,.25)}
+
+/* 8) AURORA — dreamy but sharper hierarchy */
+[data-theme="aurora"] .hero h1{font-size:clamp(44px,8vw,90px);line-height:.95;letter-spacing:-2px}
+[data-theme="aurora"] .hero h1 em{background:linear-gradient(135deg,#f43f5e,#9333ea,#3b82f6,#14b8a6);background-size:240% 240%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:auroraText 8s ease infinite}
+@keyframes auroraText{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+[data-theme="aurora"] .hero-badge{box-shadow:0 8px 24px rgba(147,51,234,.12)}
+[data-theme="aurora"] .srv-card:hover{transform:translateY(-10px) scale(1.01)}
+[data-theme="aurora"] .tp-toggle{background:linear-gradient(135deg,#f43f5e,#9333ea,#3b82f6);color:#fff;border:none}
+
+/* ════════════════════════════════════════════════
    RESPONSIVE
    ════════════════════════════════════════════════ */
 @media(max-width:900px){
