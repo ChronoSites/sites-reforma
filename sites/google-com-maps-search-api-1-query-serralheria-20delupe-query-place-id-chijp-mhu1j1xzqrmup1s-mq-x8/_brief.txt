@@ -1,0 +1,263 @@
+══════════════════════════════════════════════════════════════════
+                    BRIEF DE DESIGN — SERRALHERIA DELUPE
+              Site Institucional + Portfólio  ·  Single-Page
+══════════════════════════════════════════════════════════════════
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. SOBRE O NEGÓCIO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Nome .............. Serralheria Delupe
+  Nota Google ....... ⭐ 4.9 (63 avaliações)
+  Endereço .......... R. Alix Magalhães Ribeiro, 229
+                      Jardim Montreal — Sorocaba, SP · 18053-450
+  Telefone .......... (15) 99670-4875
+  Google Maps ....... https://www.google.com/maps/search/?api=1&query=Serralheria%20Delupe&query_place_id=ChIJP-mhu1j1xZQRMuP1s_Mq_x8
+  Segmento .......... Serralheria (metalurgia artesanal e industrial)
+
+  A Serralheria Delupe é referência em Sorocaba e região, oferecendo
+  soluções completas em estruturas metálicas, portões, grades, corrimãos,
+  coberturas para galpões e peças de design sob medida. Sua nota de 4.9
+  com 63 avaliações no Google Maps comprova a excelência e a confiança
+  conquistada junto a clientes residenciais e comerciais.
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │  PÚBLICO-ALVO                                              │
+  │  • Proprietários residenciais (portões, grades, corrimãos) │
+  │  • Construtoras e empreiteiros (estruturas, galpões)       │
+  │  • Arquitetos e designers (peças sob medida)               │
+  │  • Comércios e indústrias (coberturas, segurança)          │
+  └─────────────────────────────────────────────────────────────┘
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │  DIFERENCIAIS                                              │
+  │  • Nota 4.9 ★ no Google — qualidade comprovada             │
+  │  • Portfólio diverso: do residencial ao industrial         │
+  │  • Atendimento personalizado via WhatsApp                  │
+  │  • Acabamento impecável e atenção ao detalhe               │
+  └─────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2. CONCEITO VISUAL — "INDUSTRIAL PREMIUM"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  O conceito visual mistura a robustez do aço com a sofisticação do
+  design contemporâneo. Tons escuros de carvão e grafite (remetendo ao
+  metal) são contrastados por laranjas e âmbares quentes (remetendo a
+  faíscas e solda), criando uma identidade que transmite força, perícia
+  e modernidade.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3. PALETA DE CORES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ┌────────────────────┬───────────┬──────────────────────────────────┐
+  │ Função             │ HEX       │ Descrição                        │
+  ├────────────────────┼───────────┼──────────────────────────────────┤
+  │ Primária (Dark)    │ #1A1A2E   │ Azul-carvão profundo / fundos    │
+  │ Primária (Mid)     │ #16213E   │ Azul-escuro / seções alternadas  │
+  │ Accent Principal   │ #E67E22   │ Laranja-forja / CTAs e destaques │
+  │ Accent Hover       │ #D35400   │ Laranja escuro / hover states    │
+  │ Accent Secundário  │ #F39C12   │ Âmbar / badges e detalhes        │
+  │ Texto Claro        │ #F5F5F5   │ Branco quente / texto principal   │
+  │ Texto Sutil        │ #B0B0B0   │ Cinza claro / texto secundário   │
+  │ Surface Clara      │ #FFFFFF   │ Branco puro / cards e modais     │
+  │ Surface Escura     │ #0F3460   │ Azul-marinho / seções premium    │
+  │ Sucesso            │ #27AE60   │ Verde / nota e confirmações      │
+  └────────────────────┴───────────┴──────────────────────────────────┘
+
+  Justificativa: A paleta industrial escura posiciona a marca como
+  sofisticada e profissional. O laranja-forja cria energia e urgência
+  nos call-to-actions, remetendo diretamente ao universo metalúrgico
+  (faíscas, calor, transformação do metal).
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4. TIPOGRAFIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ┌──────────────────┬──────────────────┬──────────────────────────┐
+  │ Uso              │ Fonte            │ Detalhes                 │
+  ├──────────────────┼──────────────────┼──────────────────────────┤
+  │ Headings (h1-h3) │ Montserrat       │ 800 (ExtraBold)          │
+  │                  │                  │ Uppercase, letter-spacing│
+  │                  │                  │ 2px, impactante          │
+  ├──────────────────┼──────────────────┼──────────────────────────┤
+  │ Subheadings (h4) │ Montserrat       │ 600 (SemiBold)           │
+  ├──────────────────┼──────────────────┼──────────────────────────┤
+  │ Corpo de texto   │ Inter            │ 400 (Regular) / 500      │
+  │                  │                  │ 16px base, line-height   │
+  │                  │                  │ 1.7 para legibilidade    │
+  ├──────────────────┼──────────────────┼──────────────────────────┤
+  │ Botões / CTAs    │ Montserrat       │ 700 (Bold), uppercase    │
+  │                  │                  │ letter-spacing: 1.5px    │
+  └──────────────────┴──────────────────┴──────────────────────────┘
+
+  Escala tipográfica (desktop → mobile):
+    h1: 56px → 36px
+    h2: 40px → 28px
+    h3: 28px → 22px
+    h4: 20px → 18px
+    body: 16px → 15px
+    small: 14px → 13px
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  5. LAYOUT & GRID
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Approach ........... Mobile-First, Single Page com seções
+  • Max-width .......... 1200px (container centralizado)
+  • Grid ............... CSS Grid + Flexbox
+  • Gutter ............. 24px (desktop) / 16px (mobile)
+  • Padding seções ..... 100px vertical (desktop) / 60px (mobile)
+  • Seções alternadas .. Background escuro / escuro variante
+                         criando ritmo visual
+
+  Breakpoints:
+    Mobile:  < 768px
+    Tablet:  768px — 1024px
+    Desktop: > 1024px
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  6. ESTILO VISUAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  • Tom geral .......... Dark mode industrial premium
+  • Border radius ...... 12px (cards) / 8px (botões) / 50% (avatares)
+  • Sombras ............ 0 8px 32px rgba(0,0,0,0.3) — profundidade dramática
+  • Hover effects ...... Scale 1.03 + sombra amplificada
+  • Transições ......... 0.3s cubic-bezier(0.4, 0, 0.2, 1) — suave e moderna
+  • Gradientes ......... Sutis, de #1A1A2E → #16213E nas seções
+  • Overlay em imagens . rgba(26,26,46,0.6) com texto por cima
+  • Linha accent ....... Barras de 4px #E67E22 sob títulos de seção
+  • Glassmorphism ...... Cards com backdrop-filter: blur(10px)
+                         e borda semi-transparente
+  • Animações scroll ... Fade-in + slide-up ao entrar no viewport
+                         usando Intersection Observer
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  7. COMPONENTES UI
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  BOTÕES
+  ├─ Primário: bg #E67E22, texto branco, hover #D35400, sombra laranja
+  ├─ Secundário: borda 2px #E67E22, transparente, hover preenchido
+  └─ WhatsApp: bg #25D366, ícone WhatsApp, flutuante (FAB)
+
+  CARDS DE PORTFÓLIO
+  ├─ Imagem com aspect-ratio 4:3, object-fit cover
+  ├─ Overlay gradient no hover com título da categoria
+  ├─ Border-radius 12px, sombra dramática
+  └─ Filtro por categoria (tabs ou botões)
+
+  CARDS DE SERVIÇO
+  ├─ Ícone SVG grande (64px) em cor accent
+  ├─ Título + descrição curta
+  ├─ Borda left 4px #E67E22
+  └─ Hover: translateY(-8px) + sombra
+
+  NAVBAR
+  ├─ Fixa no topo, backdrop-filter: blur(12px)
+  ├─ Logo à esquerda, links centralizados, CTA à direita
+  ├─ Hamburger em mobile com menu fullscreen
+  └─ Scroll-spy para destacar seção ativa
+
+  HERO SECTION
+  ├─ Fullscreen (100vh) com imagem/vídeo de fundo
+  ├─ Overlay escuro com gradiente
+  ├─ Título impactante + subtítulo + 2 CTAs
+  ├─ Scroll indicator animado (chevron pulsante)
+  └─ Parallax sutil no background
+
+  FOOTER
+  ├─ Background mais escuro (#111)
+  ├─ 3 colunas: Info, Links, Contato
+  ├─ Ícones redes sociais
+  └─ Copyright + link Google Maps
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  8. SEÇÕES DO SITE (Single Page)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ┌─────┬──────────────┬────────────────────────────────────────────┐
+  │  #  │ Seção        │ Conteúdo                                   │
+  ├─────┼──────────────┼────────────────────────────────────────────┤
+  │  1  │ HERO         │ Vídeo/imagem fullscreen, headline forte,   │
+  │     │              │ CTA WhatsApp + CTA Portfólio               │
+  ├─────┼──────────────┼────────────────────────────────────────────┤
+  │  2  │ SOBRE        │ Breve história, nota Google, contador      │
+  │     │              │ animado (63 avaliações, 4.9 estrelas)      │
+  ├─────┼──────────────┼────────────────────────────────────────────┤
+  │  3  │ SERVIÇOS     │ Grid de cards com ícones:                  │
+  │     │              │ Portões, Grades, Corrimãos, Estruturas     │
+  │     │              │ Metálicas, Coberturas/Telhados, Peças      │
+  │     │              │ sob Medida                                 │
+  ├─────┼──────────────┼────────────────────────────────────────────┤
+  │  4  │ PORTFÓLIO    │ Galeria filtrável por categoria com        │
+  │     │              │ lightbox. Categorias: Portões, Grades,     │
+  │     │              │ Corrimãos, Estruturas e Coberturas,        │
+  │     │              │ Design e Decoração                         │
+  ├─────┼──────────────┼────────────────────────────────────────────┤
+  │  5  │ AVALIAÇÕES   │ Destaque nota 4.9, badge Google, link      │
+  │     │              │ para perfil completo                       │
+  ├─────┼──────────────┼────────────────────────────────────────────┤
+  │  6  │ CONTATO      │ Mapa embed, endereço, telefone, WhatsApp,  │
+  │     │              │ formulário simples de orçamento             │
+  ├─────┼──────────────┼────────────────────────────────────────────┤
+  │  7  │ FOOTER       │ Info da empresa, links úteis, copyright    │
+  └─────┴──────────────┴────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  9. MAPEAMENTO DE ASSETS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  HERO / GERAL
+  ├─ video mostrando casa chique com algumas coisas de serralheria...mp4
+  ├─ arte legal com lampada.jpg
+  └─ SaveClip.App_328212001_...jpg
+
+  PORTÕES
+  ├─ portão preto design bonito.jpg
+  ├─ portão marrom.jpg / portão marrom 2.jpg
+  ├─ portão.jpg / portões preto.jpg
+  └─ por preta.jpg
+
+  GRADES & SEGURANÇA
+  ├─ grades bonitas pretas.jpg
+  ├─ grades em janela.jpg
+  ├─ grades.jpg
+  ├─ sacada com grade branca.jpg
+  ├─ lugar em cima com grade.jpg / outro angulo.jpg
+  └─ rede de espinhos para nao atravessar muro.jpg
+
+  CORRIMÃOS & ESCADAS
+  ├─ corrimao escada.jpg
+  ├─ corrimão.jpg
+  ├─ corrimãos.jpg
+  └─ grades esacada, corrimao, escada.jpg
+
+  ESTRUTURAS METÁLICAS & TELHADOS
+  ├─ estrutura metalica telhado para galpao.jpg (+ 2, + cara trabalhando)
+  ├─ outra estrutura metalica telhado galpao.jpg (+ 2, + 3)
+  ├─ galpao com teto.jpg
+  ├─ telhado galpao finalizado.jpg
+  ├─ telhado metalico.jpg
+  ├─ telhado outro galpao.jpg / angulo 2.jpg
+  └─ visão de cima do telhado.jpg
+
+  DESIGN & DECORAÇÃO
+  ├─ mesinha com design dahora metalica.jpeg
+  └─ mesma mesinha outro angulo.jpeg
+
+
+══════════════════════════════════════════════════════════════════
+                         FIM DO BRIEF
+══════════════════════════════════════════════════════════════════
