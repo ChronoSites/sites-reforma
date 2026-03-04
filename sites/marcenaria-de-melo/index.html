@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcenaria DeMelo | Móveis Sob Medida em São Paulo</title>
+    <meta name="description" content="Marcenaria DeMelo - Desde 1985 criando ambientes modernos e inteligentes. Móveis planejados sob medida para cozinhas, salas, quartos, banheiros e ambientes corporativos em São Paulo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <span class="loader-text">DeMelo</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">
+                <img src="assets/logo.avif" alt="Marcenaria DeMelo" class="logo-img">
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+                <li><a href="https://wa.me/551137428167" target="_blank" class="nav-cta"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg" style="background-image: url('assets/banner quartos.avif')">
+            <div class="slide-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Desde 1985</div>
+            <h1 class="hero-title">
+                Criamos ambientes<br>
+                <span class="hero-highlight">modernos e inteligentes</span>
+            </h1>
+            <p class="hero-subtitle">que unem praticidade, conforto e beleza</p>
+            <div class="hero-actions">
+                <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
+                <a href="#portfolio" class="btn btn-outline">Ver Projetos</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value"><span class="stat-number" data-target="40">0</span><span class="stat-suffix">+</span></div>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <div class="stat-value"><span class="stat-number" data-target="3000">0</span><span class="stat-suffix">+</span></div>
+                    <span class="stat-label">Projetos Realizados</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <div class="stat-value"><span class="stat-number" data-target="4.7">0</span><span class="stat-suffix"><i class="fas fa-star"></i></span></div>
+                    <span class="stat-label">Google Reviews</span>
+                </div>
+            </div>
+        </div>
+        <a href="#sobre" class="scroll-indicator">
+            <span>Explorar</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="section sobre">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Quem Somos</span>
+                <h2 class="section-title">Transforme o seu projeto<br><span class="highlight">em realidade</span></h2>
+            </div>
+            <div class="sobre-grid">
+                <div class="sobre-content">
+                    <p class="sobre-lead">Estamos estabelecidos no mercado de móveis de madeira <strong>desde 1985</strong>, desenvolvendo projetos residenciais e corporativos com excelência.</p>
+                    <p>Nestes anos desenvolvemos uma capacidade técnica que nos permite oferecer soluções personalizadas, aliadas a um adequado profissionalismo e confiabilidade.</p>
+                    <p>Contamos com uma equipe especializada de marceneiros, visando um atendimento de excelência, garantindo a oferta de serviços de reconhecida qualidade. Sempre colocamos como ponto fundamental o bem-estar do cliente.</p>
+                    <div class="sobre-features">
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+                            <div>
+                                <h4>Sob Medida</h4>
+                                <p>Projetos personalizados para cada espaço e necessidade</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                            <div>
+                                <h4>Sustentável</h4>
+                                <p>Madeiras com garantia de qualidade e origem ambiental adequada</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+                            <div>
+                                <h4>Parceria</h4>
+                                <p>Trabalhamos com arquitetos, decoradores e designers</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                            <div>
+                                <h4>Restauração</h4>
+                                <p>Conserto e readequação de mobiliários existentes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-image">
+                    <div class="image-frame">
+                        <img src="assets/banner cozinha.avif" alt="Cozinha planejada Marcenaria DeMelo" loading="lazy">
+                        <div class="image-accent"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">40+</span>
+                        <span class="exp-text">anos de<br>excelência</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section class="section materiais">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Qualidade</span>
+                <h2 class="section-title">Materiais de <span class="highlight">Primeira Linha</span></h2>
+                <p class="section-desc">A matéria prima utilizada na execução do seu móvel será sempre escolhida dos melhores fornecedores.</p>
+            </div>
+            <div class="materiais-grid">
+                <div class="material-card">
+                    <div class="material-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>MDF & MDP</h3>
+                    <p>Chapas de alta qualidade com diversos padrões e acabamentos para móveis duráveis e elegantes.</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon"><i class="fas fa-tree"></i></div>
+                    <h3>Madeira Maciça</h3>
+                    <p>Peças elaboradas em madeira bruta para projetos que exigem robustez e sofisticação natural.</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon"><i class="fas fa-paint-roller"></i></div>
+                    <h3>Acabamentos</h3>
+                    <p>Ampla variedade: revestimentos padrão, envernizamento, laqueação e laminados melamínicos.</p>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon"><i class="fas fa-th-large"></i></div>
+                    <h3>Compensado & OSB</h3>
+                    <p>Chapas estruturais de madeira compensada e OSB para projetos que aliam resistência e versatilidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="section servicos">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Nossos Serviços</span>
+                <h2 class="section-title">Ambientes que <span class="highlight">Transformamos</span></h2>
+                <p class="section-desc">Elaboramos e executamos o projeto do seu móvel planejado, sob medida, com qualidade e atenção a cada detalhe.</p>
+            </div>
+            <div class="servicos-grid">
+                <a href="#portfolio" class="servico-card" data-filter="cozinha">
+                    <div class="servico-img">
+                        <img src="assets/banner cozinha.avif" alt="Cozinhas Planejadas" loading="lazy">
+                        <div class="servico-overlay">
+                            <span class="servico-cta">Ver Projetos <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="servico-info">
+                        <h3>Cozinhas</h3>
+                        <p>Cozinhas planejadas que unem funcionalidade e design sofisticado.</p>
+                    </div>
+                </a>
+                <a href="#portfolio" class="servico-card" data-filter="sala">
+                    <div class="servico-img">
+                        <img src="assets/banner sala.avif" alt="Salas Planejadas" loading="lazy">
+                        <div class="servico-overlay">
+                            <span class="servico-cta">Ver Projetos <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="servico-info">
+                        <h3>Salas</h3>
+                        <p>Ambientes de estar elegantes e confortáveis feitos sob medida.</p>
+                    </div>
+                </a>
+                <a href="#portfolio" class="servico-card" data-filter="quarto">
+                    <div class="servico-img">
+                        <img src="assets/banner quartos.avif" alt="Quartos Planejados" loading="lazy">
+                        <div class="servico-overlay">
+                            <span class="servico-cta">Ver Projetos <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="servico-info">
+                        <h3>Quartos</h3>
+                        <p>O quarto dos seus sonhos com armários e mobiliário personalizado.</p>
+                    </div>
+                </a>
+                <a href="#portfolio" class="servico-card" data-filter="banheiro">
+                    <div class="servico-img">
+                        <img src="assets/banner banheiros.avif" alt="Banheiros Planejados" loading="lazy">
+                        <div class="servico-overlay">
+                            <span class="servico-cta">Ver Projetos <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="servico-info">
+                        <h3>Banheiros</h3>
+                        <p>Armários embutidos e gabinetes que otimizam cada centímetro.</p>
+                    </div>
+                </a>
+                <a href="#portfolio" class="servico-card" data-filter="corporativo">
+                    <div class="servico-img">
+                        <img src="assets/banner comrporativos.avif" alt="Móveis Corporativos" loading="lazy">
+                        <div class="servico-overlay">
+                            <span class="servico-cta">Ver Projetos <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="servico-info">
+                        <h3>Corporativos</h3>
+                        <p>Mobiliário corporativo profissional e funcional para empresas.</p>
+                    </div>
+                </a>
+                <a href="#portfolio" class="servico-card" data-filter="outros">
+                    <div class="servico-img">
+                        <img src="assets/banner outros ambientes.avif" alt="Outros Ambientes" loading="lazy">
+                        <div class="servico-overlay">
+                            <span class="servico-cta">Ver Projetos <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="servico-info">
+                        <h3>Outros Ambientes</h3>
+                        <p>Lavanderia, home office, closets e qualquer ambiente que precisar.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Portfólio</span>
+                <h2 class="section-title">Nossos <span class="highlight">Projetos</span></h2>
+                <p class="section-desc">Conheça alguns dos projetos que já realizamos para nossos clientes.</p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="cozinha">Cozinhas</button>
+                <button class="filter-btn" data-filter="sala">Salas</button>
+                <button class="filter-btn" data-filter="quarto">Quartos</button>
+                <button class="filter-btn" data-filter="banheiro">Banheiros</button>
+                <button class="filter-btn" data-filter="corporativo">Corporativos</button>
+                <button class="filter-btn" data-filter="outros">Outros</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Cozinhas -->
+                <div class="portfolio-item" data-category="cozinha">
+                    <img src="https://static.wixstatic.com/media/622a7f_d1f2edea9b364697b221f197e93a1f50~mv2.jpg/v1/fit/w_450,h_584,q_90,enc_avif,quality_auto/622a7f_d1f2edea9b364697b221f197e93a1f50~mv2.jpg" alt="Cozinha planejada clara" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Cozinha</span>
+                        <h3>Cozinha Clara</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="cozinha">
+                    <img src="https://static.wixstatic.com/media/622a7f_77227f390a3d462ea63b7f45bf7349d3~mv2_d_2448_3264_s_4_2.jpg/v1/fit/w_794,h_584,q_90,enc_avif,quality_auto/622a7f_77227f390a3d462ea63b7f45bf7349d3~mv2_d_2448_3264_s_4_2.jpg" alt="Cozinha planejada clara" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Cozinha</span>
+                        <h3>Cozinha Moderna</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="cozinha">
+                    <img src="https://static.wixstatic.com/media/622a7f_c9f0f395b36a475b94794d3807ac42ff~mv2_d_3264_1836_s_2.jpg/v1/fit/w_794,h_584,q_90,enc_avif,quality_auto/622a7f_c9f0f395b36a475b94794d3807ac42ff~mv2_d_3264_1836_s_2.jpg" alt="Cozinha marrom planejada" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Cozinha</span>
+                        <h3>Cozinha Rústica</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="cozinha">
+                    <img src="https://static.wixstatic.com/media/622a7f_671a0e591a92408eb555f1c7e856065b~mv2.jpg/v1/fit/w_794,h_450,q_90,enc_avif,quality_auto/622a7f_671a0e591a92408eb555f1c7e856065b~mv2.jpg" alt="Cozinha planejada" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Cozinha</span>
+                        <h3>Cozinha Compacta</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="cozinha">
+                    <img src="https://static.wixstatic.com/media/622a7f_474affe378284506b9cbb8b3fd8f17c7~mv2.jpg/v1/fit/w_794,h_450,q_90,enc_avif,quality_auto/622a7f_474affe378284506b9cbb8b3fd8f17c7~mv2.jpg" alt="Cozinha grande planejada" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Cozinha</span>
+                        <h3>Cozinha Gourmet</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="cozinha">
+                    <img src="https://static.wixstatic.com/media/622a7f_d8066a88ba054facb8bda4504007246d~mv2.jpg/v1/fit/w_451,h_584,q_90,enc_avif,quality_auto/622a7f_d8066a88ba054facb8bda4504007246d~mv2.jpg" alt="Cozinha planejada" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Cozinha</span>
+                        <h3>Cozinha Elegante</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="cozinha">
+                    <img src="https://static.wixstatic.com/media/622a7f_48da9de555d04b8da4c14e7590768fc0~mv2.jpg/v1/fit/w_451,h_584,q_90,enc_avif,quality_auto/622a7f_48da9de555d04b8da4c14e7590768fc0~mv2.jpg" alt="Cozinha planejada" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Cozinha</span>
+                        <h3>Cozinha Funcional</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="cozinha">
+                    <img src="https://static.wixstatic.com/media/622a7f_9fe25c2d7ba84726b616805b82b5cb8c~mv2.jpg/v1/fit/w_794,h_584,q_90,enc_avif,quality_auto/622a7f_9fe25c2d7ba84726b616805b82b5cb8c~mv2.jpg" alt="Cozinha planejada" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Cozinha</span>
+                        <h3>Cozinha Contemporânea</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <!-- Salas -->
+                <div class="portfolio-item" data-category="sala">
+                    <img src="https://static.wixstatic.com/media/622a7f_925c30632f0845499aec748753d86997~mv2.jpg/v1/fit/w_451,h_584,q_90,enc_avif,quality_auto/622a7f_925c30632f0845499aec748753d86997~mv2.jpg" alt="Sala planejada bonita" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Sala</span>
+                        <h3>Sala de Estar</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="sala">
+                    <img src="https://static.wixstatic.com/media/622a7f_71f8a288b64f4862ad3ed319733600b6~mv2.jpg/v1/fit/w_600,h_584,q_90,enc_avif,quality_auto/622a7f_71f8a288b64f4862ad3ed319733600b6~mv2.jpg" alt="Sala planejada" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Sala</span>
+                        <h3>Sala Moderna</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="sala">
+                    <img src="https://static.wixstatic.com/media/622a7f_c0022e7f482c413fa44dfbafb919f11e~mv2.jpg/v1/fit/w_600,h_584,q_90,enc_avif,quality_auto/622a7f_c0022e7f482c413fa44dfbafb919f11e~mv2.jpg" alt="Sala planejada bonita" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Sala</span>
+                        <h3>Home Theater</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="sala">
+                    <img src="https://static.wixstatic.com/media/622a7f_ff4c856501d6430ca501702f19dc984a~mv2.jpg/v1/fit/w_600,h_584,q_90,enc_avif,quality_auto/622a7f_ff4c856501d6430ca501702f19dc984a~mv2.jpg" alt="Sala planejada" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Sala</span>
+                        <h3>Sala Clássica</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="sala">
+                    <img src="https://static.wixstatic.com/media/622a7f_807aafc4d28742a0958538bc4e50f780~mv2.jpg/v1/fit/w_794,h_584,q_90,enc_avif,quality_auto/622a7f_807aafc4d28742a0958538bc4e50f780~mv2.jpg" alt="Sala planejada bonita" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Sala</span>
+                        <h3>Sala Elegante</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="sala">
+                    <img src="https://static.wixstatic.com/media/622a7f_afbca87a07dd4b5baed4636794381ad1~mv2_d_3264_1836_s_2.jpg/v1/fit/w_794,h_584,q_90,enc_avif,quality_auto/622a7f_afbca87a07dd4b5baed4636794381ad1~mv2_d_3264_1836_s_2.jpg" alt="Sala bem bonita" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Sala</span>
+                        <h3>Sala Contemporânea</h3>
+                        <button class="portfolio-zoom" aria-label="Ampliar"><i class="fas fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <!-- Quartos — Placeholders -->
+                <div class="portfolio-item is-placeholder" data-category="quarto">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner quartos.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-bed"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+                <div class="portfolio-item is-placeholder" data-category="quarto">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner quartos.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-bed"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+                <div class="portfolio-item is-placeholder" data-category="quarto">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner quartos.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-bed"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+
+                <!-- Banheiros — Placeholders -->
+                <div class="portfolio-item is-placeholder" data-category="banheiro">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner banheiros.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-bath"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+                <div class="portfolio-item is-placeholder" data-category="banheiro">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner banheiros.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-bath"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+                <div class="portfolio-item is-placeholder" data-category="banheiro">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner banheiros.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-bath"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+
+                <!-- Corporativos — Placeholders -->
+                <div class="portfolio-item is-placeholder" data-category="corporativo">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner comrporativos.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-briefcase"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+                <div class="portfolio-item is-placeholder" data-category="corporativo">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner comrporativos.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-briefcase"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+                <div class="portfolio-item is-placeholder" data-category="corporativo">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner comrporativos.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-briefcase"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+
+                <!-- Outros — Placeholders -->
+                <div class="portfolio-item is-placeholder" data-category="outros">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner outros ambientes.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-home"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+                <div class="portfolio-item is-placeholder" data-category="outros">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner outros ambientes.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-home"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+                <div class="portfolio-item is-placeholder" data-category="outros">
+                    <div class="portfolio-placeholder-bg" style="background-image: url('assets/banner outros ambientes.avif')"></div>
+                    <div class="portfolio-placeholder-label">
+                        <div class="placeholder-icon"><i class="fas fa-home"></i></div>
+                        <span class="placeholder-text">Preview</span>
+                        <span class="placeholder-sub">Em breve</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para transformar seu ambiente?</h2>
+                <p>Entre em contato conosco e solicite um orçamento sem compromisso. Nossa equipe está pronta para criar o projeto perfeito para você.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/551137428167" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>
+                    <a href="#contato" class="btn btn-outline-light">Enviar Mensagem</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="avaliacoes" class="section avaliacoes">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Avaliações</span>
+                <h2 class="section-title">O que nossos clientes <span class="highlight">dizem</span></h2>
+                <div class="google-rating">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google" class="google-logo">
+                    <div class="rating-info">
+                        <div class="rating-stars">
+                            <span class="rating-number">4.7</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <span class="rating-count">73 avaliações no Google</span>
+                    </div>
+                    <a href="https://www.google.com/search?q=marcenariademelo&ie=UTF-8#lrd=0x94ce568ed5287117:0xeecff15043115a67,1,,,," target="_blank" class="btn btn-sm">Ver Todas</a>
+                </div>
+            </div>
+            <div class="reviews-slider">
+                <div class="reviews-track">
+                    <!-- Review 1 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">GL</div>
+                            <div class="reviewer-info">
+                                <h4>Gustavo Live</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google" class="review-google-icon">
+                        </div>
+                        <p class="review-text">"Marcenaria de alto padrão. Qualidade excepcional e pós venda muito bom. Recomendo demais!"</p>
+                        <div class="review-response">
+                            <span class="response-label"><i class="fas fa-reply"></i> Resposta da Marcenaria DeMelo</span>
+                            <p>Olá, Sr. Gustavo, Obrigado pela sua avaliação. Estamos felizes em saber que a equipe DeMelo atendeu as suas expectativas. Sua satisfação é nossa maior recompensa!</p>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">RS</div>
+                            <div class="reviewer-info">
+                                <h4>Rosana Sangar</h4>
+                                <span class="reviewer-badge"><i class="fas fa-map-marker-alt"></i> Local Guide</span>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google" class="review-google-icon">
+                        </div>
+                        <p class="review-text">"Eu só posso agradecer ao pessoal da Marcenaria Demelo, por tudo, desde o atendimento, preço, prazo, até a instalação do meu móvel. Já conheço eles há um bom tempo pois também prestam serviços para a empresa onde trabalho, e sempre com ótimo atendimento e excelente resultado. Super recomendo."</p>
+                        <div class="review-response">
+                            <span class="response-label"><i class="fas fa-reply"></i> Resposta da Marcenaria DeMelo</span>
+                            <p>Olá, Sra. Rosana, Obrigado pela sua avaliação. Estamos felizes em saber que a equipe DeMelo atendeu as suas expectativas. Conte sempre conosco!</p>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">SG</div>
+                            <div class="reviewer-info">
+                                <h4>Sergio A Garcia</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google" class="review-google-icon">
+                        </div>
+                        <p class="review-text">"Ótimo trabalho na lavanderia, Sr Ramilson e equipe muito profissional."</p>
+                        <div class="review-response">
+                            <span class="response-label"><i class="fas fa-reply"></i> Resposta da Marcenaria DeMelo</span>
+                            <p>Olá, Sr. Sergio, Obrigado pela sua avaliação. Seu feedback é fundamental para nós e nos motiva a continuar aprimorando nossos serviços. Sua satisfação é nossa maior recompensa!</p>
+                        </div>
+                    </div>
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-avatar">BC</div>
+                            <div class="reviewer-info">
+                                <h4>Bendito Coworking</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" alt="Google" class="review-google-icon">
+                        </div>
+                        <p class="review-text">"A Marcenaria DeMelo nos atende há muitos anos e presta serviço de qualidade. Recomendamos o trabalho deles!"</p>
+                    </div>
+                </div>
+                <div class="reviews-nav">
+                    <button class="review-nav-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <button class="review-nav-btn next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section contato">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Fale Conosco</span>
+                <h2 class="section-title">Entre em <span class="highlight">Contato</span></h2>
+                <p class="section-desc">Estamos prontos para transformar o seu projeto em realidade. Solicite um orçamento sem compromisso.</p>
+            </div>
+            <div class="contato-grid">
+                <div class="contato-info">
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Rua Dona Layr Costa Rego 200<br>Jardim Peri Peri, São Paulo - SP<br>CEP 05537-010</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>Telefone / WhatsApp</h4>
+                                <p><a href="tel:+551137428167">(11) 3742-8167</a></p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p><a href="mailto:marcenaria@marcenariademelo.com.br">marcenaria@marcenariademelo.com.br</a></p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Horário</h4>
+                                <p>Segunda à Sexta: 8h às 18h<br>Sábados: com agendamento</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://instagram.com/marcenariademelo/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pt-br.facebook.com/marcenariademelo.com.br" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/551137428167" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="payment-info">
+                        <p><i class="fas fa-credit-card"></i> Aceitamos todos os cartões de crédito</p>
+                    </div>
+                </div>
+                <div class="contato-form-wrapper">
+                    <form class="contato-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome ou Empresa *</label>
+                                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" name="assunto">
+                                <option value="">Selecione o assunto</option>
+                                <option value="orcamento">Solicitar Orçamento</option>
+                                <option value="cozinha">Cozinha Planejada</option>
+                                <option value="sala">Sala Planejada</option>
+                                <option value="quarto">Quarto Planejado</option>
+                                <option value="banheiro">Banheiro Planejado</option>
+                                <option value="corporativo">Mobiliário Corporativo</option>
+                                <option value="restauracao">Restauração / Conserto</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva seu projeto ou dúvida..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Enviar Mensagem</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- Map -->
+            <div class="map-wrapper">
+                <h3 class="map-title"><i class="fas fa-map-marker-alt"></i> Nossa Localização — Região do Butantã, Zona Oeste de São Paulo</h3>
+                <p class="map-subtitle">Atendemos toda a Grande São Paulo, interior e litoral.</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4572271110787!2d-46.7355638!3d-23.5879297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce568ed5287117%3A0xeecff15043115a67!2sMarcenaria%20DeMelo!5e0!3m2!1sen!2sbr!4v1772644688453!5m2!1sen!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="logo">
+                        <img src="assets/logo.avif" alt="Marcenaria DeMelo" class="logo-img footer-logo-img">
+                    </a>
+                    <p>Desde 1985 criando ambientes modernos e inteligentes que unem praticidade, conforto e beleza.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/marcenariademelo/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pt-br.facebook.com/marcenariademelo.com.br" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/551137428167" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#hero">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#avaliacoes">Avaliações</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#servicos">Cozinhas Planejadas</a></li>
+                        <li><a href="#servicos">Salas Planejadas</a></li>
+                        <li><a href="#servicos">Quartos Planejados</a></li>
+                        <li><a href="#servicos">Banheiros Planejados</a></li>
+                        <li><a href="#servicos">Móveis Corporativos</a></li>
+                        <li><a href="#servicos">Restauração</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> R. Dona Layr Costa Rego 200, São Paulo - SP</p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+551137428167">(11) 3742-8167</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:marcenaria@marcenariademelo.com.br">marcenaria@marcenariademelo.com.br</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Marcenaria DeMelo. Todos os direitos reservados.</p>
+                <p class="footer-preview">Preview por <span class="chrono-sites">Chrono Sites</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/551137428167" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Fale Conosco!</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="Imagem ampliada" id="lightboxImg">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
