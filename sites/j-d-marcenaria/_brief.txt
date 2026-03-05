@@ -1,0 +1,158 @@
+# Brief de Design — J&D Marcenaria
+> Site institucional · Single Page · Mobile-first
+
+---
+
+## 1. Sobre o Negócio
+
+**J&D Marcenaria** é uma marcenaria localizada no bairro Prosperidade, em São Caetano do Sul – SP. Atende clientes residenciais e comerciais com serviços de marcenaria sob medida: móveis planejados, armários, cozinhas, closets, portas, painéis e projetos especiais.
+
+- **Endereço:** R. Turmalinas, 164 – Prosperidade, São Caetano do Sul – SP, 09550-730
+- **Telefone / WhatsApp:** (11) 98551-6608
+- **Google Maps:** 5 ★ (1 avaliação)
+- **Perfil Google:** https://www.google.com/maps/search/?api=1&query=J%26D%20Marcenaria&query_place_id=ChIJAUR6Nj9dzpQRATipafOVZ84
+
+**Público-alvo:** Moradores e empresas da região do ABC Paulista e Grande São Paulo que buscam soluções em marcenaria personalizada com atendimento direto e próximo.
+
+**Diferenciais percebidos:** Atendimento pessoal via WhatsApp, trabalho artesanal com foco em qualidade, proximidade com o cliente do início ao fim do projeto.
+
+---
+
+## 2. Conceito Visual
+
+O site transmite **sofisticação acessível**: uma marcenaria que valoriza a matéria-prima, o trabalho manual e a atenção aos detalhes. O visual é limpo, moderno e quente — remetendo a madeira, confiança e cuidado artesanal.
+
+Inspiração: estúdios de design de interiores e marcenarias boutique. Tons terrosos, tipografia elegante com boa leitura, espaço em branco generoso.
+
+---
+
+## 3. Paleta de Cores
+
+| Token           | Hex       | Uso                                      |
+|-----------------|-----------|------------------------------------------|
+| --color-primary | #5C3A1E   | Madeira escura · headings, navbar, CTA   |
+| --color-accent  | #C8956C   | Madeira clara · hovers, destaques, links |
+| --color-warm    | #F5EDE3   | Fundo quente · seções alternadas         |
+| --color-light   | #FAFAF7   | Fundo principal, cards                   |
+| --color-dark    | #1A1A1A   | Texto corpo                              |
+| --color-muted   | #7A7A7A   | Texto secundário, legendas               |
+| --color-white   | #FFFFFF   | Superfícies, overlays                    |
+
+---
+
+## 4. Tipografia
+
+- **Headings:** "Playfair Display", serif — peso 700 / 600
+  - Hero title: clamp(2rem, 5vw, 3.5rem)
+  - Section title: clamp(1.5rem, 3vw, 2.25rem)
+- **Corpo / UI:** "Inter", sans-serif — peso 400 / 500
+  - Body: 1rem (16px) / line-height 1.7
+  - Small/caption: 0.875rem
+
+Ambas disponíveis no Google Fonts gratuitamente.
+
+---
+
+## 5. Layout & Responsividade
+
+- **Abordagem:** Mobile-first
+- **Container:** max-width 1200px, padding inline 1.5rem
+- **Breakpoints:**
+  - Mobile: < 768px (1 coluna)
+  - Tablet: 768px–1024px (2 colunas onde aplicável)
+  - Desktop: > 1024px (grid completo)
+- **Espaçamento:** múltiplos de 8px (8, 16, 24, 32, 48, 64, 80)
+- **Bordas:** border-radius 12px em cards, 8px em botões
+- **Sombras:** box-shadow: 0 4px 24px rgba(0,0,0,0.06)
+
+---
+
+## 6. Estrutura da Página (Single Page)
+
+### 6.1 Navbar
+- Logo "J&D Marcenaria" (texto estilizado)
+- Links âncora: Início · Sobre · Serviços · Galeria · Contato
+- Botão CTA "Fale Conosco" (link WhatsApp)
+- Menu hamburger no mobile com overlay animado
+
+### 6.2 Hero Section
+- Imagem de fundo: `assets/IMG_0541.webp` com overlay escuro (gradient)
+- Headline: "Marcenaria sob medida para transformar seus espaços"
+- Subtítulo curto e natural
+- Botão CTA primário (WhatsApp) + botão secundário (âncora para serviços)
+- Altura: 100vh no desktop, 80vh no mobile
+
+### 6.3 Sobre / Apresentação
+- Texto breve sobre a marcenaria (genérico mas natural)
+- 3 cards de destaque: "Sob Medida", "Qualidade Artesanal", "Atendimento Direto"
+- Ícones inline SVG
+
+### 6.4 Serviços
+- Grid de cards (3 colunas desktop, 1 mobile)
+- Serviços genéricos de marcenaria: Cozinhas Planejadas, Armários e Closets, Móveis sob Medida, Painéis e Revestimentos, Portas e Batentes, Projetos Comerciais
+- Cada card com ícone + título + descrição curta
+- Imagem placeholder com legenda "Preview"
+
+### 6.5 Galeria / Portfólio
+- Grid masonry-style ou grid uniforme
+- IMG_0541.webp como peça principal
+- Slots adicionais com placeholder "Preview" (6-8 itens)
+- Lightbox ao clicar
+
+### 6.6 Depoimento / Social Proof
+- Card destacado com a avaliação 5 estrelas do Google
+- Estrelas visuais + texto genérico
+- Badge "Avaliado no Google"
+
+### 6.7 CTA Final
+- Faixa de cor primária com texto claro
+- "Solicite seu orçamento sem compromisso"
+- Botão WhatsApp grande
+
+### 6.8 Footer
+- Informações de contato
+- Endereço com link Google Maps
+- WhatsApp com link direto
+- Horário genérico (Seg–Sex, 8h–18h | Sáb, 8h–12h)
+- Copyright
+
+---
+
+## 7. Componentes & Interações
+
+- **Scroll suave** para âncoras
+- **Navbar** com fundo transparente no topo, sólido ao scrollar (scroll-triggered)
+- **Reveal animations** — fade-up nos elementos ao entrar no viewport (IntersectionObserver)
+- **Lightbox** simples para galeria (JS puro, sem dependências)
+- **Menu mobile** com overlay e animação slide-in
+- **Botão WhatsApp flutuante** fixo no canto inferior direito
+
+---
+
+## 8. Assets Disponíveis
+
+| Arquivo                | Uso                                |
+|------------------------|------------------------------------|
+| assets/IMG_0541.webp   | Hero banner (imagem principal)     |
+| assets/20191202_151314.webp | Não utilizar (baixa qualidade) |
+| assets/IMG_2994.JPEG   | Não utilizar (baixa qualidade)     |
+
+Imagens placeholder adicionais com legenda "Preview" para slots de galeria e serviços.
+
+---
+
+## 9. Performance & SEO
+
+- Imagens com lazy loading (`loading="lazy"`)
+- Meta tags completas (title, description, OG tags)
+- Schema.org LocalBusiness em JSON-LD
+- Semântica HTML5 adequada (header, main, section, footer)
+- Fontes com display=swap
+- CSS e JS inline ou minificados (single page, sem build tools)
+
+---
+
+## 10. Tom de Voz
+
+Acolhedor, profissional, direto. Sem exageros. O texto deve soar como uma marcenaria séria que deixa o trabalho falar por si — não como marketing agressivo. Frases curtas, linguagem acessível, foco no benefício para o cliente.
+
