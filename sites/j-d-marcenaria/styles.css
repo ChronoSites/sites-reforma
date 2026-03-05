@@ -44,6 +44,7 @@ html {
   /* Firefox scrollbar */
   scrollbar-width: thin;
   scrollbar-color: var(--color-accent) var(--color-warm);
+  overflow-x: hidden; /* prevent horizontal scroll from translateX reveals */
 }
 
 /* Webkit scrollbar */
@@ -569,6 +570,7 @@ ul {
 /* ── Section Generic ──────────────────────────────────────────── */
 .section {
   padding: 5rem 0;
+  overflow: hidden; /* clip directional reveal animations */
 }
 
 .section--warm {
@@ -824,6 +826,7 @@ ul {
 .cta-section {
   background: linear-gradient(135deg, var(--color-primary) 0%, #3E2510 100%);
   padding: 5rem 0;
+  overflow: hidden;
 }
 
 .cta-section__inner {
@@ -1044,12 +1047,12 @@ ul {
 
 /* Variant: slide from left */
 .reveal--left {
-  transform: translateX(-48px);
+  transform: translateX(-32px);
 }
 
 /* Variant: slide from right */
 .reveal--right {
-  transform: translateX(48px);
+  transform: translateX(32px);
 }
 
 /* Variant: scale up */
