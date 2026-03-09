@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montador de Móveis JW | Rio Verde - GO</title>
+  <meta name="description" content="Montador de Móveis JW em Rio Verde - GO. Serviços de marcenaria, montagem e instalação de móveis. Avaliação 4.9 ⭐ no Google." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ========================
+       RESET & BASE
+    ======================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brown-deep:   #2C1810;
+      --brown-dark:   #4A2C1A;
+      --brown-mid:    #7B4A2D;
+      --brown-warm:   #A0622A;
+      --brown-light:  #C88A4E;
+      --gold:         #D4A853;
+      --gold-light:   #E8C97A;
+      --cream:        #FAF5EE;
+      --cream-dark:   #F0E8DA;
+      --text-dark:    #1A1008;
+      --text-body:    #3D2B1A;
+      --text-muted:   #7A6050;
+      --white:        #FFFFFF;
+      --shadow-sm:    0 2px 8px rgba(44,24,16,.12);
+      --shadow-md:    0 6px 24px rgba(44,24,16,.16);
+      --shadow-lg:    0 16px 48px rgba(44,24,16,.20);
+      --radius:       12px;
+      --radius-lg:    24px;
+      --transition:   .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    /* ========================
+       SCROLLBAR
+    ======================== */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--brown-deep);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, var(--brown-warm), var(--gold));
+      border-radius: 99px;
+      border: 2px solid var(--brown-deep);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, var(--gold), var(--gold-light));
+    }
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--brown-warm) var(--brown-deep);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+    a { text-decoration: none; color: inherit; }
+
+    section { padding: 80px 0; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-warm);
+      margin-bottom: 14px;
+    }
+    .section-label::before {
+      content: '';
+      width: 28px; height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--brown-deep);
+      line-height: 1.15;
+    }
+
+    .section-subtitle {
+      margin-top: 16px;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 560px;
+    }
+
+    /* ========================
+       NAVBAR
+    ======================== */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      transition: var(--transition);
+      padding: 0;
+    }
+    #navbar.scrolled {
+      background: rgba(44,24,16,.97);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      padding: 0 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .nav-logo span:first-child {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .nav-logo span:last-child {
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .88rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      color: rgba(255,255,255,.8);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 1.5px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--brown-deep) !important;
+      font-weight: 600 !important;
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: background var(--transition), transform var(--transition) !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+    .nav-cta::after { display: none !important; }
+
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-burger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--gold-light);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(44,24,16,.98);
+      backdrop-filter: blur(12px);
+      padding: 24px;
+      flex-direction: column;
+      gap: 0;
+      z-index: 999;
+      border-top: 1px solid rgba(212,168,83,.2);
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      display: block;
+      padding: 14px 0;
+      font-size: 1rem;
+      font-weight: 500;
+      color: rgba(255,255,255,.85);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: color var(--transition);
+    }
+    .nav-mobile a:last-child { border-bottom: none; }
+    .nav-mobile a:hover { color: var(--gold-light); }
+
+    /* ========================
+       HERO
+    ======================== */
+    #hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--brown-deep);
+      padding: 0;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      opacity: .35;
+    }
+    .hero-bg img { object-position: center; }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(44,24,16,.88) 0%, rgba(74,44,26,.6) 60%, rgba(123,74,45,.3) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 120px 24px 60px;
+      max-width: 800px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212,168,83,.15);
+      border: 1px solid rgba(212,168,83,.35);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 28px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge svg { width: 14px; height: 14px; fill: var(--gold); }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 7vw, 5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero-title em {
+      font-style: normal;
+      color: var(--gold-light);
+    }
+
+    .hero-desc {
+      font-size: clamp(.95rem, 2.5vw, 1.15rem);
+      color: rgba(255,255,255,.75);
+      max-width: 540px;
+      margin: 0 auto 16px;
+    }
+
+    .hero-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .88rem;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 40px;
+    }
+    .hero-location svg { width: 14px; height: 14px; fill: var(--gold); flex-shrink: 0; }
+
+    .hero-stars {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .stars {
+      display: flex;
+      gap: 3px;
+    }
+    .stars svg { width: 18px; height: 18px; fill: var(--gold); }
+    .hero-stars-text {
+      font-size: .88rem;
+      color: rgba(255,255,255,.7);
+    }
+    .hero-stars-text strong { color: var(--gold-light); }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: .95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+    .btn svg { width: 18px; height: 18px; }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--brown-deep);
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212,168,83,.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,.35);
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px; left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,.4);
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      animation: bounce 2s ease-in-out infinite;
+    }
+    .hero-scroll svg { width: 20px; height: 20px; fill: rgba(255,255,255,.4); }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ========================
+       STATS BAR
+    ======================== */
+    #stats {
+      padding: 0;
+      background: var(--brown-deep);
+      position: relative;
+      z-index: 1;
+    }
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(212,168,83,.15);
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 28px 20px;
+      border-right: 1px solid rgba(212,168,83,.12);
+      text-align: center;
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-txt {
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+    }
+
+    /* ========================
+       SERVICES
+    ======================== */
+    #services {
+      background: var(--cream);
+    }
+    .services-head {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .services-head .section-label { justify-content: center; }
+    .services-head .section-subtitle { margin: 16px auto 0; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(160,98,42,.08);
+      transition: transform var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--brown-warm), var(--gold));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--brown-warm), var(--gold));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .service-icon svg { width: 26px; height: 26px; fill: var(--white); }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--brown-deep);
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: .9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ========================
+       GALLERY
+    ======================== */
+    #gallery {
+      background: var(--cream-dark);
+    }
+    .gallery-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      gap: 14px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--cream-dark);
+      cursor: pointer;
+    }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(44,24,16,.65) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .gallery-item:hover::after { opacity: 1; }
+    .gallery-item:hover img { transform: scale(1.07); }
+
+    .gallery-item img {
+      transition: transform .5s cubic-bezier(.4,0,.2,1);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gi-1  { grid-column: 1 / 3; grid-row: 1 / 3; aspect-ratio: 1/1; }
+    .gi-2  { grid-column: 3; grid-row: 1; aspect-ratio: 1/1; }
+    .gi-3  { grid-column: 4; grid-row: 1; aspect-ratio: 1/1; }
+    .gi-4  { grid-column: 3; grid-row: 2; aspect-ratio: 1/1; }
+    .gi-5  { grid-column: 4; grid-row: 2; aspect-ratio: 1/1; }
+    .gi-6  { grid-column: 1; grid-row: 3; aspect-ratio: 1/1; }
+    .gi-7  { grid-column: 2; grid-row: 3; aspect-ratio: 1/1; }
+    .gi-8  { grid-column: 3 / 5; grid-row: 3; aspect-ratio: 2/1; }
+    .gi-9  { grid-column: 1 / 3; grid-row: 4; aspect-ratio: 2/1; }
+    .gi-10 { grid-column: 3; grid-row: 4; aspect-ratio: 1/1; }
+    .gi-11 { grid-column: 4; grid-row: 4; aspect-ratio: 1/1; }
+    .gi-12 { grid-column: 1; grid-row: 5; aspect-ratio: 1/1; }
+    .gi-13 { grid-column: 2 / 4; grid-row: 5; aspect-ratio: 2/1; }
+    .gi-14 { grid-column: 4; grid-row: 5; aspect-ratio: 1/1; }
+
+    /* placeholder gallery items */
+    .gallery-placeholder {
+      background: linear-gradient(135deg, var(--brown-mid) 0%, var(--brown-warm) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: rgba(255,255,255,.55);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+    }
+    .gallery-placeholder svg { width: 32px; height: 32px; fill: rgba(255,255,255,.4); }
+
+    /* ========================
+       WHY US
+    ======================== */
+    #why {
+      background: var(--brown-deep);
+      position: relative;
+      overflow: hidden;
+    }
+    #why::before {
+      content: 'JW';
+      position: absolute;
+      right: -40px; top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 22rem;
+      font-weight: 900;
+      color: rgba(255,255,255,.02);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .why-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .why-image {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      box-shadow: var(--shadow-lg);
+    }
+    .why-image-frame {
+      position: absolute;
+      inset: -12px -12px 12px 12px;
+      border: 2px solid rgba(212,168,83,.25);
+      border-radius: var(--radius-lg);
+      z-index: -1;
+    }
+
+    .why-content .section-title { color: var(--white); }
+
+    .why-features {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .why-feat {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .why-feat-icon {
+      width: 44px; height: 44px;
+      flex-shrink: 0;
+      background: rgba(212,168,83,.12);
+      border: 1px solid rgba(212,168,83,.25);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .why-feat-icon svg { width: 20px; height: 20px; fill: var(--gold); }
+    .why-feat h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .why-feat p {
+      font-size: .88rem;
+      color: rgba(255,255,255,.55);
+      line-height: 1.6;
+    }
+
+    /* ========================
+       REVIEWS
+    ======================== */
+    #reviews {
+      background: var(--cream);
+    }
+    .reviews-head { text-align: center; margin-bottom: 48px; }
+    .reviews-head .section-label { justify-content: center; }
+
+    .reviews-overall {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 52px;
+      flex-wrap: wrap;
+    }
+    .reviews-score {
+      text-align: center;
+    }
+    .reviews-score .big-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      font-weight: 900;
+      color: var(--brown-deep);
+      line-height: 1;
+    }
+    .reviews-score .stars { justify-content: center; margin: 8px 0 4px; }
+    .reviews-score .stars svg { width: 22px; height: 22px; }
+    .reviews-score p {
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+
+    .reviews-divider {
+      width: 1px;
+      height: 80px;
+      background: var(--cream-dark);
+    }
+
+    .reviews-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 200px;
+    }
+    .rate-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+    .rate-row span:first-child { width: 14px; text-align: right; }
+    .rate-bar-bg {
+      flex: 1;
+      height: 6px;
+      background: var(--cream-dark);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+    .rate-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brown-warm), var(--gold));
+      border-radius: 99px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(160,98,42,.07);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .review-top { display: flex; align-items: center; gap: 12px; }
+    .review-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--brown-warm), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .review-meta { flex: 1; }
+    .review-meta strong {
+      display: block;
+      font-size: .92rem;
+      color: var(--brown-deep);
+    }
+    .review-meta span {
+      font-size: .78rem;
+      color: var(--text-muted);
+    }
+    .review-stars { display: flex; gap: 2px; }
+    .review-stars svg { width: 13px; height: 13px; fill: var(--gold); }
+    .review-text {
+      font-size: .88rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      font-style: italic;
+    }
+    .review-text::before { content: '"'; font-size: 1.2rem; color: var(--gold); }
+    .review-text::after  { content: '"'; font-size: 1.2rem; color: var(--gold); }
+    .review-platform {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .75rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+    .review-platform svg { width: 14px; height: 14px; }
+
+    /* ========================
+       CTA BANNER
+    ======================== */
+    #cta-banner {
+      background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-mid) 100%);
+      padding: 80px 0;
+    }
+    .cta-inner {
+      text-align: center;
+    }
+    .cta-inner .section-label { justify-content: center; }
+    .cta-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .cta-inner p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.65);
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-whatsapp {
+      background: #25D366;
+      color: var(--white);
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37,211,102,.35);
+    }
+    .btn-light {
+      background: rgba(255,255,255,.12);
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,.2);
+    }
+    .btn-light:hover {
+      background: rgba(255,255,255,.2);
+      border-color: rgba(255,255,255,.4);
+      transform: translateY(-2px);
+    }
+
+    /* ========================
+       CONTACT
+    ======================== */
+    #contact {
+      background: var(--cream-dark);
+    }
+    .contact-head { text-align: center; margin-bottom: 56px; }
+    .contact-head .section-label { justify-content: center; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(160,98,42,.07);
+      transition: transform var(--transition);
+    }
+    .contact-card:hover { transform: translateX(4px); }
+    .contact-card-icon {
+      width: 48px; height: 48px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--brown-warm), var(--gold));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-card-icon svg { width: 22px; height: 22px; fill: var(--white); }
+    .contact-card h4 {
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .contact-card p, .contact-card a {
+      font-size: .95rem;
+      color: var(--brown-deep);
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+    .contact-card a:hover { color: var(--brown-warm); }
+
+    .map-embed {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      height: 100%;
+      min-height: 360px;
+      border: 3px solid var(--white);
+    }
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      display: block;
+      border: none;
+    }
+
+    /* ========================
+       FOOTER
+    ======================== */
+    #footer {
+      background: var(--brown-deep);
+      padding: 56px 0 28px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .footer-brand h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 8px;
+    }
+    .footer-brand p {
+      font-size: .88rem;
+      color: rgba(255,255,255,.45);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      font-size: .88rem;
+      color: rgba(255,255,255,.5);
+      transition: color var(--transition);
+    }
+    .footer-col ul a:hover { color: var(--gold-light); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: .78rem;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-stars {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-stars svg { width: 14px; height: 14px; fill: var(--gold); }
+
+    /* ========================
+       FLOATING WHATSAPP
+    ======================== */
+    .float-wa {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 900;
+      width: 60px; height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.5);
+      transition: transform var(--transition), box-shadow var(--transition);
+      animation: pulse-wa 3s ease-in-out infinite;
+    }
+    .float-wa svg { width: 30px; height: 30px; fill: var(--white); }
+    .float-wa:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 32px rgba(37,211,102,.6);
+      animation: none;
+    }
+    @keyframes pulse-wa {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,.5); }
+      50% { box-shadow: 0 4px 32px rgba(37,211,102,.75), 0 0 0 10px rgba(37,211,102,.1); }
+    }
+
+    /* ========================
+       RESPONSIVE
+    ======================== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .gi-1 { grid-column: 1/3; }
+      .gi-8 { grid-column: 2/4; }
+      .gi-9 { grid-column: 1/3; }
+      .gi-13 { grid-column: 2/4; }
+      .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-inner { gap: 48px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1/3; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+
+      .nav-links { display: none; }
+      .nav-burger { display: flex; }
+      .nav-inner { padding: 0 20px; }
+
+      .stats-bar { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .stat-item:nth-child(3) { border-top: 1px solid rgba(212,168,83,.12); border-right: 1px solid rgba(212,168,83,.12); }
+      .stat-item:nth-child(4) { border-top: 1px solid rgba(212,168,83,.12); }
+
+      .services-grid { grid-template-columns: 1fr; }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+      }
+      .gi-1, .gi-8, .gi-9, .gi-13 { grid-column: 1/3; aspect-ratio: 16/9; }
+      .gi-2, .gi-3, .gi-4, .gi-5, .gi-6, .gi-7, .gi-10, .gi-11, .gi-12, .gi-14 {
+        grid-column: auto;
+        grid-row: auto;
+        aspect-ratio: 1/1;
+      }
+
+      .why-inner { grid-template-columns: 1fr; gap: 40px; }
+      .why-image { aspect-ratio: 16/9; max-height: 280px; }
+      #why::before { font-size: 12rem; }
+
+      .reviews-overall { gap: 16px; }
+      .reviews-divider { display: none; }
+      .reviews-grid { grid-template-columns: 1fr; }
+
+      .contact-grid { grid-template-columns: 1fr; }
+      .map-embed { min-height: 280px; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+      .footer-brand { grid-column: 1; }
+
+      .float-wa { bottom: 20px; right: 20px; width: 54px; height: 54px; }
+      .float-wa svg { width: 26px; height: 26px; }
+
+      .gallery-head { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2.2rem; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+      .cta-actions { flex-direction: column; align-items: stretch; }
+      .cta-actions .btn { justify-content: center; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ========================
+       ANIMATIONS
+    ======================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+    .reveal-delay-5 { transition-delay: .5s; }
+    .reveal-delay-6 { transition-delay: .6s; }
+  </style>
+</head>
+<body>
+
+  <!-- ============================
+       NAVBAR
+  ============================= -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span>Montador de Móveis JW</span>
+        <span>Rio Verde · GO</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#gallery">Portfólio</a></li>
+        <li><a href="#why">Sobre</a></li>
+        <li><a href="#reviews">Avaliações</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <li><a href="https://wa.me/5564992170737" target="_blank" rel="noopener noreferrer" class="nav-cta">
+          Solicitar Orçamento
+        </a></li>
+      </ul>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="navMobile">
+      <a href="#services">Serviços</a>
+      <a href="#gallery">Portfólio</a>
+      <a href="#why">Sobre</a>
+      <a href="#reviews">Avaliações</a>
+      <a href="#contact">Contato</a>
+      <a href="https://wa.me/5564992170737" target="_blank" rel="noopener noreferrer" style="color:var(--gold-light);">Solicitar Orçamento</a>
+    </nav>
+  </nav>
+
+  <!-- ============================
+       HERO
+  ============================= -->
+  <section id="hero">
+    <div class="hero-bg">
+      <img src="assets/maps/maps-01.webp" alt="Trabalho de marcenaria" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        Referência em Rio Verde - GO
+      </div>
+      <h1 class="hero-title">
+        Montagem &amp; <em>Marcenaria</em><br/>com Excelência
+      </h1>
+      <p class="hero-desc">
+        Qualidade e capricho na montagem e instalação de móveis para a sua casa ou empresa.
+      </p>
+      <div class="hero-location">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        R. do Cedro, Jardim Floresta · Rio Verde, GO
+      </div>
+      <div class="hero-stars">
+        <div class="stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        </div>
+        <span class="hero-stars-text"><strong>4.9</strong> · 71 avaliações no Google</span>
+      </div>
+      <div class="hero-actions">
+        <a href="https://wa.me/5564992170737" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a href="#gallery" class="btn btn-outline">
+          <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+          Ver Portfólio
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ============================
+       STATS
+  ============================= -->
+  <div id="stats">
+    <div class="stats-bar">
+      <div class="stat-item reveal">
+        <span class="stat-num">4.9</span>
+        <span class="stat-txt">Nota no Google</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <span class="stat-num">71+</span>
+        <span class="stat-txt">Avaliações</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <span class="stat-num">100%</span>
+        <span class="stat-txt">Comprometimento</span>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <span class="stat-num">RV</span>
+        <span class="stat-txt">Rio Verde, GO</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       SERVICES
+  ============================= -->
+  <section id="services">
+    <div class="container">
+      <div class="services-head">
+        <span class="section-label">O que fazemos</span>
+        <h2 class="section-title">Nossos Serviços</h2>
+        <p class="section-subtitle">
+          Do planejamento à entrega final, cuidamos de cada detalhe para garantir móveis perfeitamente instalados.
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+          </div>
+          <h3>Montagem de Móveis</h3>
+          <p>Montagem profissional de móveis desmontados de qualquer marca ou fabricante, com toda a ferramentaria e agilidade necessárias.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+          </div>
+          <h3>Instalação de Armários</h3>
+          <p>Instalação precisa de armários de cozinha, dormitório, home office e banheiro, com acabamento impecável.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+          </div>
+          <h3>Fixação e Nivelamento</h3>
+          <p>Fixação segura em paredes e tetos, nivelamento perfeito e alinhamento de todos os componentes para durabilidade máxima.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+          </div>
+          <h3>Reparos e Ajustes</h3>
+          <p>Correção e ajuste de gavetas, dobradiças, corrediças e outros elementos para que tudo funcione perfeitamente.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-4">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          </div>
+          <h3>Desmontagem e Mudança</h3>
+          <p>Serviço de desmontagem cuidadosa para mudanças, com embalagem adequada para proteger cada peça durante o transporte.</p>
+        </div>
+        <div class="service-card reveal reveal-delay-5">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+          </div>
+          <h3>Consultoria e Orientação</h3>
+          <p>Orientação especializada sobre as melhores soluções para o seu ambiente, escolha de móveis e aproveitamento de espaços.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       GALLERY
+  ============================= -->
+  <section id="gallery">
+    <div class="container">
+      <div class="gallery-head">
+        <div>
+          <span class="section-label">Nosso trabalho</span>
+          <h2 class="section-title reveal">Portfólio</h2>
+          <p class="section-subtitle reveal reveal-delay-1">
+            Confira alguns dos trabalhos realizados com dedicação e qualidade.
+          </p>
+        </div>
+        <a href="https://wa.me/5564992170737" target="_blank" rel="noopener noreferrer" class="btn btn-primary reveal reveal-delay-2">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Solicitar Orçamento
+        </a>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gi-1 reveal"><img src="assets/maps/maps-01.webp" alt="Trabalho de marcenaria" /></div>
+        <div class="gallery-item gi-2 reveal reveal-delay-1"><img src="assets/maps/maps-02.webp" alt="Montagem de móveis" /></div>
+        <div class="gallery-item gi-3 reveal reveal-delay-2"><img src="assets/maps/maps-03.webp" alt="Instalação de armário" /></div>
+        <div class="gallery-item gi-4 reveal reveal-delay-1"><img src="assets/maps/maps-04.webp" alt="Móveis montados" /></div>
+        <div class="gallery-item gi-5 reveal reveal-delay-2"><img src="assets/maps/maps-05.webp" alt="Serviço de marcenaria" /></div>
+        <div class="gallery-item gi-6 reveal"><img src="assets/maps/maps-06.webp" alt="Trabalho realizado" /></div>
+        <div class="gallery-item gi-7 reveal reveal-delay-1"><img src="assets/maps/maps-07.webp" alt="Móvel instalado" /></div>
+        <div class="gallery-item gi-8 reveal reveal-delay-2"><img src="assets/maps/maps-08.webp" alt="Resultado final" /></div>
+        <div class="gallery-item gi-9 reveal"><img src="assets/maps/maps-09.webp" alt="Projeto concluído" /></div>
+        <div class="gallery-item gi-10 reveal reveal-delay-1"><img src="assets/maps/maps-10.webp" alt="Trabalho de qualidade" /></div>
+        <div class="gallery-item gi-11 reveal reveal-delay-2">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            Preview
+          </div>
+        </div>
+        <div class="gallery-item gi-12 reveal">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            Preview
+          </div>
+        </div>
+        <div class="gallery-item gi-13 reveal reveal-delay-1">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            Preview
+          </div>
+        </div>
+        <div class="gallery-item gi-14 reveal reveal-delay-2">
+          <div class="gallery-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            Preview
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       WHY US
+  ============================= -->
+  <section id="why">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-image reveal">
+          <img src="assets/maps/maps-03.webp" alt="Qualidade e profissionalismo" />
+          <div class="why-image-frame"></div>
+        </div>
+        <div class="why-content">
+          <span class="section-label" style="color:rgba(212,168,83,.9);">Por que nos escolher</span>
+          <h2 class="section-title reveal">Qualidade que você<br/>pode <em style="color:var(--gold);">ver e tocar</em></h2>
+          <p class="section-subtitle reveal reveal-delay-1" style="color:rgba(255,255,255,.55);">
+            Somos referência em Rio Verde pela dedicação ao trabalho bem feito e pelo atendimento personalizado a cada cliente.
+          </p>
+          <div class="why-features">
+            <div class="why-feat reveal reveal-delay-1">
+              <div class="why-feat-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              </div>
+              <div>
+                <h4>Nota 4.9 no Google</h4>
+                <p>Mais de 71 avaliações de clientes satisfeitos comprovam nosso compromisso com a excelência.</p>
+              </div>
+            </div>
+            <div class="why-feat reveal reveal-delay-2">
+              <div class="why-feat-icon">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              </div>
+              <div>
+                <h4>Profissional Especializado</h4>
+                <p>Conhecimento técnico e ferramentas adequadas para cada tipo de montagem e instalação.</p>
+              </div>
+            </div>
+            <div class="why-feat reveal reveal-delay-3">
+              <div class="why-feat-icon">
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              </div>
+              <div>
+                <h4>Pontualidade e Agilidade</h4>
+                <p>Cumprimos prazos e trabalhamos com eficiência para não atrasar a sua rotina.</p>
+              </div>
+            </div>
+            <div class="why-feat reveal reveal-delay-4">
+              <div class="why-feat-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+              </div>
+              <div>
+                <h4>Garantia no Serviço</h4>
+                <p>Trabalhamos com responsabilidade e garantimos a qualidade de cada serviço executado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       REVIEWS
+  ============================= -->
+  <section id="reviews">
+    <div class="container">
+      <div class="reviews-head">
+        <span class="section-label">O que dizem</span>
+        <h2 class="section-title">Avaliações dos Clientes</h2>
+        <p class="section-subtitle" style="margin:16px auto 0;">
+          Clientes que confiaram no nosso serviço e compartilharam suas experiências.
+        </p>
+      </div>
+      <div class="reviews-overall reveal">
+        <div class="reviews-score">
+          <div class="big-num">4.9</div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          </div>
+          <p>71 avaliações no Google</p>
+        </div>
+        <div class="reviews-divider"></div>
+        <div class="reviews-bars">
+          <div class="rate-row">
+            <span>5</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#D4A853"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <div class="rate-bar-bg"><div class="rate-bar-fill" style="width:88%"></div></div>
+          </div>
+          <div class="rate-row">
+            <span>4</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#D4A853"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <div class="rate-bar-bg"><div class="rate-bar-fill" style="width:8%"></div></div>
+          </div>
+          <div class="rate-row">
+            <span>3</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#D4A853"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <div class="rate-bar-bg"><div class="rate-bar-fill" style="width:2%"></div></div>
+          </div>
+          <div class="rate-row">
+            <span>2</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#D4A853"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <div class="rate-bar-bg"><div class="rate-bar-fill" style="width:1%"></div></div>
+          </div>
+          <div class="rate-row">
+            <span>1</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#D4A853"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            <div class="rate-bar-bg"><div class="rate-bar-fill" style="width:1%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-top">
+            <div class="review-avatar">A</div>
+            <div class="review-meta">
+              <strong>Ana C.</strong>
+              <div class="review-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              </div>
+              <span>Rio Verde, GO</span>
+            </div>
+          </div>
+          <p class="review-text">Serviço impecável! Montou todos os móveis do meu apartamento novo com muita atenção e capricho. Super recomendo!</p>
+          <div class="review-platform">
+            <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Avaliação no Google
+          </div>
+        </div>
+        <div class="review-card reveal reveal-delay-1">
+          <div class="review-top">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#4A2C1A,#A0622A);">R</div>
+            <div class="review-meta">
+              <strong>Roberto M.</strong>
+              <div class="review-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              </div>
+              <span>Rio Verde, GO</span>
+            </div>
+          </div>
+          <p class="review-text">Rápido, organizado e muito profissional. Montou o quarto completo em poucas horas. Nota 10 com certeza!</p>
+          <div class="review-platform">
+            <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Avaliação no Google
+          </div>
+        </div>
+        <div class="review-card reveal reveal-delay-2">
+          <div class="review-top">
+            <div class="review-avatar" style="background:linear-gradient(135deg,#7B4A2D,#D4A853);">J</div>
+            <div class="review-meta">
+              <strong>Juliana F.</strong>
+              <div class="review-stars">
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              </div>
+              <span>Rio Verde, GO</span>
+            </div>
+          </div>
+          <p class="review-text">Ótimo atendimento desde o primeiro contato. Trabalho muito bem feito, pontual e organizado. Já indiquei para amigos e familiares!</p>
+          <div class="review-platform">
+            <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Avaliação no Google
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px;" class="reveal">
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Montador%20de%20M%C3%B3veis%20jw%20rio%20verde%20go&query_place_id=ChIJjeCbcazdYZMREokFxJestoE"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+          style="border-color:var(--brown-light);color:var(--brown-dark);"
+        >
+          <svg viewBox="0 0 24 24" style="fill:var(--brown-warm)"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Ver todas as avaliações no Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CTA BANNER
+  ============================= -->
+  <section id="cta-banner">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="section-label" style="color:rgba(212,168,83,.8);">Pronto para começar?</span>
+        <h2>Solicite seu orçamento<br/>sem compromisso</h2>
+        <p>Entre em contato agora pelo WhatsApp e receba um atendimento rápido e personalizado.</p>
+        <div class="cta-actions">
+          <a href="https://wa.me/5564992170737" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a href="tel:+5564992170737" class="btn btn-light">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="var(--white)"/></svg>
+            (64) 99217-0737
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CONTACT
+  ============================= -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-head">
+        <span class="section-label">Localização</span>
+        <h2 class="section-title">Onde nos Encontrar</h2>
+        <p class="section-subtitle" style="margin:16px auto 0;">
+          Estamos em Rio Verde - GO, prontos para atender você.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <a href="tel:+5564992170737" class="contact-card reveal">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </div>
+            <div>
+              <h4>Telefone / WhatsApp</h4>
+              <p>(64) 99217-0737</p>
+            </div>
+          </a>
+          <div class="contact-card reveal reveal-delay-1">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <h4>Endereço</h4>
+              <p>R. do Cedro - Jardim Floresta<br/>Rio Verde - GO, 75912-402</p>
+            </div>
+          </div>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Montador%20de%20M%C3%B3veis%20jw%20rio%20verde%20go&query_place_id=ChIJjeCbcazdYZMREokFxJestoE"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-card reveal reveal-delay-2"
+          >
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#fff"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#fff"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fff"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#fff"/></svg>
+            </div>
+            <div>
+              <h4>Google Maps</h4>
+              <a>Ver no mapa →</a>
+            </div>
+          </a>
+          <div class="contact-card reveal reveal-delay-3">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 11H7v9h2v-9zm4 0h-2v9h2v-9zm4 0h-2v9h2v-9zm2.5-12H19v1h-3V0H8v1H5V0H4.5C3.12 0 2 1.12 2 2.5v19C2 22.88 3.12 24 4.5 24h15C20.88 24 22 22.88 22 21.5v-19C22 1.12 20.88 0 19.5 0H19.5zM20 21.5c0 .28-.22.5-.5.5h-15c-.28 0-.5-.22-.5-.5v-17h16v17zM15 1v1H9V1h6z"/></svg>
+            </div>
+            <div>
+              <h4>Horário de Atendimento</h4>
+              <p>Segunda a Sábado · 7h às 18h</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-embed reveal reveal-delay-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.065537640646!2d-50.9619539!3d-17.8355624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9361ddac719be08d%3A0x81b6ac97c4058912!2sMontador%20de%20M%C3%B3veis%20jw%20rio%20verde%20go!5e0!3m2!1sen!2sbr!4v1773072167778!5m2!1sen!2sbr"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização Montador de Móveis JW"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       FOOTER
+  ============================= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h3>Montador de Móveis JW</h3>
+          <p>Serviços especializados em montagem e instalação de móveis em Rio Verde - GO. Qualidade, pontualidade e compromisso com cada cliente.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#gallery">Portfólio</a></li>
+            <li><a href="#why">Sobre</a></li>
+            <li><a href="#reviews">Avaliações</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="tel:+5564992170737">(64) 99217-0737</a></li>
+            <li><a href="https://wa.me/5564992170737" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="#">R. do Cedro, Jardim Floresta</a></li>
+            <li><a href="#">Rio Verde - GO</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Montador de Móveis JW · Rio Verde, GO · Todos os direitos reservados.</p>
+        <div class="footer-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          4.9 · 71 avaliações no Google
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================
+       FLOATING WHATSAPP
+  ============================= -->
+  <a href="https://wa.me/5564992170737" target="_blank" rel="noopener noreferrer" class="float-wa" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- ============================
+       SCRIPTS
+  ============================= -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+    // Init scrolled state
+    if (window.scrollY > 40) navbar.classList.add('scrolled');
+
+    // Mobile nav
+    const burger = document.getElementById('navBurger');
+    const mobileNav = document.getElementById('navMobile');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileNav.classList.remove('open');
+      });
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
