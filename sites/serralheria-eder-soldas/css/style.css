@@ -23,6 +23,13 @@
   --nav-h:         70px;
 }
 
+/* ── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar               { width: 8px; }
+::-webkit-scrollbar-track         { background: var(--clr-bg2); }
+::-webkit-scrollbar-thumb         { background: #3a3a3a; border-radius: 99px; border: 2px solid var(--clr-bg2); }
+::-webkit-scrollbar-thumb:hover   { background: var(--clr-accent); }
+* { scrollbar-width: thin; scrollbar-color: #3a3a3a var(--clr-bg2); }
+
 /* ── Reset ──────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
@@ -544,17 +551,71 @@ button { cursor: pointer; border: none; background: none; }
   gap: 56px;
   align-items: start;
 }
-.contato-map {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+/* Map replaced with address card */
+.contato-map-card {
+  background: var(--clr-surface);
   border: 1px solid var(--clr-border);
-  height: 420px;
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  height: 100%;
+  min-height: 300px;
+  justify-content: center;
+  transition: border-color var(--transition);
 }
-.contato-map iframe {
-  width: 100%; height: 100%;
-  display: block;
-  filter: grayscale(.9) invert(.85) hue-rotate(180deg);
-  border: none;
+.contato-map-card:hover { border-color: var(--clr-accent); }
+.map-card-top {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.map-pin-anim {
+  flex-shrink: 0;
+  width: 60px; height: 60px;
+  background: rgba(232,128,10,.12);
+  border: 1px solid rgba(232,128,10,.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  color: var(--clr-accent);
+  animation: pinBounce 2.5s ease-in-out infinite;
+}
+@keyframes pinBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-7px); }
+}
+.map-card-address h3 {
+  font-family: var(--ff-head);
+  font-size: 1.15rem;
+  color: var(--clr-white);
+  margin-bottom: 8px;
+}
+.map-card-address p {
+  font-size: .92rem;
+  color: var(--clr-muted);
+  line-height: 1.65;
+}
+.map-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.map-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--clr-accent);
+  background: rgba(232,128,10,.1);
+  border: 1px solid rgba(232,128,10,.25);
+  padding: 8px 16px;
+  border-radius: 99px;
+  align-self: flex-start;
 }
 
 /* ════════════════ FOOTER ════════════════════════════════ */
@@ -676,7 +737,7 @@ button { cursor: pointer; border: none; background: none; }
   .reviews-grid { grid-template-columns: 1fr; }
 
   .contato-grid { grid-template-columns: 1fr; }
-  .contato-map  { height: 280px; }
+  .map-card-actions { flex-direction: column; }
 
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
 
