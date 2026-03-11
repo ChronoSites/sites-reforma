@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marcenaria Módulos FLEX — Móveis comerciais com entrega rápida, direto da fábrica. Bauru, SP." />
+  <title>Marcenaria Módulos FLEX | Bauru SP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="#hero" class="header__logo">
+        <span class="logo__icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect x="2" y="8" width="32" height="4" rx="2" fill="currentColor"/>
+            <rect x="6" y="12" width="4" height="16" rx="1" fill="currentColor"/>
+            <rect x="26" y="12" width="4" height="16" rx="1" fill="currentColor"/>
+            <rect x="6" y="26" width="24" height="3" rx="1.5" fill="currentColor" opacity=".6"/>
+            <rect x="10" y="16" width="16" height="2" rx="1" fill="currentColor" opacity=".4"/>
+          </svg>
+        </span>
+        <div class="logo__text">
+          <span class="logo__name">Módulos FLEX</span>
+          <span class="logo__sub">Marcenaria · Bauru SP</span>
+        </div>
+      </a>
+
+      <button class="header__burger" id="burger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="header__nav" id="nav">
+        <a href="#sobre" class="nav__link">Sobre</a>
+        <a href="#servicos" class="nav__link">Serviços</a>
+        <a href="#portfolio" class="nav__link">Portfólio</a>
+        <a href="#contato" class="nav__link nav__link--cta">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="assets/Marcenaria_M_dulos_FLEX___Baur_001.jpg" alt="" class="hero__bg-img" aria-hidden="true" />
+      <div class="hero__pattern"></div>
+    </div>
+    <div class="hero__container">
+      <div class="hero__badge reveal">Direto da Fábrica · Bauru SP</div>
+      <h1 class="hero__title reveal">
+        Móveis que <em>transformam</em><br/>
+        seus ambientes
+      </h1>
+      <p class="hero__desc reveal">
+        Móveis comerciais e planejados com entrega rápida.<br/>
+        Qualidade de fábrica no conforto da sua empresa ou residência.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#portfolio" class="btn btn--primary">Ver Portfólio</a>
+        <a href="#contato" class="btn btn--outline">Fale Conosco</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Role para explorar</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ STATS ═══════════════════════════════ -->
+  <section class="stats">
+    <div class="stats__container">
+      <div class="stats__item reveal">
+        <span class="stats__icon">🪵</span>
+        <strong>Entrega Rápida</strong>
+        <span>Diretamente da fábrica</span>
+      </div>
+      <div class="stats__item reveal">
+        <span class="stats__icon">🏭</span>
+        <strong>Direto da Fábrica</strong>
+        <span>Sem intermediários</span>
+      </div>
+      <div class="stats__item reveal">
+        <span class="stats__icon">📐</span>
+        <strong>Sob Medida</strong>
+        <span>Móveis planejados</span>
+      </div>
+      <div class="stats__item reveal">
+        <span class="stats__icon">📍</span>
+        <strong>Bauru, SP</strong>
+        <span>Atendimento local</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SOBRE ═══════════════════════════════ -->
+  <section class="sobre" id="sobre">
+    <div class="section__container">
+      <div class="sobre__content">
+        <div class="sobre__text reveal">
+          <div class="section__tag">Quem somos</div>
+          <h2 class="section__title">Marcenaria<br/><em>Módulos FLEX</em></h2>
+          <p>Somos uma marcenaria especializada em móveis planejados e comerciais, localizada em Bauru, SP. Trabalhamos diretamente da fábrica para garantir o melhor preço, qualidade e agilidade na entrega.</p>
+          <p>Nosso compromisso é transformar seus ambientes com móveis que unem funcionalidade, design e durabilidade — feitos sob medida para cada cliente.</p>
+          <a href="#contato" class="btn btn--primary" style="margin-top:1.5rem">Entre em Contato</a>
+        </div>
+        <div class="sobre__gallery reveal">
+          <div class="img-preview img-preview--tall">
+            <img src="assets/Marcenaria_M_dulos_FLEX___Baur_002.jpg" alt="Projeto de marcenaria" loading="lazy" />
+          </div>
+          <div class="sobre__gallery-grid">
+            <div class="img-preview">
+              <img src="assets/Marcenaria_M_dulos_FLEX___Baur_003.jpg" alt="Projeto de marcenaria" loading="lazy" />
+            </div>
+            <div class="img-preview">
+              <img src="assets/Marcenaria_M_dulos_FLEX___Baur_004.jpg" alt="Projeto de marcenaria" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SERVIÇOS ═══════════════════════════════ -->
+  <section class="servicos" id="servicos">
+    <div class="section__container">
+      <div class="section__header reveal">
+        <div class="section__tag">O que fazemos</div>
+        <h2 class="section__title">Nossos <em>Serviços</em></h2>
+        <p class="section__subtitle">Soluções completas em marcenaria para ambientes comerciais e residenciais</p>
+      </div>
+      <div class="servicos__grid">
+
+        <div class="servico-card reveal">
+          <div class="servico-card__img">
+            <div class="img-preview">
+              <img src="assets/Marcenaria_M_dulos_FLEX___Baur_005.jpg" alt="Móveis comerciais" loading="lazy" />
+            </div>
+          </div>
+          <div class="servico-card__body">
+            <div class="servico-card__icon">🪑</div>
+            <h3>Móveis Comerciais</h3>
+            <p>Balcões, estantes, displays e mobiliário para lojas, escritórios e estabelecimentos comerciais.</p>
+          </div>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-card__img">
+            <div class="img-preview">
+              <img src="assets/Marcenaria_M_dulos_FLEX___Baur_006.jpg" alt="Móveis planejados" loading="lazy" />
+            </div>
+          </div>
+          <div class="servico-card__body">
+            <div class="servico-card__icon">🛋️</div>
+            <h3>Móveis Planejados</h3>
+            <p>Ambientes residenciais sob medida: salas, quartos, cozinhas e áreas integradas.</p>
+          </div>
+        </div>
+
+        <div class="servico-card reveal">
+          <div class="servico-card__img">
+            <div class="img-preview">
+              <img src="assets/Marcenaria_M_dulos_FLEX___Baur_007.jpg" alt="Entrega de móveis" loading="lazy" />
+            </div>
+          </div>
+          <div class="servico-card__body">
+            <div class="servico-card__icon">📦</div>
+            <h3>Entrega Rápida</h3>
+            <p>Produção direta da fábrica com agilidade e pontualidade na entrega e montagem.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PORTFÓLIO ═══════════════════════════════ -->
+  <section class="portfolio" id="portfolio">
+    <div class="section__container">
+      <div class="section__header reveal">
+        <div class="section__tag">Nosso trabalho</div>
+        <h2 class="section__title">Portfólio</h2>
+        <p class="section__subtitle">Confira alguns dos nossos projetos realizados</p>
+      </div>
+
+      <div class="portfolio__filters reveal" id="filters" style="display:none"></div>
+
+      <div class="portfolio__grid" id="portfolioGrid">
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_008.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_009.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_010.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_011.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_012.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_013.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_014.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_015.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_016.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_017.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_018.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_019.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_020.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_021.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_022.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_023.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_024.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_050.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_051.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_052.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_053.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_054.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_055.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_056.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+        <div class="portfolio-item reveal">
+          <div class="img-preview img-preview--portfolio"><img src="assets/Marcenaria_M_dulos_FLEX___Baur_057.jpg" alt="Projeto de marcenaria" loading="lazy" /></div>
+          <div class="portfolio-item__overlay"><h4>Projeto de Marcenaria</h4></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ DIFERENCIAIS ═══════════════════════════════ -->
+  <section class="diferenciais">
+    <div class="section__container">
+      <div class="section__header reveal">
+        <div class="section__tag">Por que nos escolher</div>
+        <h2 class="section__title">Nossos <em>Diferenciais</em></h2>
+      </div>
+      <div class="diferenciais__grid">
+        <div class="diferencial-item reveal">
+          <div class="diferencial-item__num">01</div>
+          <h3>Fábrica Própria</h3>
+          <p>Produzimos diretamente, eliminando intermediários e garantindo preços competitivos.</p>
+        </div>
+        <div class="diferencial-item reveal">
+          <div class="diferencial-item__num">02</div>
+          <h3>Entrega Rápida</h3>
+          <p>Agilidade no processo produtivo e na entrega para que seu projeto saia do papel o mais rápido possível.</p>
+        </div>
+        <div class="diferencial-item reveal">
+          <div class="diferencial-item__num">03</div>
+          <h3>Personalização Total</h3>
+          <p>Desenvolvemos cada projeto conforme as necessidades e medidas específicas do cliente.</p>
+        </div>
+        <div class="diferencial-item reveal">
+          <div class="diferencial-item__num">04</div>
+          <h3>Atendimento Local</h3>
+          <p>Presença em Bauru, SP, com atendimento próximo e comprometido com o cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTATO ═══════════════════════════════ -->
+  <section class="contato" id="contato">
+    <div class="section__container">
+      <div class="section__header reveal">
+        <div class="section__tag">Fale conosco</div>
+        <h2 class="section__title">Entre em <em>Contato</em></h2>
+        <p class="section__subtitle">Solicite um orçamento sem compromisso</p>
+      </div>
+
+      <div class="contato__layout">
+        <div class="contato__info reveal">
+          <div class="info-card">
+            <div class="info-card__icon">📞</div>
+            <div>
+              <strong>Telefone / WhatsApp</strong>
+              <a href="tel:+5514999090424">+55 (14) 99909-0424</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">✉️</div>
+            <div>
+              <strong>E-mail</strong>
+              <a href="mailto:modulosflex@gmail.com">modulosflex@gmail.com</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">📍</div>
+            <div>
+              <strong>Localização</strong>
+              <span>José Santiago, Bauru — SP</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">🕐</div>
+            <div>
+              <strong>Atendimento</strong>
+              <span>Sempre disponível</span>
+            </div>
+          </div>
+
+          <div class="contato__social">
+            <a href="https://www.facebook.com/p/Marcenaria-M%C3%B3dulos-FLEX-100065682511683/" target="_blank" rel="noopener noreferrer" class="social-btn social-btn--fb">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+              Facebook
+            </a>
+            <a href="https://www.instagram.com/modulos.flex" target="_blank" rel="noopener noreferrer" class="social-btn social-btn--ig">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+
+        <form class="contato__form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(14) 99999-9999" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva seu projeto ou dúvida..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Enviar Mensagem</button>
+          <p class="form__note">Ou fale diretamente via WhatsApp: <a href="https://wa.me/5514999090424" target="_blank" rel="noopener noreferrer">+55 (14) 99909-0424</a></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a href="#hero" class="header__logo">
+          <span class="logo__icon">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+              <rect x="2" y="8" width="32" height="4" rx="2" fill="currentColor"/>
+              <rect x="6" y="12" width="4" height="16" rx="1" fill="currentColor"/>
+              <rect x="26" y="12" width="4" height="16" rx="1" fill="currentColor"/>
+              <rect x="6" y="26" width="24" height="3" rx="1.5" fill="currentColor" opacity=".6"/>
+            </svg>
+          </span>
+          <div class="logo__text">
+            <span class="logo__name">Módulos FLEX</span>
+            <span class="logo__sub">Marcenaria · Bauru SP</span>
+          </div>
+        </a>
+        <p>Móveis comerciais com entrega rápida, direto da fábrica.</p>
+      </div>
+      <div class="footer__links">
+        <h4>Navegação</h4>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer__contact">
+        <h4>Contato</h4>
+        <a href="tel:+5514999090424">+55 (14) 99909-0424</a>
+        <a href="mailto:modulosflex@gmail.com">modulosflex@gmail.com</a>
+        <span>José Santiago, Bauru — SP</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Marcenaria Módulos FLEX. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/5514999090424" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
