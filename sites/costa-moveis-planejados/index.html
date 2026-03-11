@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Costa Móveis Planejados | Bauru - SP</title>
+  <meta name="description" content="Marcenaria e móveis planejados em Bauru-SP. Qualidade nos materiais, atendimento de excelência e entrega no prazo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" aria-label="Navegação principal">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Costa Móveis Planejados - Início">
+        <span class="logo-main">Costa</span>
+        <span class="logo-sub">Móveis Planejados</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="list">
+        <li><a href="#sobre"       class="nav-link">Sobre</a></li>
+        <li><a href="#servicos"    class="nav-link">Serviços</a></li>
+        <li><a href="#portfolio"   class="nav-link">Portfólio</a></li>
+        <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+        <li><a href="#contato"     class="nav-link nav-cta">Fale Conosco</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-up-1">Marcenaria &amp; Móveis Planejados &middot; Bauru, SP</p>
+      <h1 class="hero-title fade-up-2">
+        Transformamos<br>
+        <em>espaços</em> em<br>
+        histórias.
+      </h1>
+      <p class="hero-desc fade-up-3">Planejamento, qualidade e acabamento que superam expectativas.</p>
+      <div class="hero-actions fade-up-4">
+        <a href="#portfolio" class="btn btn-primary">Ver Portfólio</a>
+        <a href="#contato"   class="btn btn-outline">Solicitar Orçamento</a>
+      </div>
+    </div>
+    <a href="#sobre" class="hero-scroll" aria-label="Ir para Sobre">
+      <span class="scroll-line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-text reveal">
+          <span class="label">Sobre Nós</span>
+          <h2 class="section-title">Qualidade em cada detalhe, prazo em cada entrega.</h2>
+          <p>Na Costa Móveis Planejados, cada projeto é tratado com atenção exclusiva. Utilizamos materiais de alta qualidade e contamos com uma equipe de colaboradores educados e comprometidos, garantindo que o seu sonho seja entregue no prazo combinado e com o acabamento que você merece.</p>
+          <p>Do planejamento à instalação, acompanhamos cada etapa para que o resultado final seja exatamente o que você imaginou — ou melhor.</p>
+        </div>
+        <div class="sobre-stats reveal delay-1">
+          <div class="stat-card">
+            <span class="stat-number">41</span>
+            <span class="stat-label">Avaliações</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5★</span>
+            <span class="stat-label">Nota Média</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">No Prazo</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Dedicação</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="section servicos" id="servicos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">O que fazemos</span>
+        <h2 class="section-title">Soluções planejadas<br>para cada ambiente.</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon" aria-hidden="true">🍳</div>
+          <h3>Cozinhas</h3>
+          <p>Cozinhas planejadas com funcionalidade e elegância, otimizando cada centímetro do espaço.</p>
+        </div>
+        <div class="service-card reveal delay-1">
+          <div class="service-icon" aria-hidden="true">🛏️</div>
+          <h3>Quartos</h3>
+          <p>Dormitórios e closets com armários planejados que unem conforto, organização e estilo.</p>
+        </div>
+        <div class="service-card reveal delay-2">
+          <div class="service-icon" aria-hidden="true">🚿</div>
+          <h3>Banheiros</h3>
+          <p>Gabinetes e nichos planejados que transformam o banheiro em um ambiente sofisticado.</p>
+        </div>
+        <div class="service-card reveal delay-3">
+          <div class="service-icon" aria-hidden="true">🛋️</div>
+          <h3>Salas</h3>
+          <p>Painéis, estantes e home theaters que valorizam seus momentos de lazer em família.</p>
+        </div>
+        <div class="service-card reveal delay-4">
+          <div class="service-icon" aria-hidden="true">💼</div>
+          <h3>Escritórios</h3>
+          <p>Ambientes de trabalho produtivos com móveis que aliam ergonomia e design refinado.</p>
+        </div>
+        <div class="service-card reveal delay-5">
+          <div class="service-icon" aria-hidden="true">🌿</div>
+          <h3>Varandas</h3>
+          <p>Áreas gourmet e varandas planejadas para aproveitar ao máximo cada metro quadrado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFÓLIO ===== -->
+  <section class="section portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Portfólio</span>
+        <h2 class="section-title">Projetos que<br>encantam.</h2>
+        <p class="section-sub">Cada ambiente é único. Veja alguns dos nossos trabalhos realizados.</p>
+      </div>
+    </div>
+    <div class="gallery-grid">
+      <!-- Real images — used generically -->
+      <div class="gallery-item gallery-featured reveal" data-src="assets/maps/maps-01.webp" data-label="Ambiente Planejado">
+        <img src="assets/maps/maps-01.webp" alt="Projeto de móveis planejados" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <div class="gallery-item reveal" data-src="assets/maps/maps-02.webp" data-label="Ambiente Planejado">
+        <img src="assets/maps/maps-02.webp" alt="Projeto de móveis planejados" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <div class="gallery-item reveal" data-src="assets/maps/maps-03.webp" data-label="Projeto Residencial">
+        <img src="assets/maps/maps-03.webp" alt="Projeto residencial planejado" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <div class="gallery-item reveal" data-src="assets/maps/maps-04.webp" data-label="Projeto Residencial">
+        <img src="assets/maps/maps-04.webp" alt="Projeto residencial planejado" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <div class="gallery-item reveal" data-src="assets/maps/maps-05.webp" data-label="Ambiente Planejado">
+        <img src="assets/maps/maps-05.webp" alt="Ambiente planejado" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <div class="gallery-item reveal" data-src="assets/maps/maps-06.webp" data-label="Ambiente Planejado">
+        <img src="assets/maps/maps-06.webp" alt="Ambiente planejado" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <div class="gallery-item reveal" data-src="assets/maps/maps-07.webp" data-label="Detalhes de Acabamento">
+        <img src="assets/maps/maps-07.webp" alt="Detalhes de acabamento em MDF" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <div class="gallery-item reveal" data-src="assets/maps/maps-08.webp" data-label="Detalhes de Acabamento">
+        <img src="assets/maps/maps-08.webp" alt="Detalhes de acabamento" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <div class="gallery-item reveal" data-src="assets/maps/maps-09.webp" data-label="Projeto Completo">
+        <img src="assets/maps/maps-09.webp" alt="Projeto completo planejado" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <div class="gallery-item reveal" data-src="assets/maps/maps-10.webp" data-label="Projeto Completo">
+        <img src="assets/maps/maps-10.webp" alt="Projeto completo planejado" loading="lazy" />
+        <div class="gallery-overlay"><span>Ver projeto</span></div>
+      </div>
+      <!-- Placeholder items -->
+      <div class="gallery-item gallery-placeholder reveal">
+        <div class="placeholder-inner"><span>Preview</span></div>
+        <div class="gallery-overlay"><span>Em breve</span></div>
+      </div>
+      <div class="gallery-item gallery-placeholder reveal">
+        <div class="placeholder-inner"><span>Preview</span></div>
+        <div class="gallery-overlay"><span>Em breve</span></div>
+      </div>
+      <div class="gallery-item gallery-placeholder reveal">
+        <div class="placeholder-inner"><span>Preview</span></div>
+        <div class="gallery-overlay"><span>Em breve</span></div>
+      </div>
+      <div class="gallery-item gallery-placeholder reveal">
+        <div class="placeholder-inner"><span>Preview</span></div>
+        <div class="gallery-overlay"><span>Em breve</span></div>
+      </div>
+      <div class="gallery-item gallery-placeholder reveal">
+        <div class="placeholder-inner"><span>Preview</span></div>
+        <div class="gallery-overlay"><span>Em breve</span></div>
+      </div>
+      <div class="gallery-item gallery-placeholder reveal">
+        <div class="placeholder-inner"><span>Preview</span></div>
+        <div class="gallery-overlay"><span>Em breve</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagem">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">✕</button>
+    <button class="lightbox-prev"  id="lightboxPrev"  aria-label="Anterior">&#8249;</button>
+    <button class="lightbox-next"  id="lightboxNext"  aria-label="Próximo">&#8250;</button>
+    <div class="lightbox-inner">
+      <img src="" alt="" id="lightboxImg" />
+      <p id="lightboxLabel"></p>
+    </div>
+  </div>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section class="section depoimentos" id="depoimentos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Depoimentos</span>
+        <h2 class="section-title">O que nossos<br>clientes dizem.</h2>
+        <div class="rating-summary">
+          <span class="stars" aria-label="5 estrelas">★★★★★</span>
+          <span>5.0 &middot; 41 avaliações no Google</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+          <p class="review-text">"Nós ficamos satisfeitos com o serviço prestado pela empresa, tanto material como mão de obra são de excelente qualidade. Os colaboradores são todos muito educados, excelente desempenho e qualidade, produto entregue no prazo combinado."</p>
+          <div class="review-author">
+            <div class="author-avatar" aria-hidden="true">E</div>
+            <div>
+              <strong>Eidi da Silva Rodrigues</strong>
+              <span>2 meses atrás</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal delay-1">
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+          <p class="review-text">"Tudo maravilhoso. Trabalho deles são excelente, cumpre o prazo de entrega sem dor de cabeça. Só tenho a agradecer."</p>
+          <div class="review-author">
+            <div class="author-avatar" aria-hidden="true">C</div>
+            <div>
+              <strong>Cristiana Soares</strong>
+              <span>3 meses atrás</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal delay-2">
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+          <p class="review-text">"Eles tornaram real o nosso sonho do apartamento planejado. Muita qualidade nos materiais e atendimento de excelência. A cozinha, o banheiro e o quarto do meu filho ficaram lindos! Obrigado."</p>
+          <div class="review-author">
+            <div class="author-avatar" aria-hidden="true">E</div>
+            <div>
+              <strong>Elton Camargo</strong>
+              <span>7 meses atrás</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="section contato" id="contato">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-info reveal">
+          <span class="label">Contato</span>
+          <h2 class="section-title">Vamos criar seu<br>projeto juntos.</h2>
+          <p>Entre em contato e solicite seu orçamento sem compromisso. Nossa equipe está pronta para transformar o seu espaço.</p>
+          <div class="info-items">
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Telefone / WhatsApp</strong>
+                <a href="tel:+5514991227900">(14) 99122-7900</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Endereço</strong>
+                <address>Rua Campos Salles, 2-48 &mdash; Vila Falcão<br>Bauru &mdash; SP, 17050-000</address>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/5514991227900" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Chamar no WhatsApp
+          </a>
+        </div>
+        <div class="contato-highlight reveal delay-1">
+          <div class="highlight-box">
+            <div class="highlight-stars" aria-label="5 estrelas">★★★★★</div>
+            <p class="highlight-number">41</p>
+            <p class="highlight-label">clientes satisfeitos<br>nos avaliam no Google</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="Voltar ao início">
+            <span class="logo-main">Costa</span>
+            <span class="logo-sub">Móveis Planejados</span>
+          </a>
+          <p>Marcenaria e móveis planejados com qualidade e pontualidade em Bauru, SP.</p>
+        </div>
+        <div class="footer-nav">
+          <h4>Navegação</h4>
+          <ul role="list">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p><a href="tel:+5514991227900">(14) 99122-7900</a></p>
+          <address>Rua Campos Salles, 2-48<br>Vila Falcão, Bauru &mdash; SP<br>CEP 17050-000</address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Costa Móveis Planejados &middot; Bauru, SP</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FAB WhatsApp ===== -->
+  <a href="https://wa.me/5514991227900" class="fab-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.855L.057 23.617a.5.5 0 0 0 .624.614l5.911-1.55A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.946 9.946 0 0 1-5.13-1.42l-.37-.22-3.508.92.935-3.417-.242-.386A9.944 9.944 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+
+  <!-- ===== Scroll To Top ===== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">&#8593;</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>
