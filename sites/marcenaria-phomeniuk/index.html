@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcenaria Phomeniuk | Londrina PR</title>
+    <meta name="description" content="Marcenaria Phomeniuk — Móveis planejados sob medida em Londrina PR. Desde 1989 levando satisfação aos clientes com variedade e qualidade.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="header__logo">
+                <span class="logo-icon">P</span>
+                <div class="logo-text">
+                    <strong>Phomeniuk</strong>
+                    <small>Marcenaria &bull; Londrina PR</small>
+                </div>
+            </a>
+            <nav class="header__nav" id="navMenu">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active">Início</a></li>
+                    <li><a href="#sobre" class="nav__link">Sobre</a></li>
+                    <li><a href="#servicos" class="nav__link">Serviços</a></li>
+                    <li><a href="#galeria" class="nav__link">Galeria</a></li>
+                    <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+                    <li><a href="#contato" class="nav__link nav__link--cta">Contato</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu toggle -->
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE MENU OVERLAY ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__header">
+            <a href="#" class="header__logo">
+                <span class="logo-icon">P</span>
+                <div class="logo-text">
+                    <strong>Phomeniuk</strong>
+                    <small>Marcenaria</small>
+                </div>
+            </a>
+            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Fechar menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li><a href="#home" class="mobile-menu__link">Início</a></li>
+                <li><a href="#sobre" class="mobile-menu__link">Sobre</a></li>
+                <li><a href="#servicos" class="mobile-menu__link">Serviços</a></li>
+                <li><a href="#galeria" class="mobile-menu__link">Galeria</a></li>
+                <li><a href="#depoimentos" class="mobile-menu__link">Depoimentos</a></li>
+                <li><a href="#contato" class="mobile-menu__link mobile-menu__link--cta">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu__footer">
+            <a href="https://www.facebook.com/phomeniukplanejados/" target="_blank" rel="noopener noreferrer" class="mobile-menu__social">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </a>
+        </div>
+    </div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero__bg">
+            <img src="assets/Marcenaria_Phomeniuk___Londrin_001.jpg" alt="Marcenaria Phomeniuk" loading="eager">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container hero__content">
+            <span class="hero__badge">Desde 1989</span>
+            <h1 class="hero__title">Marcenaria<br><span>Phomeniuk</span></h1>
+            <p class="hero__subtitle">Móveis planejados sob medida em Londrina PR.<br>Variedade, qualidade e satisfação.</p>
+            <div class="hero__actions">
+                <a href="#galeria" class="btn btn--primary">Ver Projetos</a>
+                <a href="#contato" class="btn btn--outline">Fale Conosco</a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Role para baixo</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="section section--about" id="sobre">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__images">
+                    <div class="about__img about__img--main">
+                        <img src="assets/Marcenaria_Phomeniuk___Londrin_005.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    </div>
+                    <div class="about__img about__img--secondary">
+                        <img src="assets/Marcenaria_Phomeniuk___Londrin_024.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    </div>
+                    <div class="about__experience">
+                        <span class="about__exp-number">35+</span>
+                        <span class="about__exp-text">Anos de<br>Experiência</span>
+                    </div>
+                </div>
+                <div class="about__content">
+                    <span class="section__label">Sobre Nós</span>
+                    <h2 class="section__title">Tradição e qualidade em<br>móveis planejados</h2>
+                    <p class="about__text">
+                        A Marcenaria Phomeniuk é uma microempresa fundada em 1989, em Londrina PR. Tem como principal objetivo levar satisfação aos clientes oferecendo variedade e qualidade em móveis planejados sob medida.
+                    </p>
+                    <p class="about__text">
+                        Com mais de três décadas de atuação, nossa equipe combina experiência artesanal com técnicas modernas para entregar projetos que transformam ambientes.
+                    </p>
+                    <div class="about__stats">
+                        <div class="stat">
+                            <span class="stat__number">985+</span>
+                            <span class="stat__label">Curtidas no Facebook</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">1989</span>
+                            <span class="stat__label">Ano de Fundação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="section section--services" id="servicos">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Nossos Serviços</span>
+                <h2 class="section__title">Soluções completas em<br>marcenaria planejada</h2>
+            </div>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__number">01</div>
+                    <div class="service-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M8 4v16"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Cozinhas Planejadas</h3>
+                    <p class="service-card__text">Cozinhas sob medida que otimizam cada centímetro do seu espaço com funcionalidade e estilo.</p>
+                    <div class="service-card__arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">02</div>
+                    <div class="service-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v18"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Dormitórios</h3>
+                    <p class="service-card__text">Guarda-roupas, cabeceiras e criados-mudos projetados para o seu quarto dos sonhos.</p>
+                    <div class="service-card__arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">03</div>
+                    <div class="service-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 22V4c0-1.1.9-2 2-2h12a2 2 0 012 2v18H4z"/><path d="M9 22V12h6v10"/><path d="M9 6h.01M15 6h.01"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Home Office</h3>
+                    <p class="service-card__text">Ambientes de trabalho funcionais e elegantes para sua produtividade dentro de casa.</p>
+                    <div class="service-card__arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">04</div>
+                    <div class="service-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 9V6a2 2 0 00-2-2H6a2 2 0 00-2 2v3"/><path d="M2 11v5a2 2 0 002 2h16a2 2 0 002-2v-5a3 3 0 00-3-3H5a3 3 0 00-3 3z"/><path d="M4 18v2m16-2v2"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Salas de Estar</h3>
+                    <p class="service-card__text">Painéis de TV, estantes e racks que valorizam sua sala com design contemporâneo.</p>
+                    <div class="service-card__arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">05</div>
+                    <div class="service-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h1m8-9v1m8 8h1M5.6 5.6l.7.7m12.1-.7l-.7.7"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M17 12a5 5 0 10-10 0 5 5 0 0010 0z"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Banheiros</h3>
+                    <p class="service-card__text">Gabinetes e armários para banheiro que unem praticidade com acabamento refinado.</p>
+                    <div class="service-card__arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__number">06</div>
+                    <div class="service-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3 class="service-card__title">Projetos Especiais</h3>
+                    <p class="service-card__text">Móveis e soluções personalizadas para qualquer necessidade — do comercial ao residencial.</p>
+                    <div class="service-card__arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALERIA ===== -->
+    <section class="section section--gallery" id="galeria">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Nossos Trabalhos</span>
+                <h2 class="section__title">Galeria de Projetos</h2>
+                <p class="section__desc">Conheça alguns dos nossos projetos realizados ao longo de mais de 35 anos de atuação.</p>
+            </div>
+            <div class="gallery__grid" id="galleryGrid">
+                <div class="gallery__item">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_002.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item gallery__item--tall">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_003.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_004.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_006.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item gallery__item--wide">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_007.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_008.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item gallery__item--tall">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_021.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_022.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_023.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item gallery__item--wide">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_024.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_025.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/Marcenaria_Phomeniuk___Londrin_026.jpg" alt="Projeto Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    <div class="gallery__item-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <!-- Placeholder "Preview" items -->
+                <div class="gallery__item gallery__item--placeholder">
+                    <div class="placeholder-img"><span>Preview</span></div>
+                    <div class="gallery__item-overlay"><span>Em Breve</span></div>
+                </div>
+                <div class="gallery__item gallery__item--placeholder">
+                    <div class="placeholder-img"><span>Preview</span></div>
+                    <div class="gallery__item-overlay"><span>Em Breve</span></div>
+                </div>
+                <div class="gallery__item gallery__item--placeholder gallery__item--wide">
+                    <div class="placeholder-img"><span>Preview</span></div>
+                    <div class="gallery__item-overlay"><span>Em Breve</span></div>
+                </div>
+                <div class="gallery__item gallery__item--placeholder">
+                    <div class="placeholder-img"><span>Preview</span></div>
+                    <div class="gallery__item-overlay"><span>Em Breve</span></div>
+                </div>
+                <div class="gallery__item gallery__item--placeholder">
+                    <div class="placeholder-img"><span>Preview</span></div>
+                    <div class="gallery__item-overlay"><span>Em Breve</span></div>
+                </div>
+                <div class="gallery__item gallery__item--placeholder">
+                    <div class="placeholder-img"><span>Preview</span></div>
+                    <div class="gallery__item-overlay"><span>Em Breve</span></div>
+                </div>
+                <div class="gallery__item gallery__item--placeholder">
+                    <div class="placeholder-img"><span>Preview</span></div>
+                    <div class="gallery__item-overlay"><span>Em Breve</span></div>
+                </div>
+                <div class="gallery__item gallery__item--placeholder">
+                    <div class="placeholder-img"><span>Preview</span></div>
+                    <div class="gallery__item-overlay"><span>Em Breve</span></div>
+                </div>
+            </div>
+            <div class="gallery__load-more">
+                <button class="btn btn--secondary" id="loadMoreBtn">Carregar Mais Projetos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BANNER PARALLAX ===== -->
+    <section class="parallax-banner">
+        <div class="parallax-banner__bg">
+            <img src="assets/Marcenaria_Phomeniuk___Londrin_050.jpg" alt="Marcenaria Phomeniuk" loading="lazy">
+        </div>
+        <div class="parallax-banner__overlay"></div>
+        <div class="container parallax-banner__content">
+            <h2>Transformamos seus <span>sonhos</span> em realidade</h2>
+            <p>Cada projeto é único, feito sob medida para o seu espaço e estilo de vida.</p>
+            <a href="#contato" class="btn btn--primary">Solicite um Orçamento</a>
+        </div>
+    </section>
+
+    <!-- ===== PROCESSO ===== -->
+    <section class="section section--process">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Como Funciona</span>
+                <h2 class="section__title">Nosso Processo</h2>
+            </div>
+            <div class="process__grid">
+                <div class="process-step">
+                    <div class="process-step__number">01</div>
+                    <h3 class="process-step__title">Consulta</h3>
+                    <p class="process-step__text">Entendemos suas necessidades e o espaço disponível para criar a melhor solução.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">02</div>
+                    <h3 class="process-step__title">Projeto</h3>
+                    <p class="process-step__text">Desenvolvemos o projeto personalizado com todos os detalhes e acabamentos.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">03</div>
+                    <h3 class="process-step__title">Fabricação</h3>
+                    <p class="process-step__text">Fabricamos os móveis com materiais de qualidade e acabamento impecável.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step__number">04</div>
+                    <h3 class="process-step__title">Instalação</h3>
+                    <p class="process-step__text">Instalamos tudo no local com precisão e cuidado, pronto para você aproveitar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="section section--testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__label">Depoimentos</span>
+                <h2 class="section__title">O que dizem<br>nossos clientes</h2>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-card__text">"Excelente trabalho! Os móveis ficaram perfeitos, exatamente como imaginamos. Recomendo a todos."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">C</div>
+                        <div>
+                            <strong>Cliente Satisfeito</strong>
+                            <span>Londrina, PR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-card__text">"Profissionais competentes e atenciosos. Cumpriram o prazo e o acabamento ficou impecável. Nota 10!"</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">M</div>
+                        <div>
+                            <strong>Mais um Cliente Feliz</strong>
+                            <span>Londrina, PR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-card__text">"Qualidade excepcional e atenção aos detalhes. Os móveis transformaram completamente nossa casa."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">R</div>
+                        <div>
+                            <strong>Recomendação Garantida</strong>
+                            <span>Londrina, PR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="section section--contact" id="contato">
+        <div class="container">
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <span class="section__label">Contato</span>
+                    <h2 class="section__title">Vamos conversar sobre<br>seu projeto?</h2>
+                    <p class="contact__text">Entre em contato conosco para solicitar um orçamento ou tirar dúvidas. Estamos prontos para atender você!</p>
+                    <div class="contact__details">
+                        <div class="contact__detail">
+                            <div class="contact__detail-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <strong>Localização</strong>
+                                <span>Londrina, PR</span>
+                            </div>
+                        </div>
+                        <div class="contact__detail">
+                            <div class="contact__detail-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Facebook</strong>
+                                <a href="https://www.facebook.com/phomeniukplanejados/" target="_blank" rel="noopener noreferrer">@phomeniukplanejados</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__image">
+                        <img src="assets/Marcenaria_Phomeniuk___Londrin_055.jpg" alt="Marcenaria Phomeniuk" class="lightbox-trigger" loading="lazy">
+                    </div>
+                </div>
+                <div class="contact__form-wrapper">
+                    <form class="contact__form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(43) 99999-9999">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service" name="service">
+                                <option value="">Selecione um serviço</option>
+                                <option value="cozinha">Cozinha Planejada</option>
+                                <option value="dormitorio">Dormitório</option>
+                                <option value="home-office">Home Office</option>
+                                <option value="sala">Sala de Estar</option>
+                                <option value="banheiro">Banheiro</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Descreva seu projeto..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#" class="header__logo">
+                        <span class="logo-icon logo-icon--light">P</span>
+                        <div class="logo-text">
+                            <strong>Phomeniuk</strong>
+                            <small>Marcenaria &bull; Londrina PR</small>
+                        </div>
+                    </a>
+                    <p class="footer__desc">Desde 1989 levando satisfação aos clientes com variedade e qualidade em móveis planejados.</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#servicos">Cozinhas Planejadas</a></li>
+                        <li><a href="#servicos">Dormitórios</a></li>
+                        <li><a href="#servicos">Home Office</a></li>
+                        <li><a href="#servicos">Salas de Estar</a></li>
+                        <li><a href="#servicos">Projetos Especiais</a></li>
+                    </ul>
+                </div>
+                <div class="footer__social">
+                    <h4>Redes Sociais</h4>
+                    <a href="https://www.facebook.com/phomeniukplanejados/" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Facebook
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Marcenaria Phomeniuk. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="lightbox__content">
+            <img src="" alt="Imagem ampliada" id="lightboxImg">
+        </div>
+    </div>
+
+    <!-- ===== WHATSAPP FLUTUANTE ===== -->
+    <a class="whatsapp-float" href="https://wa.me/5543988482105" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-float__label">Fale pelo WhatsApp</span>
+    </a>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
