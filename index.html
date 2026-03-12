@@ -202,26 +202,97 @@ p{color:var(--ink-light);font-size:clamp(0.95rem,1.5vw,1.1rem)}
 .style-tag:hover{color:var(--accent);border-color:var(--accent)}
 
 /* ═══════════════════════════════════════════
-   SPEED SECTION (STOPWATCH + TIMELINE)
+   SPEED SECTION (CLOCK + SITE BUILD)
    ═══════════════════════════════════════════ */
-.speed-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,60px);align-items:center}
-.speed-visual{display:flex;justify-content:center}
-.stopwatch{width:clamp(200px,30vw,280px)}
-.sw-ring{transition:stroke-dashoffset 2s ease-out}
-.sw-progress{stroke-dasharray:471;stroke-dashoffset:471;transform:rotate(-90deg);transform-origin:100px 120px}
-.sw-progress.animate{animation:swFill 2.5s cubic-bezier(.4,0,.2,1) forwards}
-@keyframes swFill{to{stroke-dashoffset:47}}
-.sw-hand{transform-origin:100px 120px}
-.sw-hand.animate{animation:swSpin 2.5s cubic-bezier(.15,.6,.15,1) forwards}
-@keyframes swSpin{from{transform:rotate(0deg)}to{transform:rotate(1080deg)}}
+.speed-section{padding:clamp(60px,10vw,100px) 0;background:var(--paper-alt);position:relative;overflow:hidden}
+.speed-header{text-align:center;margin-bottom:clamp(40px,6vw,60px)}
+.speed-header h2{margin-bottom:12px}
+.speed-header p{max-width:560px;margin:0 auto}
+.speed-stage{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,60px);align-items:center;max-width:1000px;margin:0 auto}
 
-.timeline{display:flex;flex-direction:column;gap:0;margin-top:32px;position:relative;padding-left:28px}
-.timeline::before{content:'';position:absolute;left:8px;top:8px;bottom:8px;width:2.5px;background:var(--border-color);border-radius:2px}
-.timeline-item{display:flex;align-items:flex-start;gap:16px;padding:12px 0;position:relative}
-.timeline-dot{width:18px;height:18px;border-radius:50%;border:2.5px solid var(--ink);background:var(--paper);position:absolute;left:-28px;top:14px;z-index:1}
-.timeline-dot.accent{background:var(--accent);border-color:var(--accent)}
-.timeline-content strong{font-family:var(--font-hand);font-size:1.2rem;display:block}
-.timeline-content span{font-size:.92rem;color:var(--ink-light)}
+/* ─── CLOCK ─── */
+.clock-wrap{display:flex;flex-direction:column;align-items:center;gap:16px}
+.clock-svg{width:clamp(240px,32vw,320px);filter:drop-shadow(3px 3px 0 rgba(0,0,0,.06))}
+.clock-face{fill:var(--paper);stroke:var(--ink);stroke-width:3}
+.clock-tick{stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+.clock-tick-minor{stroke:var(--ink-faint);stroke-width:1.2;stroke-linecap:round}
+.clock-num{font-family:var(--font-hand);font-size:18px;font-weight:700;fill:var(--ink);text-anchor:middle;dominant-baseline:central}
+.clock-hand-hour{stroke:var(--ink);stroke-width:4;stroke-linecap:round;transform-origin:150px 150px}
+.clock-hand-minute{stroke:var(--accent);stroke-width:3;stroke-linecap:round;transform-origin:150px 150px}
+.clock-center{fill:var(--ink)}
+.clock-center-inner{fill:var(--accent)}
+.clock-progress-ring{fill:none;stroke:var(--accent);stroke-width:5;stroke-linecap:round;stroke-dasharray:848;stroke-dashoffset:848;transform:rotate(-90deg);transform-origin:150px 150px;opacity:.25}
+
+/* clock timer display */
+.clock-timer{font-family:var(--font-hand);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--ink);text-align:center}
+.clock-timer span{color:var(--accent)}
+.clock-label{font-family:var(--font-hand);font-size:1.1rem;color:var(--ink-light)}
+
+/* animated states */
+.clock-hand-hour.animate{animation:hourSpin 8s cubic-bezier(.25,.1,.25,1) forwards}
+.clock-hand-minute.animate{animation:minuteSpin 8s cubic-bezier(.25,.1,.25,1) forwards}
+.clock-progress-ring.animate{animation:ringFill 8s cubic-bezier(.25,.1,.25,1) forwards}
+@keyframes hourSpin{from{transform:rotate(0deg)}to{transform:rotate(60deg)}}
+@keyframes minuteSpin{from{transform:rotate(0deg)}to{transform:rotate(720deg)}}
+@keyframes ringFill{to{stroke-dashoffset:282}}
+
+/* ─── SITE BUILD ANIMATION ─── */
+.site-build{position:relative;width:100%;max-width:420px;margin:0 auto}
+.site-build-browser{border:2.5px solid var(--ink);border-radius:12px 12px 8px 8px;overflow:hidden;background:var(--paper);box-shadow:5px 5px 0 rgba(0,0,0,.08)}
+.site-build-topbar{height:32px;background:var(--paper-dark);border-bottom:2px solid var(--ink);display:flex;align-items:center;padding:0 12px;gap:6px}
+.site-build-dot{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--ink)}
+.site-build-dot:nth-child(1){background:var(--red)}
+.site-build-dot:nth-child(2){background:var(--yellow)}
+.site-build-dot:nth-child(3){background:var(--accent2)}
+.site-build-url{flex:1;height:16px;background:var(--paper);border-radius:8px;border:1.5px solid var(--border-color);margin-left:8px}
+.site-build-body{height:280px;padding:16px;position:relative;overflow:hidden}
+
+/* build layers */
+.build-layer{position:absolute;left:16px;right:16px;opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+.build-layer.visible{opacity:1;transform:translateY(0)}
+
+/* navbar layer */
+.bl-nav{top:16px;height:28px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;background:var(--ink);border-radius:6px}
+.bl-nav-logo{width:50px;height:10px;background:var(--accent);border-radius:3px}
+.bl-nav-links{display:flex;gap:8px}
+.bl-nav-link{width:28px;height:6px;background:rgba(255,255,255,.4);border-radius:3px}
+
+/* hero layer */
+.bl-hero{top:52px;display:flex;gap:12px;align-items:flex-start}
+.bl-hero-text{flex:1;display:flex;flex-direction:column;gap:6px}
+.bl-hero-title{height:14px;width:85%;background:var(--ink);border-radius:3px}
+.bl-hero-sub{height:8px;width:65%;background:var(--ink-faint);border-radius:3px}
+.bl-hero-btn{height:20px;width:70px;background:var(--accent);border-radius:var(--sk4);margin-top:4px}
+.bl-hero-img{width:80px;height:60px;background:linear-gradient(135deg,var(--accent2),var(--purple));border-radius:6px;flex-shrink:0}
+
+/* content blocks layer */
+.bl-content{top:132px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.bl-card{background:var(--paper-alt);border:1.5px solid var(--border-color);border-radius:6px;padding:8px;display:flex;flex-direction:column;gap:4px}
+.bl-card-icon{width:20px;height:20px;background:var(--accent);border-radius:50%;opacity:.7}
+.bl-card-line{height:5px;background:var(--border-color);border-radius:2px}
+.bl-card-line:last-child{width:60%}
+
+/* images layer */
+.bl-images{top:210px;display:flex;gap:8px}
+.bl-img{flex:1;height:40px;border-radius:6px;border:1.5px solid var(--border-color)}
+.bl-img:nth-child(1){background:linear-gradient(135deg,var(--yellow),var(--accent))}
+.bl-img:nth-child(2){background:linear-gradient(135deg,var(--accent2),var(--accent))}
+.bl-img:nth-child(3){background:linear-gradient(135deg,var(--purple),var(--accent2))}
+
+/* colors & polish layer (overlay effect) */
+.bl-polish{top:0;left:0;right:0;bottom:0;width:auto;background:transparent;pointer-events:none}
+.bl-polish-gradient{position:absolute;top:48px;left:16px;right:16px;bottom:0;background:linear-gradient(135deg,rgba(255,107,53,.04),rgba(78,205,196,.04));border-radius:0 0 6px 6px}
+.bl-polish-badge{position:absolute;bottom:12px;right:12px;font-family:var(--font-hand);font-size:.85rem;font-weight:600;color:#fff;background:var(--accent2);padding:3px 10px;border-radius:var(--sk4);border:1.5px solid var(--ink);transform:rotate(-2deg)}
+
+/* build step labels */
+.build-steps{display:flex;flex-direction:column;gap:0;margin-top:20px}
+.build-step{display:flex;align-items:center;gap:10px;padding:6px 0;font-family:var(--font-hand);font-size:1.05rem;color:var(--ink-faint);transition:color .4s}
+.build-step.active{color:var(--ink)}
+.build-step.done{color:var(--accent2)}
+.build-step-icon{width:22px;height:22px;border-radius:50%;border:2px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:.7rem;transition:all .4s;flex-shrink:0}
+.build-step.done .build-step-icon{background:var(--accent2);border-color:var(--accent2);color:#fff}
+.build-step.active .build-step-icon{border-color:var(--accent);color:var(--accent);animation:stepPulse 1.5s ease-in-out infinite}
+@keyframes stepPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,107,53,.3)}50%{box-shadow:0 0 0 6px rgba(255,107,53,0)}}
 
 /* ═══════════════════════════════════════════
    SERVICES SECTION
@@ -357,9 +428,8 @@ p{color:var(--ink-light);font-size:clamp(0.95rem,1.5vw,1.1rem)}
   .hero-btns{justify-content:center}
   .hero-visual{max-width:520px;margin:0 auto}
   .annotation-top{display:none}
-  .speed-grid{grid-template-columns:1fr;text-align:center}
-  .speed-visual{order:-1}
-  .timeline{text-align:left}
+  .speed-stage{grid-template-columns:1fr;text-align:center}
+  .site-build{order:-1}
   .process-steps{grid-template-columns:repeat(2,1fr);gap:32px}
   .process-steps::before{display:none}
   .stats-grid{grid-template-columns:repeat(2,1fr);gap:24px}
@@ -510,71 +580,141 @@ p{color:var(--ink-light);font-size:clamp(0.95rem,1.5vw,1.1rem)}
 </svg>
 
 <!-- ═══ SPEED / 48H SECTION ═══ -->
-<section class="section section-alt" id="velocidade">
-  <div class="container speed-grid">
-    <div class="speed-visual reveal">
-      <svg class="stopwatch" viewBox="0 0 200 220">
-        <!-- Stopwatch top stem -->
-        <line x1="100" y1="16" x2="100" y2="40" stroke="#2d2d2d" stroke-width="3" stroke-linecap="round"/>
-        <!-- Top button -->
-        <rect x="90" y="8" width="20" height="14" rx="4" fill="none" stroke="#2d2d2d" stroke-width="2.5"/>
-        <!-- Side button -->
-        <line x1="148" y1="56" x2="162" y2="44" stroke="#2d2d2d" stroke-width="3" stroke-linecap="round"/>
-        <line x1="162" y1="44" x2="165" y2="48" stroke="#2d2d2d" stroke-width="3" stroke-linecap="round"/>
-        <!-- Main circle -->
-        <circle cx="100" cy="120" r="75" fill="none" stroke="#2d2d2d" stroke-width="3"/>
-        <!-- Progress ring -->
-        <circle class="sw-progress" cx="100" cy="120" r="75" fill="none" stroke="#ff6b35" stroke-width="4.5" stroke-linecap="round"/>
-        <!-- Tick marks (12 o'clock, 3, 6, 9) -->
-        <line x1="100" y1="48" x2="100" y2="58" stroke="#2d2d2d" stroke-width="2.5"/>
-        <line x1="172" y1="120" x2="162" y2="120" stroke="#2d2d2d" stroke-width="2.5"/>
-        <line x1="100" y1="192" x2="100" y2="182" stroke="#2d2d2d" stroke-width="2.5"/>
-        <line x1="28" y1="120" x2="38" y2="120" stroke="#2d2d2d" stroke-width="2.5"/>
-        <!-- Minor ticks -->
-        <line x1="137" y1="55" x2="132" y2="63" stroke="#2d2d2d" stroke-width="1.5"/>
-        <line x1="165" y1="83" x2="157" y2="87" stroke="#2d2d2d" stroke-width="1.5"/>
-        <line x1="165" y1="157" x2="157" y2="153" stroke="#2d2d2d" stroke-width="1.5"/>
-        <line x1="137" y1="185" x2="132" y2="177" stroke="#2d2d2d" stroke-width="1.5"/>
-        <line x1="63" y1="185" x2="68" y2="177" stroke="#2d2d2d" stroke-width="1.5"/>
-        <line x1="35" y1="157" x2="43" y2="153" stroke="#2d2d2d" stroke-width="1.5"/>
-        <line x1="35" y1="83" x2="43" y2="87" stroke="#2d2d2d" stroke-width="1.5"/>
-        <line x1="63" y1="55" x2="68" y2="63" stroke="#2d2d2d" stroke-width="1.5"/>
-        <!-- Clock hand -->
-        <line class="sw-hand" x1="100" y1="120" x2="100" y2="56" stroke="#ff6b35" stroke-width="3" stroke-linecap="round"/>
-        <!-- Center dot -->
-        <circle cx="100" cy="120" r="5" fill="#2d2d2d"/>
-        <circle cx="100" cy="120" r="2.5" fill="#ff6b35"/>
-        <!-- 48h text -->
-        <text x="100" y="157" text-anchor="middle" font-family="Caveat,cursive" font-size="24" font-weight="700" fill="#2d2d2d">48h</text>
-      </svg>
+<section class="speed-section" id="velocidade">
+  <div class="container">
+    <div class="speed-header reveal">
+      <h2>Rápido como um <span class="squiggle">raio</span> ⚡</h2>
+      <p>Enquanto outros levam semanas, nós entregamos sua prévia em apenas 2 horas. Sem enrolação, sem surpresas.</p>
     </div>
 
-    <div class="speed-text">
-      <div class="section-header" style="text-align:left;margin-bottom:24px">
-        <h2>Rápido como um <span class="squiggle">raio</span> ⚡</h2>
-        <p style="margin:12px 0 0">Enquanto outros levam semanas, nós entregamos sua prévia em apenas 48 horas. Sem enrolação, sem surpresas.</p>
+    <div class="speed-stage">
+      <!-- LEFT: CLOCK -->
+      <div class="clock-wrap reveal" id="clockWrap">
+        <svg class="clock-svg" viewBox="0 0 300 300">
+          <!-- outer ring -->
+          <circle cx="150" cy="150" r="135" class="clock-face"/>
+          <!-- progress ring -->
+          <circle cx="150" cy="150" r="135" class="clock-progress-ring" id="clockRing"/>
+          <!-- hour numbers -->
+          <text x="150" y="38" class="clock-num">12</text>
+          <text x="217" y="56" class="clock-num">1</text>
+          <text x="262" y="100" class="clock-num">2</text>
+          <text x="278" y="155" class="clock-num">3</text>
+          <text x="262" y="210" class="clock-num">4</text>
+          <text x="217" y="253" class="clock-num">5</text>
+          <text x="150" y="272" class="clock-num">6</text>
+          <text x="83" y="253" class="clock-num">7</text>
+          <text x="38" y="210" class="clock-num">8</text>
+          <text x="22" y="155" class="clock-num">9</text>
+          <text x="38" y="100" class="clock-num">10</text>
+          <text x="83" y="56" class="clock-num">11</text>
+          <!-- major ticks -->
+          <line x1="150" y1="20" x2="150" y2="32" class="clock-tick"/>
+          <line x1="280" y1="150" x2="268" y2="150" class="clock-tick"/>
+          <line x1="150" y1="280" x2="150" y2="268" class="clock-tick"/>
+          <line x1="20" y1="150" x2="32" y2="150" class="clock-tick"/>
+          <!-- minor ticks (every 5 min) -->
+          <line x1="215" y1="32" x2="210" y2="42" class="clock-tick-minor"/>
+          <line x1="265" y1="85" x2="256" y2="91" class="clock-tick-minor"/>
+          <line x1="265" y1="215" x2="256" y2="209" class="clock-tick-minor"/>
+          <line x1="215" y1="268" x2="210" y2="258" class="clock-tick-minor"/>
+          <line x1="85" y1="268" x2="90" y2="258" class="clock-tick-minor"/>
+          <line x1="35" y1="215" x2="44" y2="209" class="clock-tick-minor"/>
+          <line x1="35" y1="85" x2="44" y2="91" class="clock-tick-minor"/>
+          <line x1="85" y1="32" x2="90" y2="42" class="clock-tick-minor"/>
+          <!-- hour hand (shorter, thick) -->
+          <line id="clockHour" class="clock-hand-hour" x1="150" y1="150" x2="150" y2="80"/>
+          <!-- minute hand (longer, accent) -->
+          <line id="clockMinute" class="clock-hand-minute" x1="150" y1="150" x2="150" y2="45"/>
+          <!-- center -->
+          <circle cx="150" cy="150" r="7" class="clock-center"/>
+          <circle cx="150" cy="150" r="3.5" class="clock-center-inner"/>
+        </svg>
+        <div class="clock-timer" id="clockTimer"><span>0:00</span> / 2:00h</div>
+        <div class="clock-label">Tempo para sua prévia ficar pronta</div>
       </div>
 
-      <div class="timeline reveal">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <strong>Dia 1</strong>
-            <span>Briefing & análise do seu negócio</span>
+      <!-- RIGHT: SITE BUILDING ANIMATION -->
+      <div class="site-build reveal" id="siteBuild">
+        <div class="site-build-browser">
+          <div class="site-build-topbar">
+            <div class="site-build-dot"></div>
+            <div class="site-build-dot"></div>
+            <div class="site-build-dot"></div>
+            <div class="site-build-url"></div>
+          </div>
+          <div class="site-build-body">
+            <!-- Layer 1: Navbar -->
+            <div class="build-layer bl-nav" data-step="0">
+              <div class="bl-nav-logo"></div>
+              <div class="bl-nav-links">
+                <div class="bl-nav-link"></div>
+                <div class="bl-nav-link"></div>
+                <div class="bl-nav-link"></div>
+              </div>
+            </div>
+            <!-- Layer 2: Hero -->
+            <div class="build-layer bl-hero" data-step="1">
+              <div class="bl-hero-text">
+                <div class="bl-hero-title"></div>
+                <div class="bl-hero-sub"></div>
+                <div class="bl-hero-btn"></div>
+              </div>
+              <div class="bl-hero-img"></div>
+            </div>
+            <!-- Layer 3: Content cards -->
+            <div class="build-layer bl-content" data-step="2">
+              <div class="bl-card">
+                <div class="bl-card-icon"></div>
+                <div class="bl-card-line"></div>
+                <div class="bl-card-line"></div>
+              </div>
+              <div class="bl-card">
+                <div class="bl-card-icon" style="background:var(--accent2)"></div>
+                <div class="bl-card-line"></div>
+                <div class="bl-card-line"></div>
+              </div>
+              <div class="bl-card">
+                <div class="bl-card-icon" style="background:var(--purple)"></div>
+                <div class="bl-card-line"></div>
+                <div class="bl-card-line"></div>
+              </div>
+            </div>
+            <!-- Layer 4: Images -->
+            <div class="build-layer bl-images" data-step="3">
+              <div class="bl-img"></div>
+              <div class="bl-img"></div>
+              <div class="bl-img"></div>
+            </div>
+            <!-- Layer 5: Polish & colors -->
+            <div class="build-layer bl-polish" data-step="4">
+              <div class="bl-polish-gradient"></div>
+              <div class="bl-polish-badge">✓ Pronto!</div>
+            </div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <strong>Dia 2</strong>
-            <span>Design & proposta visual personalizada</span>
+
+        <!-- Step labels -->
+        <div class="build-steps" id="buildSteps">
+          <div class="build-step" data-step="0">
+            <div class="build-step-icon">1</div>
+            <span>Estrutura & Navegação</span>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-dot accent"></div>
-          <div class="timeline-content">
-            <strong>Entrega! 🎉</strong>
-            <span>Seu novo site pronto para revisão</span>
+          <div class="build-step" data-step="1">
+            <div class="build-step-icon">2</div>
+            <span>Hero & Conteúdo principal</span>
+          </div>
+          <div class="build-step" data-step="2">
+            <div class="build-step-icon">3</div>
+            <span>Seções & Componentes</span>
+          </div>
+          <div class="build-step" data-step="3">
+            <div class="build-step-icon">4</div>
+            <span>Imagens & Mídia</span>
+          </div>
+          <div class="build-step" data-step="4">
+            <div class="build-step-icon">5</div>
+            <span>Cores, polimento & entrega ✨</span>
           </div>
         </div>
       </div>
@@ -1068,21 +1208,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-  /* ─── STOPWATCH ANIMATION ─── */
-  const swProgress = document.querySelector('.sw-progress');
-  const swHand = document.querySelector('.sw-hand');
+  /* ─── CLOCK + SITE BUILD ANIMATION ─── */
+  const clockWrap = document.getElementById('clockWrap');
+  const clockHour = document.getElementById('clockHour');
+  const clockMinute = document.getElementById('clockMinute');
+  const clockRing = document.getElementById('clockRing');
+  const clockTimer = document.getElementById('clockTimer');
+  const buildLayers = document.querySelectorAll('.build-layer');
+  const buildSteps = document.querySelectorAll('.build-step');
 
-  const swObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        swProgress.classList.add('animate');
-        swHand.classList.add('animate');
-        swObserver.unobserve(entry.target);
-      }
+  let clockAnimated = false;
+
+  function runClockBuild() {
+    if (clockAnimated) return;
+    clockAnimated = true;
+
+    // Animate clock hands
+    clockHour.classList.add('animate');
+    clockMinute.classList.add('animate');
+    clockRing.classList.add('animate');
+
+    // Animate timer counter 0:00 → 2:00 over 8s
+    const totalMs = 8000;
+    const start = performance.now();
+    function tickTimer(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / totalMs, 1);
+      const eased = 1 - Math.pow(1 - progress, 2);
+      const totalMinutes = Math.floor(eased * 120);
+      const h = Math.floor(totalMinutes / 60);
+      const m = totalMinutes % 60;
+      clockTimer.innerHTML = `<span>${h}:${String(m).padStart(2,'0')}</span> / 2:00h`;
+      if (progress < 1) requestAnimationFrame(tickTimer);
+    }
+    requestAnimationFrame(tickTimer);
+
+    // Build layers sequentially
+    const stepDelay = 1500; // ms between each layer
+    buildLayers.forEach((layer, i) => {
+      setTimeout(() => {
+        layer.classList.add('visible');
+        // Update step labels
+        buildSteps.forEach((step, j) => {
+          step.classList.remove('active');
+          if (j < i) step.classList.add('done');
+          if (j === i) { step.classList.add('active'); step.classList.remove('done'); }
+        });
+      }, 400 + i * stepDelay);
     });
-  }, { threshold: 0.3 });
+    // Final: mark last step done
+    setTimeout(() => {
+      buildSteps.forEach(s => { s.classList.remove('active'); s.classList.add('done'); });
+    }, 400 + buildLayers.length * stepDelay + 400);
+  }
 
-  if (swProgress) swObserver.observe(swProgress.closest('.speed-visual'));
+  const clockObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { runClockBuild(); clockObs.unobserve(entry.target); }
+    });
+  }, { threshold: 0.2 });
+
+  if (clockWrap) clockObs.observe(clockWrap);
 
   /* ─── NUMBER COUNTER ─── */
   const counterObserver = new IntersectionObserver((entries) => {
