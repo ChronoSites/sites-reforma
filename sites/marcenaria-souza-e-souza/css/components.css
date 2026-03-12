@@ -1,0 +1,260 @@
+/* =============================================
+   MARCENARIA SOUZA E SOUZA — COMPONENTS
+   ============================================= */
+
+/* ---------- Mobile Menu ---------- */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.mobile-menu.open {
+    pointer-events: all;
+    visibility: visible;
+}
+
+.mobile-menu__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 11, 8, 0.6);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.mobile-menu.open .mobile-menu__overlay {
+    opacity: 1;
+}
+
+.mobile-menu__panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min(380px, 85vw);
+    height: 100%;
+    background: linear-gradient(180deg, var(--color-dark) 0%, var(--color-dark-2) 100%);
+    transform: translateX(100%);
+    transition: transform var(--transition-slow);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    overflow-y: auto;
+    box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+}
+
+.mobile-menu.open .mobile-menu__panel {
+    transform: translateX(0);
+}
+
+.mobile-menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 32px;
+}
+
+.mobile-menu__header .logo-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 0.9rem;
+}
+
+.mobile-menu__close {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.7);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition);
+}
+
+.mobile-menu__close:hover {
+    color: var(--color-white);
+    background: rgba(255,255,255,0.1);
+}
+
+.mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.mobile-menu__link {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-menu__link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: var(--color-accent);
+    border-radius: 3px;
+    transition: height var(--transition);
+}
+
+.mobile-menu__link:hover {
+    color: var(--color-white);
+    background: rgba(255,255,255,0.05);
+    padding-left: 28px;
+}
+
+.mobile-menu__link:hover::before {
+    height: 24px;
+}
+
+.mobile-menu__cta {
+    margin-top: 24px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition);
+}
+
+.lightbox.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+}
+
+.lightbox__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    transition: all var(--transition);
+    z-index: 10;
+    background: rgba(255,255,255,0.08);
+}
+
+.lightbox__close:hover {
+    color: var(--color-white);
+    background: rgba(255,255,255,0.15);
+    transform: rotate(90deg);
+}
+
+.lightbox__content {
+    position: relative;
+    z-index: 5;
+    max-width: 90vw;
+    max-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox__img {
+    max-width: 100%;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform var(--transition);
+}
+
+.lightbox.open .lightbox__img {
+    transform: scale(1);
+}
+
+.lightbox__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+    transition: all var(--transition);
+    z-index: 10;
+}
+
+.lightbox__nav:hover {
+    color: var(--color-white);
+    background: rgba(255,255,255,0.2);
+}
+
+.lightbox__nav--prev {
+    left: 20px;
+}
+
+.lightbox__nav--next {
+    right: 20px;
+}
+
+/* ---------- Scroll Reveal ---------- */
+.sobre__content,
+.sobre__images,
+.servico-card,
+.galeria__item,
+.contato__card,
+.contato__map,
+.section__header {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.sobre__content.in-view,
+.sobre__images.in-view,
+.servico-card.in-view,
+.galeria__item.in-view,
+.contato__card.in-view,
+.contato__map.in-view,
+.section__header.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.servico-card:nth-child(2) { transition-delay: 0.1s; }
+.servico-card:nth-child(3) { transition-delay: 0.2s; }
+.servico-card:nth-child(4) { transition-delay: 0.3s; }
+
+.contato__card:nth-child(2) { transition-delay: 0.1s; }
+.contato__card:nth-child(3) { transition-delay: 0.2s; }
