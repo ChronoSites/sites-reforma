@@ -1188,26 +1188,32 @@ input, select, textarea { font-family: inherit; }
     background: #25D366;
     color: #fff;
     border-radius: 50px;
-    padding: 13px 16px;
+    padding: 13px 14px;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
     z-index: 999;
     text-decoration: none;
     overflow: hidden;
+    width: 54px;
     max-width: 54px;
-    transition: max-width 0.35s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    transition: max-width 0.35s ease, width 0.35s ease, box-shadow 0.25s ease, transform 0.25s ease;
     white-space: nowrap;
 }
 .whatsapp-float:hover {
-    max-width: 240px;
+    max-width: 260px;
+    width: auto;
     box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
     transform: translateY(-3px);
+}
+.whatsapp-float__icon {
+    flex-shrink: 0;
+    min-width: 26px;
 }
 .whatsapp-float__label {
     font-size: 0.88rem;
     font-weight: 600;
     font-family: var(--font-body);
     opacity: 0;
-    transition: opacity 0.2s ease 0.1s;
+    transition: opacity 0.2s ease 0.15s;
     pointer-events: none;
 }
 .whatsapp-float:hover .whatsapp-float__label {
