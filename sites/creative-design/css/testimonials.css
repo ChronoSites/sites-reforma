@@ -1,0 +1,97 @@
+/* ========== TESTIMONIALS ========== */
+.section--testimonials {
+    background: var(--clr-dark-2);
+}
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+.testimonial-card {
+    background: var(--clr-dark);
+    border: 1px solid var(--clr-dark-3);
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-xl);
+    font-family: var(--ff-heading);
+    font-size: 5rem;
+    color: var(--clr-primary);
+    opacity: 0.1;
+    line-height: 1;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(200, 149, 108, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card--featured {
+    border-color: var(--clr-primary);
+    background: linear-gradient(135deg, var(--clr-dark) 0%, rgba(200, 149, 108, 0.05) 100%);
+}
+
+.testimonial-card__stars {
+    margin-bottom: var(--space-lg);
+    font-size: var(--fs-sm);
+    letter-spacing: 2px;
+}
+
+.testimonial-card__text {
+    font-size: var(--fs-base);
+    color: var(--clr-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--space-xl);
+    font-style: italic;
+}
+
+.testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.testimonial-card__avatar {
+    width: 48px;
+    height: 48px;
+    background: var(--clr-primary);
+    color: var(--clr-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    font-size: var(--fs-lg);
+    flex-shrink: 0;
+}
+
+.testimonial-card__name {
+    display: block;
+    font-weight: 600;
+    color: var(--clr-white);
+    font-size: var(--fs-base);
+}
+
+.testimonial-card__date {
+    display: block;
+    font-size: var(--fs-xs);
+    color: var(--clr-text-muted);
+    margin-top: 2px;
+}
+
+.testimonials__cta {
+    text-align: center;
+    margin-top: var(--space-3xl);
+}

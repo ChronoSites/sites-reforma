@@ -1,0 +1,71 @@
+:root {
+    /* Color Palette - Warm wood tones + modern dark */
+    --clr-primary: #C8956C;
+    --clr-primary-dark: #A87550;
+    --clr-primary-light: #E8C9A8;
+    --clr-primary-glow: rgba(200, 149, 108, 0.25);
+
+    --clr-dark: #1A1612;
+    --clr-dark-2: #2A2420;
+    --clr-dark-3: #3A3330;
+    --clr-dark-4: #4A4340;
+
+    --clr-light: #FAF6F1;
+    --clr-light-2: #F0EAE2;
+    --clr-light-3: #E5DDD4;
+
+    --clr-white: #FFFFFF;
+    --clr-text: #FAF6F1;
+    --clr-text-muted: #B0A89E;
+    --clr-text-dark: #1A1612;
+    --clr-text-dark-muted: #6B6560;
+
+    /* Typography */
+    --ff-heading: 'Playfair Display', Georgia, serif;
+    --ff-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 2.5rem;
+    --fs-4xl: 3.5rem;
+    --fs-hero: clamp(2.5rem, 6vw, 5rem);
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    --space-4xl: 6rem;
+    --space-5xl: 8rem;
+
+    /* Layout */
+    --max-width: 1200px;
+    --header-height: 80px;
+
+    /* Borders & Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 30px rgba(200, 149, 108, 0.3);
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-spring: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

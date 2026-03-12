@@ -1,0 +1,210 @@
+/* ========== RESPONSIVE ========== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .about__grid {
+        gap: var(--space-2xl);
+    }
+
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 240px;
+    }
+
+    .testimonials__grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .cta-banner__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile landscape / small tablet */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 70px;
+        --space-5xl: 5rem;
+        --space-4xl: 3.5rem;
+    }
+
+    .container {
+        padding: 0 var(--space-lg);
+    }
+
+    /* Header */
+    .header__nav {
+        display: none;
+    }
+
+    .header__hamburger {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero__subtitle {
+        font-size: var(--fs-base);
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+
+    /* About */
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about__image {
+        height: 350px;
+    }
+
+    .about__image-accent {
+        display: none;
+    }
+
+    .section__title {
+        font-size: var(--fs-2xl);
+    }
+
+    /* Services */
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Gallery */
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+    }
+
+    .gallery__item--wide {
+        grid-column: span 2;
+    }
+
+    .gallery__item--tall {
+        grid-row: span 1;
+    }
+
+    /* Contact */
+    .contact__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__map {
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    /* CTA */
+    .cta-banner__title {
+        font-size: var(--fs-xl);
+    }
+
+    /* Scroll top */
+    .scroll-top {
+        width: 44px;
+        height: 44px;
+        bottom: var(--space-lg);
+        right: var(--space-lg);
+    }
+
+    /* WhatsApp float */
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        bottom: var(--space-lg);
+        left: var(--space-lg);
+    }
+
+    /* Nav social hidden on mobile (shown in mobile menu) */
+    .nav__social {
+        display: none;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    :root {
+        --space-5xl: 4rem;
+    }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .gallery__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 160px;
+        gap: var(--space-sm);
+    }
+
+    .gallery__item--wide {
+        grid-column: span 1;
+    }
+
+    .about__stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
+    }
+
+    .stat__number {
+        font-size: var(--fs-xl);
+    }
+
+    .btn {
+        padding: var(--space-sm) var(--space-lg);
+        font-size: var(--fs-sm);
+    }
+
+    .btn--lg {
+        padding: var(--space-md) var(--space-xl);
+    }
+
+    .testimonial-card {
+        padding: var(--space-xl);
+    }
+
+    .lightbox__close {
+        top: var(--space-md);
+        right: var(--space-md);
+        width: 40px;
+        height: 40px;
+    }
+
+    .service-card {
+        padding: var(--space-xl);
+    }
+
+    .contact__card {
+        padding: var(--space-lg);
+        gap: var(--space-md);
+    }
+}

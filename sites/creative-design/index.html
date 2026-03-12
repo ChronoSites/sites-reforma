@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcenaria Creative Design | Móveis Planejados em São Vicente - SP</title>
+    <meta name="description" content="Marcenaria Creative Design - Móveis planejados sob medida em São Vicente, SP. Qualidade, design e pontualidade. Avaliação 5 estrelas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="header__logo">
+                <span class="logo__icon">✦</span>
+                <div class="logo__text">
+                    <span class="logo__name">Creative Design</span>
+                    <span class="logo__sub">Marcenaria &amp; Móveis Planejados</span>
+                </div>
+            </a>
+            <nav class="header__nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="#inicio" class="nav__link" data-nav>Início</a></li>
+                    <li><a href="#sobre" class="nav__link" data-nav>Sobre</a></li>
+                    <li><a href="#servicos" class="nav__link" data-nav>Serviços</a></li>
+                    <li><a href="#galeria" class="nav__link" data-nav>Galeria</a></li>
+                    <li><a href="#depoimentos" class="nav__link" data-nav>Depoimentos</a></li>
+                    <li><a href="#contato" class="nav__link nav__link--cta" data-nav>Contato</a></li>
+                </ul>
+                <div class="nav__social">
+                    <a href="https://www.instagram.com/marcenaria_creative_design/" target="_blank" rel="noopener" class="nav__social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/marcenariacreative/?locale=pt_BR" target="_blank" rel="noopener" class="nav__social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </nav>
+            <button class="header__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__overlay" id="menuOverlay"></div>
+        <div class="mobile-menu__panel">
+            <button class="mobile-menu__close" id="menuClose" aria-label="Fechar menu">✕</button>
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li><a href="#inicio" class="mobile-menu__link" data-mobile-nav>Início</a></li>
+                    <li><a href="#sobre" class="mobile-menu__link" data-mobile-nav>Sobre</a></li>
+                    <li><a href="#servicos" class="mobile-menu__link" data-mobile-nav>Serviços</a></li>
+                    <li><a href="#galeria" class="mobile-menu__link" data-mobile-nav>Galeria</a></li>
+                    <li><a href="#depoimentos" class="mobile-menu__link" data-mobile-nav>Depoimentos</a></li>
+                    <li><a href="#contato" class="mobile-menu__link mobile-menu__link--cta" data-mobile-nav>Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__footer">
+                <a href="tel:+5513974029783" class="mobile-menu__phone">📞 (13) 97402-9783</a>
+                <div class="mobile-menu__social">
+                    <a href="https://www.instagram.com/marcenaria_creative_design/" target="_blank" rel="noopener" class="mobile-menu__social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/marcenariacreative/?locale=pt_BR" target="_blank" rel="noopener" class="mobile-menu__social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://wa.me/5513974029783" target="_blank" rel="noopener" class="mobile-menu__social-link" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.126 1.52 5.867L.057 23.306a.5.5 0 00.636.636l5.44-1.463A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.94 0-3.79-.562-5.39-1.527l-.386-.232-3.232.869.87-3.232-.232-.386A9.948 9.948 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero__bg">
+            <img src="assets/maps/maps-09.webp" alt="Móveis planejados Creative Design" class="hero__bg-img">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container hero__content">
+            <div class="hero__badge">⭐ 5.0 — 109 avaliações no Google</div>
+            <h1 class="hero__title">Móveis Planejados<br><span class="hero__title--accent">Sob Medida</span></h1>
+            <p class="hero__subtitle">Transformamos seus sonhos em móveis com design exclusivo, qualidade impecável e pontualidade garantida.</p>
+            <div class="hero__actions">
+                <a href="https://wa.me/5513974029783" target="_blank" rel="noopener" class="btn btn--primary">
+                    <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.126 1.52 5.867L.057 23.306a.5.5 0 00.636.636l5.44-1.463A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.94 0-3.79-.562-5.39-1.527l-.386-.232-3.232.869.87-3.232-.232-.386A9.948 9.948 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    Peça seu Orçamento
+                </a>
+                <a href="#galeria" class="btn btn--outline">Ver Projetos</a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Role para baixo</span>
+            <div class="hero__scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section section--about" id="sobre">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image-wrapper">
+                    <img src="assets/maps/maps-02.webp" alt="Marcenaria Creative Design" class="about__image clickable-img">
+                    <div class="about__image-accent"></div>
+                </div>
+                <div class="about__content">
+                    <span class="section__tag">Quem Somos</span>
+                    <h2 class="section__title">Marcenaria<br><span class="highlight">Creative Design</span></h2>
+                    <p class="about__text">Somos uma marcenaria especializada em móveis planejados sob medida, localizada em São Vicente, SP. Nosso compromisso é entregar projetos com qualidade excepcional, atendimento personalizado e pontualidade.</p>
+                    <p class="about__text">Com avaliação máxima no Google e mais de 100 clientes satisfeitos, buscamos sempre superar expectativas em cada projeto.</p>
+                    <div class="about__stats">
+                        <div class="stat">
+                            <span class="stat__number">5.0</span>
+                            <span class="stat__label">⭐ Avaliação Google</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">109+</span>
+                            <span class="stat__label">Avaliações</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">100%</span>
+                            <span class="stat__label">Satisfação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section section--services" id="servicos">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Nossos Serviços</span>
+                <h2 class="section__title">O que <span class="highlight">fazemos</span></h2>
+                <p class="section__desc">Soluções completas em marcenaria para transformar cada ambiente da sua casa.</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">🏠</div>
+                    <h3 class="service-card__title">Cozinhas Planejadas</h3>
+                    <p class="service-card__text">Cozinhas funcionais e elegantes, projetadas sob medida para aproveitar cada centímetro do seu espaço.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🛋️</div>
+                    <h3 class="service-card__title">Salas &amp; Living</h3>
+                    <p class="service-card__text">Painéis de TV, estantes, racks e móveis para sala com design moderno e acabamento impecável.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🛏️</div>
+                    <h3 class="service-card__title">Dormitórios</h3>
+                    <p class="service-card__text">Guarda-roupas, closets e cabeceiras planejados para seu quarto com máximo conforto e organização.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🚿</div>
+                    <h3 class="service-card__title">Banheiros</h3>
+                    <p class="service-card__text">Gabinetes e armários para banheiro com materiais resistentes à umidade e design sofisticado.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">📐</div>
+                    <h3 class="service-card__title">Projeto Sob Medida</h3>
+                    <p class="service-card__text">Desde a medição até a instalação, cuidamos de cada detalhe para que o resultado seja perfeito.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">✨</div>
+                    <h3 class="service-card__title">Acabamento Premium</h3>
+                    <p class="service-card__text">Materiais de alta qualidade e acabamentos refinados que garantem durabilidade e beleza.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="section section--gallery" id="galeria">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Portfólio</span>
+                <h2 class="section__title">Nossos <span class="highlight">Projetos</span></h2>
+                <p class="section__desc">Conheça alguns dos nossos trabalhos e veja a qualidade que entregamos.</p>
+            </div>
+            <div class="gallery__grid">
+                <div class="gallery__item gallery__item--wide">
+                    <img src="assets/maps/maps-03.webp" alt="Projeto Creative Design" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__hover">
+                        <span class="gallery__hover-icon">🔍</span>
+                        <span class="gallery__hover-text">Ver Projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-04.webp" alt="Projeto Creative Design" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__hover">
+                        <span class="gallery__hover-icon">🔍</span>
+                        <span class="gallery__hover-text">Ver Projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-05.webp" alt="Projeto Creative Design" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__hover">
+                        <span class="gallery__hover-icon">🔍</span>
+                        <span class="gallery__hover-text">Ver Projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-06.webp" alt="Projeto Creative Design" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__hover">
+                        <span class="gallery__hover-icon">🔍</span>
+                        <span class="gallery__hover-text">Ver Projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--tall">
+                    <img src="assets/maps/maps-07.webp" alt="Projeto Creative Design" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__hover">
+                        <span class="gallery__hover-icon">🔍</span>
+                        <span class="gallery__hover-text">Ver Projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-08.webp" alt="Projeto Creative Design" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__hover">
+                        <span class="gallery__hover-icon">🔍</span>
+                        <span class="gallery__hover-text">Ver Projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--wide">
+                    <img src="assets/maps/maps-09.webp" alt="Projeto Creative Design" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__hover">
+                        <span class="gallery__hover-icon">🔍</span>
+                        <span class="gallery__hover-text">Ver Projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-10.webp" alt="Projeto Creative Design" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__hover">
+                        <span class="gallery__hover-icon">🔍</span>
+                        <span class="gallery__hover-text">Ver Projeto</span>
+                    </div>
+                </div>
+                <!-- Placeholder images -->
+                <div class="gallery__item">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span class="gallery__placeholder-icon">📷</span>
+                        <span class="gallery__placeholder-text">Preview</span>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--tall">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span class="gallery__placeholder-icon">📷</span>
+                        <span class="gallery__placeholder-text">Preview</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span class="gallery__placeholder-icon">📷</span>
+                        <span class="gallery__placeholder-text">Preview</span>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--wide">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span class="gallery__placeholder-icon">📷</span>
+                        <span class="gallery__placeholder-text">Preview</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span class="gallery__placeholder-icon">📷</span>
+                        <span class="gallery__placeholder-text">Preview</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span class="gallery__placeholder-icon">📷</span>
+                        <span class="gallery__placeholder-text">Preview</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="section section--testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Depoimentos</span>
+                <h2 class="section__title">O que nossos <span class="highlight">clientes dizem</span></h2>
+                <p class="section__desc">A satisfação dos nossos clientes é a nossa maior conquista.</p>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-card__text">"Excelente trabalho! Encomendei um móvel para minha kit, eles foram super atenciosos e o resultado final ficou lindo!"</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">A</div>
+                        <div class="testimonial-card__info">
+                            <span class="testimonial-card__name">Ana Dudnik</span>
+                            <span class="testimonial-card__date">1 mês atrás</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card testimonial-card--featured">
+                    <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-card__text">"Excelentes profissionais! Já contratei serviços para a cozinha e a sala, e fiquei extremamente satisfeito. A equipe é ágil, comprometida e muito profissional! A qualidade da entrega é absurda — os móveis ficaram impecáveis e o prazo foi super rápido, algo raro de encontrar hoje em dia. Recomendo de olhos fechados!"</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">R</div>
+                        <div class="testimonial-card__info">
+                            <span class="testimonial-card__name">Renan Castro</span>
+                            <span class="testimonial-card__date">9 meses atrás</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-card__text">"Realizei os armários da minha cozinha com eles e foram impecáveis, sempre muito educados, compreensíveis, ajudaram nas decisões, tiveram o atendimento ótimo desde o primeiro contato, além do preço ser um dos melhores e cumpriram o prazo perfeitamente. Só tenho elogios a fazer!"</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">R</div>
+                        <div class="testimonial-card__info">
+                            <span class="testimonial-card__name">Rafaela Santana</span>
+                            <span class="testimonial-card__date">3 meses atrás</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__cta">
+                <a href="https://www.google.com/maps/search/?api=1&query=Marcenaria%20Creative%20Design&query_place_id=ChIJEashBacczpQReHS9Xb0Nrdg" target="_blank" rel="noopener" class="btn btn--outline">Ver todas as avaliações no Google</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container cta-banner__inner">
+            <div class="cta-banner__content">
+                <h2 class="cta-banner__title">Pronto para transformar seu ambiente?</h2>
+                <p class="cta-banner__text">Entre em contato e solicite um orçamento sem compromisso.</p>
+            </div>
+            <a href="https://wa.me/5513974029783" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+                <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.126 1.52 5.867L.057 23.306a.5.5 0 00.636.636l5.44-1.463A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.94 0-3.79-.562-5.39-1.527l-.386-.232-3.232.869.87-3.232-.232-.386A9.948 9.948 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                Falar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section section--contact" id="contato">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Contato</span>
+                <h2 class="section__title">Fale <span class="highlight">Conosco</span></h2>
+                <p class="section__desc">Estamos prontos para atender você.</p>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <div class="contact__card">
+                        <div class="contact__card-icon">📍</div>
+                        <div class="contact__card-content">
+                            <h4>Endereço</h4>
+                            <p>R. Américo Martins dos Santos, 60<br>Jardim Paraiso, São Vicente - SP<br>CEP 11370-550</p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">📞</div>
+                        <div class="contact__card-content">
+                            <h4>Telefone / WhatsApp</h4>
+                            <a href="tel:+5513974029783">(13) 97402-9783</a>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">⭐</div>
+                        <div class="contact__card-content">
+                            <h4>Avaliação Google</h4>
+                            <p>5.0 estrelas — 109 avaliações</p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Marcenaria%20Creative%20Design&query_place_id=ChIJEashBacczpQReHS9Xb0Nrdg" target="_blank" rel="noopener" class="contact__maps-link">Ver no Google Maps →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.8!2d-46.39!3d-23.96!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce9ca705216a12%3A0xd8ad0dbd5dbd7478!2sMarcenaria%20Creative%20Design!5e0!3m2!1spt-BR!2sbr!4v1" width="100%" height="100%" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Marcenaria Creative Design"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <a href="#" class="footer__logo">
+                    <span class="logo__icon">✦</span>
+                    <span class="logo__name">Creative Design</span>
+                </a>
+                <p class="footer__desc">Marcenaria &amp; Móveis Planejados sob medida em São Vicente, SP.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h4>Contato</h4>
+                <p>📍 São Vicente - SP</p>
+                <p>📞 <a href="tel:+5513974029783">(13) 97402-9783</a></p>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/marcenaria_creative_design/" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/marcenariacreative/?locale=pt_BR" target="_blank" rel="noopener" class="footer__social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2025 Marcenaria Creative Design. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">✕</button>
+        <div class="lightbox__content">
+            <img src="" alt="" class="lightbox__img" id="lightboxImg">
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5513974029783" target="_blank" rel="noopener" class="whatsapp-float" id="whatsappFloat" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.553 4.126 1.52 5.867L.057 23.306a.5.5 0 00.636.636l5.44-1.463A11.948 11.948 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.94 0-3.79-.562-5.39-1.527l-.386-.232-3.232.869.87-3.232-.232-.386A9.948 9.948 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/animations.js"></script>
+
+</body>
+</html>

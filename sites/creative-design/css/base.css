@@ -1,0 +1,180 @@
+/* ========== RESET & BASE ========== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fs-base);
+    color: var(--clr-text);
+    background: var(--clr-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--clr-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr-dark-3);
+    border-radius: 10px;
+    border: 2px solid var(--clr-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-primary);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--clr-dark-3) var(--clr-dark);
+}
+
+/* ========== UTILITY ========== */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+}
+
+.section {
+    padding: var(--space-5xl) 0;
+    position: relative;
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: var(--space-4xl);
+}
+
+.section__tag {
+    display: inline-block;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--clr-primary);
+    margin-bottom: var(--space-md);
+    position: relative;
+    padding: var(--space-xs) var(--space-lg);
+    border: 1px solid rgba(200, 149, 108, 0.3);
+    border-radius: var(--radius-full);
+}
+
+.section__title {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-lg);
+}
+
+.section__desc {
+    font-size: var(--fs-md);
+    color: var(--clr-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.highlight {
+    color: var(--clr-primary);
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-2xl);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background: var(--clr-primary);
+    color: var(--clr-dark);
+}
+
+.btn--primary:hover {
+    background: var(--clr-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn--outline {
+    border: 2px solid var(--clr-primary);
+    color: var(--clr-primary);
+    background: transparent;
+}
+
+.btn--outline:hover {
+    background: var(--clr-primary);
+    color: var(--clr-dark);
+    transform: translateY(-2px);
+}
+
+.btn--lg {
+    padding: var(--space-lg) var(--space-3xl);
+    font-size: var(--fs-md);
+}
+
+.btn__icon {
+    flex-shrink: 0;
+}
+
+/* ========== ANIMATIONS (reveal) ========== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}

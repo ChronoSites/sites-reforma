@@ -1,0 +1,101 @@
+/* ========== GALLERY ========== */
+.section--gallery {
+    background: var(--clr-dark);
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    grid-auto-rows: 280px;
+}
+
+.gallery__item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery__item--wide {
+    grid-column: span 2;
+}
+
+.gallery__item--tall {
+    grid-row: span 2;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.gallery__item:hover .gallery__img {
+    transform: scale(1.08);
+}
+
+.gallery__hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 22, 18, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.gallery__item:hover .gallery__hover {
+    opacity: 1;
+}
+
+.gallery__hover-icon {
+    font-size: var(--fs-2xl);
+}
+
+.gallery__hover-text {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--clr-primary);
+}
+
+/* Placeholder items */
+.gallery__placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--clr-dark-2), var(--clr-dark-3));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    border: 2px dashed var(--clr-dark-4);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+    cursor: default;
+}
+
+.gallery__placeholder:hover {
+    border-color: var(--clr-primary);
+    background: linear-gradient(135deg, var(--clr-dark-3), var(--clr-dark-4));
+}
+
+.gallery__placeholder-icon {
+    font-size: 2.5rem;
+    opacity: 0.4;
+}
+
+.gallery__placeholder-text {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--clr-text-muted);
+    opacity: 0.5;
+}
