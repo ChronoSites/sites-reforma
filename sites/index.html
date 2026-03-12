@@ -28,6 +28,13 @@ img,svg{display:block;max-width:100%}
 button{cursor:pointer;font-family:inherit;border:none;background:none}
 a{color:inherit;text-decoration:none}
 
+/* ═══ CUSTOM SCROLLBAR ═══ */
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--paper-alt);border-left:2px solid var(--border-color)}
+::-webkit-scrollbar-thumb{background:var(--ink-faint);border-radius:20px;border:2px solid var(--paper-alt)}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+html{scrollbar-color:var(--ink-faint) var(--paper-alt);scrollbar-width:thin}
+
 h1,h2,h3{font-family:var(--font-hand);line-height:1.2;color:var(--ink)}
 h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:700}
 h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700}
@@ -35,10 +42,6 @@ h3{font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:600}
 p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
 .highlight{background:linear-gradient(transparent 55%,var(--yellow) 55%);display:inline;padding:0 4px}
 .container{max-width:1140px;margin:0 auto;padding:0 20px}
-
-/* squiggle */
-.squiggle{position:relative;display:inline-block}
-.squiggle::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:8px;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4Q12.5 0 25 4Q37.5 8 50 4Q62.5 0 75 4Q87.5 8 100 4Q112.5 0 125 4Q137.5 8 150 4Q162.5 0 175 4Q187.5 8 200 4' fill='none' stroke='%23ff6b35' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") repeat-x;background-size:100px 8px}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
@@ -79,10 +82,10 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
 .mobile-menu a{font-family:var(--font-hand);font-size:1.8rem;font-weight:600;color:var(--ink);padding:12px 0;border-bottom:2px dashed var(--border-color)}
 
 /* ═══ HERO HEADER ═══ */
-.hero{padding:clamp(100px,14vw,150px) 0 clamp(40px,6vw,60px);text-align:center;position:relative;overflow:hidden}
+.hero{padding:clamp(100px,14vw,150px) 0 clamp(50px,8vw,80px);text-align:center;position:relative;overflow:hidden}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;font-family:var(--font-hand);font-size:1.1rem;font-weight:500;background:var(--yellow);color:var(--ink);margin-bottom:20px;transform:rotate(-1deg);border-radius:var(--sk4);border:2px solid var(--ink)}
 .hero h1{margin-bottom:16px}
-.hero p{max-width:560px;margin:0 auto 32px}
+.hero p{max-width:560px;margin:0 auto}
 .doodle{position:absolute;pointer-events:none;font-size:2rem;opacity:.12;animation:doodleFloat 8s ease-in-out infinite}
 .doodle-1{top:15%;right:8%;color:var(--accent)}
 .doodle-2{bottom:30%;left:5%;color:var(--accent2);animation-delay:-3s}
@@ -90,8 +93,8 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
 @keyframes doodleFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(8deg)}}
 
 /* ═══ FILTERS ═══ */
-.filters{padding:0 0 clamp(30px,4vw,50px);text-align:center}
-.filter-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:16px}
+.filters{padding:clamp(30px,5vw,50px) 0 clamp(20px,3vw,30px);text-align:center}
+.filter-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:20px}
 .filter-btn{font-family:var(--font-hand);font-size:1.1rem;font-weight:500;padding:8px 20px;border:2.5px solid var(--border-color);border-radius:var(--sk4);color:var(--ink-light);background:var(--paper);transition:all .3s}
 .filter-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(255,107,53,.08);transform:rotate(-1deg)}
 .filter-btn:hover{color:var(--accent);border-color:var(--accent)}
@@ -106,8 +109,8 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
 .results-count strong{color:var(--accent);font-weight:700}
 
 /* ═══ SITES GRID ═══ */
-.sites-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;margin-bottom:60px}
-.site-card{border:2.5px solid var(--ink);background:var(--paper);position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.sites-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px;margin-bottom:60px}
+.site-card{border:2.5px solid var(--ink);background:var(--paper);position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s;cursor:pointer}
 .site-card:nth-child(4n+1){border-radius:var(--sk1);transform:rotate(-.5deg)}
 .site-card:nth-child(4n+2){border-radius:var(--sk2);transform:rotate(.3deg)}
 .site-card:nth-child(4n+3){border-radius:var(--sk3);transform:rotate(-.3deg)}
@@ -119,27 +122,23 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
 .site-card:nth-child(2n)::before{--tape-rot:-1.5deg}
 .site-card:nth-child(3n)::before{--tape-rot:3deg}
 
-/* screenshot */
-.site-screenshot{height:200px;overflow:hidden;position:relative;background:var(--paper-alt)}
-.site-screenshot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s}
-.site-card:hover .site-screenshot img{transform:scale(1.04)}
-.site-screenshot-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--ink-faint)}
-.site-screenshot-placeholder svg{width:40px;height:40px;opacity:.3}
-
-/* status badge */
-.site-status{position:absolute;top:12px;right:12px;font-family:var(--font-hand);font-size:.9rem;font-weight:600;padding:4px 12px;border:2px solid var(--ink);z-index:2}
-.site-status-ready{background:var(--accent2);color:#fff;border-radius:var(--sk4);transform:rotate(-2deg)}
-.site-status-new{background:var(--yellow);color:var(--ink);border-radius:var(--sk4);transform:rotate(2deg)}
+/* iframe thumbnail */
+.site-preview{height:220px;overflow:hidden;position:relative;background:var(--paper-alt);border-bottom:2.5px solid var(--ink)}
+.site-preview iframe{width:1280px;height:900px;transform:scale(.27);transform-origin:top left;pointer-events:none;border:none;position:absolute;top:0;left:0}
+.site-preview-overlay{position:absolute;inset:0;z-index:2}
+.site-preview-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--ink-faint);z-index:1}
+.site-preview-loading svg{width:32px;height:32px;opacity:.25;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.15}50%{opacity:.35}}
 
 /* info */
-.site-info{padding:18px 20px;border-top:2.5px solid var(--ink)}
-.site-domain{font-family:var(--font-hand);font-size:1.4rem;font-weight:700;color:var(--ink);margin-bottom:4px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.site-title{font-size:.88rem;color:var(--ink-light);margin-bottom:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.site-meta{display:flex;justify-content:space-between;align-items:center}
+.site-info{padding:18px 20px}
+.site-name{font-family:var(--font-hand);font-size:1.5rem;font-weight:700;color:var(--ink);margin-bottom:4px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.site-slug{font-size:.8rem;color:var(--ink-faint);font-family:var(--font-body);margin-bottom:10px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.site-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
 .site-category{font-family:var(--font-hand);font-size:.95rem;font-weight:500;color:var(--accent);display:inline-flex;align-items:center;gap:4px}
 .site-date{font-size:.78rem;color:var(--ink-faint)}
-.site-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--font-hand);font-size:1.05rem;font-weight:600;color:var(--accent);transition:gap .3s}
-.site-link:hover{gap:12px}
+.site-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-hand);font-size:1.1rem;font-weight:600;color:#fff;background:var(--accent);padding:8px 20px;border:2px solid var(--accent);border-radius:var(--sk4);transition:transform .3s,box-shadow .3s,gap .3s}
+.site-link:hover{transform:rotate(-1deg);box-shadow:3px 3px 0 var(--ink);gap:12px}
 
 /* empty state */
 .empty-state{text-align:center;padding:80px 20px;grid-column:1/-1}
@@ -148,7 +147,7 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
 .empty-state p{color:var(--ink-faint)}
 
 /* wave divider */
-.wave-divider{display:block;width:100%;height:24px;margin:-12px 0;position:relative;z-index:2}
+.wave-divider{display:block;width:100%;height:24px;position:relative;z-index:2}
 .wave-divider path{stroke:var(--border-color);fill:none;stroke-width:2}
 
 /* ═══ CTA ═══ */
@@ -177,6 +176,7 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
   .hamburger{display:flex}
   .sites-grid{grid-template-columns:1fr}
   .site-card{transform:rotate(0deg)!important}
+  .site-preview iframe{width:1024px;height:720px;transform:scale(.34)}
   .doodle{display:none}
   .cta-doodle{display:none}
   .footer-inner{flex-direction:column;text-align:center}
@@ -187,7 +187,8 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
   .filter-bar{gap:6px}
   .filter-btn{font-size:.95rem;padding:6px 14px}
   .sites-grid{grid-template-columns:1fr}
-  .site-screenshot{height:180px}
+  .site-preview{height:180px}
+  .site-preview iframe{width:960px;height:680px;transform:scale(.2)}
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -239,23 +240,17 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
   </div>
 </section>
 
-<!-- Wave -->
-<svg class="wave-divider" viewBox="0 0 1200 24" preserveAspectRatio="none">
-  <path d="M0 12Q50 2 100 12Q150 22 200 12Q250 2 300 12Q350 22 400 12Q450 2 500 12Q550 22 600 12Q650 2 700 12Q750 22 800 12Q850 2 900 12Q950 22 1000 12Q1050 2 1100 12Q1150 22 1200 12"/>
-</svg>
-
 <!-- ═══ FILTERS ═══ -->
 <section class="filters">
   <div class="container">
     <div class="filter-bar" id="filterBar">
       <button class="filter-btn active" data-filter="all">Todos</button>
-      <!-- Dynamic category filters injected by JS -->
     </div>
     <div class="search-wrap">
       <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
         <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/>
       </svg>
-      <input type="text" class="search-input" id="searchInput" placeholder="Buscar por domínio ou categoria...">
+      <input type="text" class="search-input" id="searchInput" placeholder="Buscar por nome ou categoria...">
     </div>
   </div>
 </section>
@@ -263,13 +258,11 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
 <!-- ═══ SITES GRID ═══ -->
 <section class="container">
   <div class="results-count" id="resultsCount"></div>
-  <div class="sites-grid" id="sitesGrid">
-    <!-- Cards injected by JS -->
-  </div>
+  <div class="sites-grid" id="sitesGrid"></div>
 </section>
 
 <!-- Wave -->
-<svg class="wave-divider" viewBox="0 0 1200 24" preserveAspectRatio="none">
+<svg class="wave-divider" viewBox="0 0 1200 24" preserveAspectRatio="none" style="margin-top:40px">
   <path d="M0 12Q50 2 100 12Q150 22 200 12Q250 2 300 12Q350 22 400 12Q450 2 500 12Q550 22 600 12Q650 2 700 12Q750 22 800 12Q850 2 900 12Q950 22 1000 12Q1050 2 1100 12Q1150 22 1200 12"/>
 </svg>
 
@@ -301,7 +294,7 @@ p{color:var(--ink-light);font-size:clamp(0.92rem,1.3vw,1.05rem)}
 
 <script>
 /* ═══ SITES DATA — injected by push script ═══ */
-const SITES_DATA = [{"slug":"marcenaria-flex","title":"facebook.com/p/Marcenaria-M%C3%B3dulos-FLEX-100065682511683","domain":"facebook.com/p/Marcenaria-M%C3%B3dulos-FLEX-100065682511683","description":"Marcenaria Módulos FLEX · MÓVEIS COMERCIAIS COM ENTREGA RÁPIDA,DIRETO DA FÁBRICA. Page · Furniture · JOSE SANTIAGO, Bauru, SP, Brazil · +55 14 99909-0424 · modulosflex@gmail.com · modulos.flex · Always open · Not yet rated (0 Reviews) ...","category":"marcenaria","city":"Bauru","state":"SP","screenshot_url":"","original_url":"https://www.facebook.com/p/Marcenaria-M%C3%B3dulos-FLEX-100065682511683/","preview_url":"/marcenaria-flex/","created_at":"2026-03-11T19:57:03.864+00:00"},{"slug":"costa-moveis-planejados","title":"google.com/maps/search/?api=1&query=Costa%20M%C3%B3veis%20Planejados&query_place_id=ChIJYyFEm4Jnv5QRX1O96g_3A78","domain":"google.com/maps/search/?api=1&query=Costa%20M%C3%B3veis%20Planejados&query_place_id=ChIJYyFEm4Jnv5QRX1O96g_3A78","description":"⭐ 5 (41 avaliações) · Rua Campos Salles, 2-48 - Vila Falcao, Bauru - SP, 17050-000, Brazil · 📞 (14) 99122-7900","category":"marcenaria","city":"Bauru","state":"SP","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=Costa%20M%C3%B3veis%20Planejados&query_place_id=ChIJYyFEm4Jnv5QRX1O96g_3A78","preview_url":"/costa-moveis-planejados/","created_at":"2026-03-11T19:16:03.336+00:00"},{"slug":"floricultura-previa","title":"google.com/maps/search/?api=1&query=Floricultura%20Vida%20em%20Flores&query_place_id=ChIJ-0PsO9qx3pQRmnC-vtFFJGA","domain":"google.com/maps/search/?api=1&query=Floricultura%20Vida%20em%20Flores&query_place_id=ChIJ-0PsO9qx3pQRmnC-vtFFJGA","description":"⭐ 5 (31 avaliações) · R. Wenceslau Raboch, 201 - João Costa, Joinville - SC, 89209-020, Brazil · 📞 (47) 99943-2518","category":"floricultura","city":"Joinville","state":"SC","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=Floricultura%20Vida%20em%20Flores&query_place_id=ChIJ-0PsO9qx3pQRmnC-vtFFJGA","preview_url":"/floricultura-previa/","created_at":"2026-03-10T18:53:57.438+00:00"},{"slug":"vida-em-flores","title":"google.com/maps/search/?api=1&query=Floricultura%20Vida%20em%20Flores&query_place_id=ChIJ-0PsO9qx3pQRmnC-vtFFJGA","domain":"google.com/maps/search/?api=1&query=Floricultura%20Vida%20em%20Flores&query_place_id=ChIJ-0PsO9qx3pQRmnC-vtFFJGA","description":"⭐ 5 (31 avaliações) · R. Wenceslau Raboch, 201 - João Costa, Joinville - SC, 89209-020, Brazil · 📞 (47) 99943-2518","category":"floricultura","city":"Joinville","state":"SC","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=Floricultura%20Vida%20em%20Flores&query_place_id=ChIJ-0PsO9qx3pQRmnC-vtFFJGA","preview_url":"/vida-em-flores/","created_at":"2026-03-10T18:52:34.737+00:00"},{"slug":"serralheria-eder-soldas","title":"google.com/maps/search/?api=1&query=Serralheria%20%C3%89der%20soldas&query_place_id=ChIJq8a4QRNlGZURhrooSS4ESOA","domain":"google.com/maps/search/?api=1&query=Serralheria%20%C3%89der%20soldas&query_place_id=ChIJq8a4QRNlGZURhrooSS4ESOA","description":"⭐ 5 (48 avaliações) · R. Nossa Sra. da Conceição, 502 - Harmonia, Canoas - RS, 92325-220, Brazil · 📞 (51) 99215-1269","category":"serralheria","city":"Canoas","state":"RS","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=Serralheria%20%C3%89der%20soldas&query_place_id=ChIJq8a4QRNlGZURhrooSS4ESOA","preview_url":"/serralheria-eder-soldas/","created_at":"2026-03-10T18:33:47.829+00:00"},{"slug":"d-paulo-moveis-planejados","title":"google.com/maps/search/?api=1&query=D'Paulo%20M%C3%B3veis%20Planejados&query_place_id=ChIJTfDX9rhrYpMRB8aDwZPQoEk","domain":"google.com/maps/search/?api=1&query=D'Paulo%20M%C3%B3veis%20Planejados&query_place_id=ChIJTfDX9rhrYpMRB8aDwZPQoEk","description":"⭐ 5 (4 avaliações) · R. Italino Moura, 291 - Dom Abel, Jataí - GO, 75806-260, Brazil · 📞 (64) 99671-0651","category":"marcenaria","city":"Jataí","state":"GO","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=D'Paulo%20M%C3%B3veis%20Planejados&query_place_id=ChIJTfDX9rhrYpMRB8aDwZPQoEk","preview_url":"/d-paulo-moveis-planejados/","created_at":"2026-03-09T18:17:37.043+00:00"},{"slug":"mdf-moveis-planejados","title":"google.com/maps/search/?api=1&query=MDF%20m%C3%B3veis%20planejados&query_place_id=ChIJn4-PgvptYpMRTJCKlvTqDRo","domain":"google.com/maps/search/?api=1&query=MDF%20m%C3%B3veis%20planejados&query_place_id=ChIJn4-PgvptYpMRTJCKlvTqDRo","description":"⭐ 5 (2 avaliações) · Av. Santa Catarina - St. Jacutinga, Jataí - GO, 75807-641, Brazil · 📞 (64) 99329-6039","category":"marcenaria","city":"Jataí","state":"GO","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=MDF%20m%C3%B3veis%20planejados&query_place_id=ChIJn4-PgvptYpMRTJCKlvTqDRo","preview_url":"/mdf-moveis-planejados/","created_at":"2026-03-09T18:14:54.16+00:00"},{"slug":"montador-jw","title":"google.com/maps/search/?api=1&query=Montador%20de%20M%C3%B3veis%20jw%20rio%20verde%20go&query_place_id=ChIJjeCbcazdYZMREokFxJestoE","domain":"google.com/maps/search/?api=1&query=Montador%20de%20M%C3%B3veis%20jw%20rio%20verde%20go&query_place_id=ChIJjeCbcazdYZMREokFxJestoE","description":"⭐ 4.9 (71 avaliações) · R. do Cedro - Jardim Floresta, Rio Verde - GO, 75912-402, Brazil · 📞 (64) 99217-0737","category":"marcenaria","city":"Rio Verde","state":"GO","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=Montador%20de%20M%C3%B3veis%20jw%20rio%20verde%20go&query_place_id=ChIJjeCbcazdYZMREokFxJestoE","preview_url":"/montador-jw/","created_at":"2026-03-09T16:40:22.724+00:00"},{"slug":"j-d-marcenaria","title":"google.com/maps/search/?api=1&query=J%26D%20Marcenaria&query_place_id=ChIJAUR6Nj9dzpQRATipafOVZ84","domain":"google.com/maps/search/?api=1&query=J%26D%20Marcenaria&query_place_id=ChIJAUR6Nj9dzpQRATipafOVZ84","description":"⭐ 5 (1 avaliações) · R. Turmalinas, 164 - Prosperidade, São Caetano do Sul - SP, 09550-730, Brazil · 📞 (11) 98551-6608","category":"marcenaria","city":"São Caetano do Sul","state":"SP","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=J%26D%20Marcenaria&query_place_id=ChIJAUR6Nj9dzpQRATipafOVZ84","preview_url":"/j-d-marcenaria/","created_at":"2026-03-05T20:28:12.633+00:00"},{"slug":"marcenaria-de-melo","title":"marcenariademelo.com.br","domain":"marcenariademelo.com.br","description":"","category":"Marcenaria / Móveis planejados","city":"","state":"SP","screenshot_url":"","original_url":"https://www.marcenariademelo.com.br/","preview_url":"/marcenaria-de-melo/","created_at":"2026-03-04T17:46:21.12+00:00"},{"slug":"serralheria-delupe","title":"google.com/maps/search/?api=1&query=Serralheria%20Delupe&query_place_id=ChIJP-mhu1j1xZQRMuP1s_Mq_x8","domain":"google.com/maps/search/?api=1&query=Serralheria%20Delupe&query_place_id=ChIJP-mhu1j1xZQRMuP1s_Mq_x8","description":"⭐ 4.9 (63 avaliações) · R. Alix Magalhães Ribeiro, 229 - Jardim Montreal, Sorocaba - SP, 18053-450, Brazil · 📞 (15) 99670-4875","category":"serralheria","city":"Sorocaba","state":"SP","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=Serralheria%20Delupe&query_place_id=ChIJP-mhu1j1xZQRMuP1s_Mq_x8","preview_url":"/serralheria-delupe/","created_at":"2026-03-03T19:54:44.996+00:00"},{"slug":"google-com-maps-search-api-1-query-serralheria-20delupe-query-place-id-chijp-mhu1j1xzqrmup1s-mq-x8","title":"google.com/maps/search/?api=1&query=Serralheria%20Delupe&query_place_id=ChIJP-mhu1j1xZQRMuP1s_Mq_x8","domain":"google.com/maps/search/?api=1&query=Serralheria%20Delupe&query_place_id=ChIJP-mhu1j1xZQRMuP1s_Mq_x8","description":"⭐ 4.9 (63 avaliações) · R. Alix Magalhães Ribeiro, 229 - Jardim Montreal, Sorocaba - SP, 18053-450, Brazil · 📞 (15) 99670-4875","category":"serralheria","city":"Sorocaba","state":"SP","screenshot_url":"","original_url":"https://www.google.com/maps/search/?api=1&query=Serralheria%20Delupe&query_place_id=ChIJP-mhu1j1xZQRMuP1s_Mq_x8","preview_url":"/google-com-maps-search-api-1-query-serralheria-20delupe-query-place-id-chijp-mhu1j1xzqrmup1s-mq-x8/","created_at":"2026-03-03T19:36:00.5+00:00"},{"slug":"masterhousesolucoes","title":"masterhousesolucoes.com.br","domain":"masterhousesolucoes.com.br","description":"Por termos uma sólida estrutura planejada e um processo de expansão cadenciado, possuímos franquias de qualidade por todo Brasil, onde nossos eletricistas de Camaçari são rigorosamente selecionados através de duas entrevistas presenciais e provas técnicas de elétrica.","category":"Elétrica / Instalações elétricas","city":"Camaçari","state":"BA","screenshot_url":"","original_url":"https://www.masterhousesolucoes.com.br/servico/eletricista/ba/camacari/","preview_url":"/masterhousesolucoes/","created_at":"2026-02-25T19:46:03.4+00:00"}];
+const SITES_DATA = [{"slug":"marcenaria-flex","name":"Marcenaria Módulos FLEX","category":"marcenaria","city":"Bauru","state":"SP","preview_url":"/sites/marcenaria-flex/","created_at":"2026-03-11T19:57:03.864+00:00"},{"slug":"costa-moveis-planejados","name":"Costa Móveis Planejados","category":"marcenaria","city":"Bauru","state":"SP","preview_url":"/sites/costa-moveis-planejados/","created_at":"2026-03-11T19:16:03.336+00:00"},{"slug":"floricultura-previa","name":"Floricultura Vida em Flores","category":"floricultura","city":"Joinville","state":"SC","preview_url":"/sites/floricultura-previa/","created_at":"2026-03-10T18:53:57.438+00:00"},{"slug":"vida-em-flores","name":"Floricultura Vida em Flores","category":"floricultura","city":"Joinville","state":"SC","preview_url":"/sites/vida-em-flores/","created_at":"2026-03-10T18:52:34.737+00:00"},{"slug":"serralheria-eder-soldas","name":"Serralheria Éder soldas","category":"serralheria","city":"Canoas","state":"RS","preview_url":"/sites/serralheria-eder-soldas/","created_at":"2026-03-10T18:33:47.829+00:00"},{"slug":"d-paulo-moveis-planejados","name":"D'Paulo Móveis Planejados","category":"marcenaria","city":"Jataí","state":"GO","preview_url":"/sites/d-paulo-moveis-planejados/","created_at":"2026-03-09T18:17:37.043+00:00"},{"slug":"mdf-moveis-planejados","name":"MDF móveis planejados","category":"marcenaria","city":"Jataí","state":"GO","preview_url":"/sites/mdf-moveis-planejados/","created_at":"2026-03-09T18:14:54.16+00:00"},{"slug":"montador-jw","name":"Montador de Móveis jw rio verde go","category":"marcenaria","city":"Rio Verde","state":"GO","preview_url":"/sites/montador-jw/","created_at":"2026-03-09T16:40:22.724+00:00"},{"slug":"j-d-marcenaria","name":"J&D Marcenaria","category":"marcenaria","city":"São Caetano do Sul","state":"SP","preview_url":"/sites/j-d-marcenaria/","created_at":"2026-03-05T20:28:12.633+00:00"},{"slug":"marcenaria-de-melo","name":"marcenaria de melo","category":"Marcenaria / Móveis planejados","city":"","state":"SP","preview_url":"/sites/marcenaria-de-melo/","created_at":"2026-03-04T17:46:21.12+00:00"},{"slug":"serralheria-delupe","name":"Serralheria Delupe","category":"serralheria","city":"Sorocaba","state":"SP","preview_url":"/sites/serralheria-delupe/","created_at":"2026-03-03T19:54:44.996+00:00"},{"slug":"google-com-maps-search-api-1-query-serralheria-20delupe-query-place-id-chijp-mhu1j1xzqrmup1s-mq-x8","name":"Serralheria Delupe","category":"serralheria","city":"Sorocaba","state":"SP","preview_url":"/sites/google-com-maps-search-api-1-query-serralheria-20delupe-query-place-id-chijp-mhu1j1xzqrmup1s-mq-x8/","created_at":"2026-03-03T19:36:00.5+00:00"},{"slug":"masterhousesolucoes","name":"Eletricista em Camaçari, BA - Master House Manutenção e ReformasMaster House Manutenção e Reformas","category":"Elétrica / Instalações elétricas","city":"Camaçari","state":"BA","preview_url":"/sites/masterhousesolucoes/","created_at":"2026-02-25T19:46:03.4+00:00"}];
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -344,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = document.createElement('button');
     btn.className = 'filter-btn';
     btn.dataset.filter = cat;
-    btn.textContent = cat;
+    btn.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
     filterBar.appendChild(btn);
   });
 
@@ -382,8 +375,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (searchQuery) {
       filtered = filtered.filter(s =>
-        (s.domain && s.domain.toLowerCase().includes(searchQuery)) ||
-        (s.title && s.title.toLowerCase().includes(searchQuery)) ||
+        (s.name && s.name.toLowerCase().includes(searchQuery)) ||
+        (s.slug && s.slug.toLowerCase().includes(searchQuery)) ||
         (s.category && s.category.toLowerCase().includes(searchQuery)) ||
         (s.city && s.city.toLowerCase().includes(searchQuery))
       );
@@ -403,25 +396,27 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    const baseUrl = window.location.origin;
+
     grid.innerHTML = filtered.map((site, i) => {
-      const screenshot = site.screenshot_url
-        ? `<img src="${site.screenshot_url}" alt="Preview de ${site.domain}" loading="lazy">`
-        : `<div class="site-screenshot-placeholder">
+      const previewSrc = baseUrl + site.preview_url;
+      const location = [site.city, site.state].filter(Boolean).join(', ');
+
+      return `<div class="site-card reveal" style="transition-delay:${Math.min(i * 0.06, 0.5)}s">
+        <a href="${site.preview_url}" class="site-preview" target="_blank" rel="noopener noreferrer">
+          <div class="site-preview-loading">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
             </svg>
-            <span style="font-family:var(--font-hand);font-size:1rem;color:var(--ink-faint)">Em produção...</span>
-          </div>`;
-
-      const location = [site.city, site.state].filter(Boolean).join(', ');
-
-      return `<div class="site-card reveal" style="transition-delay:${Math.min(i * 0.05, 0.4)}s">
-        <div class="site-screenshot">${screenshot}</div>
+          </div>
+          <iframe src="${previewSrc}" loading="lazy" sandbox="allow-same-origin" title="Preview de ${site.name}"></iframe>
+          <div class="site-preview-overlay"></div>
+        </a>
         <div class="site-info">
-          <span class="site-domain">${site.domain}</span>
-          <div class="site-title">${site.title || 'Sem título'}</div>
+          <span class="site-name">${site.name}</span>
+          <span class="site-slug">/${site.slug}/</span>
           <div class="site-meta">
-            <span class="site-category">${site.category || 'Geral'}${location ? ' · ' + location : ''}</span>
+            <span class="site-category">${site.category ? site.category.charAt(0).toUpperCase() + site.category.slice(1) : 'Geral'}${location ? ' · ' + location : ''}</span>
             <span class="site-date">${formatDate(site.created_at)}</span>
           </div>
           <a href="${site.preview_url}" class="site-link" target="_blank" rel="noopener noreferrer">
@@ -431,7 +426,6 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>`;
     }).join('');
 
-    // Observe new cards for reveal
     grid.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
   }
 
