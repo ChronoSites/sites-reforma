@@ -109,24 +109,44 @@
     }, 320);
   }
 
-  // Attach click to every element with [data-lightbox]
+  // ---- Event delegation: one listener catches clicks on any [data-lightbox] ----
   function attachLightboxTriggers() {
+    // Mark all [data-lightbox] elements as keyboard-accessible
     document.querySelectorAll('[data-lightbox]').forEach(function (el) {
-      el.addEventListener('click', function () {
-        openLightbox(el.dataset.lightbox, el.dataset.lightboxAlt || '');
-      });
-      // Improve keyboard accessibility
-      el.setAttribute('tabindex', '0');
-      el.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openLightbox(el.dataset.lightbox, el.dataset.lightboxAlt || '');
+      if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '0');
+    });
+
+    // Delegated click on document — works regardless of nested elements
+    document.addEventListener('click', function (e) {
+      var target = e.target;
+      // Walk up until we find an element with data-lightbox or hit the document
+      while (target && target !== document) {
+        if (target.dataset && target.dataset.lightbox) {
+          e.stopPropagation();
+          openLightbox(target.dataset.lightbox, target.dataset.lightboxAlt || '');
+          return;
         }
-      });
+        // Stop climbing if we hit the lightbox itself (avoid re-triggering)
+        if (target === lightbox) return;
+        target = target.parentElement;
+      }
+    });
+
+    // Keyboard: Enter / Space on [data-lightbox]
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var target = document.activeElement;
+      if (target && target.dataset && target.dataset.lightbox) {
+        e.preventDefault();
+        openLightbox(target.dataset.lightbox, target.dataset.lightboxAlt || '');
+      }
     });
   }
 
-  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightboxClose) lightboxClose.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeLightbox();
+  });
   if (lightbox) {
     lightbox.addEventListener('click', function (e) {
       if (e.target === lightbox) closeLightbox();
@@ -169,11 +189,10 @@
 
   /* ============================
      INIT
+     Script is at bottom of <body>: DOM is already ready, no need to wait.
      ============================ */
-  document.addEventListener('DOMContentLoaded', function () {
-    attachLightboxTriggers();
-    initScrollReveal();
-    initFilters();
-  });
+  attachLightboxTriggers();
+  initScrollReveal();
+  initFilters();
 
 })();

@@ -694,6 +694,7 @@
   display: flex;
   align-items: flex-end;
   padding: 18px;
+  pointer-events: none; /* pass clicks through to parent [data-lightbox] */
 }
 .portfolio-item:hover .portfolio-overlay {
   opacity: 1;
