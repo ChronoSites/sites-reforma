@@ -1,0 +1,70 @@
+/* ===== FOOTER ===== */
+.footer {
+    background: var(--color-dark);
+    color: rgba(255,255,255,0.6);
+    padding: var(--space-3xl) 0 0;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer__brand .header__brand,
+.footer__brand .header__sub {
+    /* Already styled in header */
+}
+
+.footer__desc {
+    margin-top: var(--space-md);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer__links h4,
+.footer__contact h4 {
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--space-lg);
+}
+
+.footer__links ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.footer__links a {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.footer__links a:hover {
+    color: var(--color-accent);
+    padding-left: 6px;
+}
+
+.footer__contact p {
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+}
+
+.footer__contact a {
+    color: var(--color-accent);
+}
+
+.footer__bottom {
+    padding: var(--space-lg) 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+}

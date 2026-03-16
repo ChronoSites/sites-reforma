@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Interiores — Marcenaria em Macaé RJ</title>
+    <meta name="description" content="Module Interiores — Marcenaria e Móveis Planejados em Macaé, RJ. Qualidade e design sob medida para seu ambiente.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="header__logo">
+                <span class="header__logo-icon">M</span>
+                <div class="header__logo-text">
+                    <span class="header__brand">Module</span>
+                    <span class="header__sub">Interiores</span>
+                </div>
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li><a href="#inicio" class="nav__link" data-nav>Início</a></li>
+                    <li><a href="#sobre" class="nav__link" data-nav>Sobre</a></li>
+                    <li><a href="#servicos" class="nav__link" data-nav>Serviços</a></li>
+                    <li><a href="#galeria" class="nav__link" data-nav>Galeria</a></li>
+                    <li><a href="#depoimentos" class="nav__link" data-nav>Avaliações</a></li>
+                    <li><a href="#contato" class="nav__link nav__link--cta" data-nav>Contato</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__content">
+            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Fechar menu">&times;</button>
+            <nav class="mobile-menu__nav">
+                <a href="#inicio" class="mobile-menu__link" data-mobile-nav>Início</a>
+                <a href="#sobre" class="mobile-menu__link" data-mobile-nav>Sobre</a>
+                <a href="#servicos" class="mobile-menu__link" data-mobile-nav>Serviços</a>
+                <a href="#galeria" class="mobile-menu__link" data-mobile-nav>Galeria</a>
+                <a href="#depoimentos" class="mobile-menu__link" data-mobile-nav>Avaliações</a>
+                <a href="#contato" class="mobile-menu__link mobile-menu__link--cta" data-mobile-nav>Contato</a>
+            </nav>
+            <div class="mobile-menu__footer">
+                <p>📞 (22) 99769-7822</p>
+                <p>Aroeira, Macaé — RJ</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero__bg">
+            <img src="assets/maps/maps-01.webp" alt="Module Interiores" class="hero__bg-img">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container hero__content">
+            <span class="hero__tag">Marcenaria &amp; Móveis Planejados</span>
+            <h1 class="hero__title">Transformamos seus<br>ambientes em <em>arte</em></h1>
+            <p class="hero__subtitle">Móveis sob medida com design exclusivo para sua casa ou empresa em Macaé e região.</p>
+            <div class="hero__actions">
+                <a href="#contato" class="btn btn--primary">Solicite um Orçamento</a>
+                <a href="#galeria" class="btn btn--outline">Ver Projetos</a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Role para baixo</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section section--about" id="sobre">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image">
+                    <img src="assets/maps/maps-02.webp" alt="Module Interiores — Nosso trabalho" class="about__img clickable-img">
+                    <div class="about__badge">
+                        <span class="about__badge-number">⭐ 4.7</span>
+                        <span class="about__badge-text">no Google</span>
+                    </div>
+                </div>
+                <div class="about__text">
+                    <span class="section__tag">Sobre Nós</span>
+                    <h2 class="section__title">Module <em>Interiores</em></h2>
+                    <p class="about__desc">
+                        Somos uma marcenaria localizada em Aroeira, Macaé — RJ, especializada em móveis planejados e projetos de interiores sob medida. Cada peça é pensada com cuidado para refletir a personalidade de quem a encomenda.
+                    </p>
+                    <div class="about__stats">
+                        <div class="about__stat">
+                            <span class="about__stat-icon">📐</span>
+                            <div>
+                                <strong>Sob Medida</strong>
+                                <p>Projetos exclusivos</p>
+                            </div>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-icon">🪵</span>
+                            <div>
+                                <strong>Materiais Premium</strong>
+                                <p>Qualidade garantida</p>
+                            </div>
+                        </div>
+                        <div class="about__stat">
+                            <span class="about__stat-icon">🏠</span>
+                            <div>
+                                <strong>Macaé e Região</strong>
+                                <p>Atendimento local</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section section--services" id="servicos">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Nossos Serviços</span>
+                <h2 class="section__title">O que <em>fazemos</em></h2>
+                <p class="section__subtitle">Soluções completas em marcenaria para todos os ambientes</p>
+            </div>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">🍳</div>
+                    <h3 class="service-card__title">Cozinhas Planejadas</h3>
+                    <p class="service-card__desc">Cozinhas funcionais e elegantes, projetadas para otimizar cada centímetro do seu espaço.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🛏️</div>
+                    <h3 class="service-card__title">Dormitórios</h3>
+                    <p class="service-card__desc">Guarda-roupas, cabeceiras e móveis para quartos com design personalizado.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🛋️</div>
+                    <h3 class="service-card__title">Salas de Estar</h3>
+                    <p class="service-card__desc">Painéis de TV, estantes e mobília que transformam sua sala em um ambiente acolhedor.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🚿</div>
+                    <h3 class="service-card__title">Banheiros</h3>
+                    <p class="service-card__desc">Gabinetes e armários sob medida para banheiros de todos os tamanhos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">💼</div>
+                    <h3 class="service-card__title">Home Office</h3>
+                    <p class="service-card__desc">Mesas, estantes e ambientes de trabalho planejados para produtividade e conforto.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🏢</div>
+                    <h3 class="service-card__title">Ambientes Comerciais</h3>
+                    <p class="service-card__desc">Projetos para lojas, escritórios e estabelecimentos comerciais sob medida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="section section--gallery" id="galeria">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Portfólio</span>
+                <h2 class="section__title">Nossos <em>Projetos</em></h2>
+                <p class="section__subtitle">Confira alguns dos nossos trabalhos realizados</p>
+            </div>
+            <div class="gallery__grid">
+                <div class="gallery__item gallery__item--wide">
+                    <img src="assets/maps/maps-03.webp" alt="Projeto Module Interiores" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__overlay">
+                        <span>Ver projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-04.webp" alt="Projeto Module Interiores" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__overlay">
+                        <span>Ver projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-05.webp" alt="Projeto Module Interiores" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__overlay">
+                        <span>Ver projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-06.webp" alt="Projeto Module Interiores" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__overlay">
+                        <span>Ver projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--tall">
+                    <img src="assets/maps/maps-07.webp" alt="Projeto Module Interiores" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__overlay">
+                        <span>Ver projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-08.webp" alt="Projeto Module Interiores" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__overlay">
+                        <span>Ver projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--wide">
+                    <img src="assets/maps/maps-09.webp" alt="Projeto Module Interiores" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__overlay">
+                        <span>Ver projeto</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <img src="assets/maps/maps-10.webp" alt="Projeto Module Interiores" class="gallery__img clickable-img" loading="lazy">
+                    <div class="gallery__overlay">
+                        <span>Ver projeto</span>
+                    </div>
+                </div>
+                <!-- Placeholders Preview -->
+                <div class="gallery__item">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span>Preview</span>
+                    </div>
+                    <div class="gallery__overlay">
+                        <span>Em breve</span>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--tall">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span>Preview</span>
+                    </div>
+                    <div class="gallery__overlay">
+                        <span>Em breve</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span>Preview</span>
+                    </div>
+                    <div class="gallery__overlay">
+                        <span>Em breve</span>
+                    </div>
+                </div>
+                <div class="gallery__item gallery__item--wide">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span>Preview</span>
+                    </div>
+                    <div class="gallery__overlay">
+                        <span>Em breve</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span>Preview</span>
+                    </div>
+                    <div class="gallery__overlay">
+                        <span>Em breve</span>
+                    </div>
+                </div>
+                <div class="gallery__item">
+                    <div class="gallery__placeholder clickable-img" data-placeholder="true">
+                        <span>Preview</span>
+                    </div>
+                    <div class="gallery__overlay">
+                        <span>Em breve</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processo -->
+    <section class="section section--process">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Como Funciona</span>
+                <h2 class="section__title">Nosso <em>Processo</em></h2>
+            </div>
+            <div class="process__grid">
+                <div class="process__step">
+                    <div class="process__number">01</div>
+                    <h3>Contato</h3>
+                    <p>Entre em contato e conte sobre o que precisa para seu ambiente.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">02</div>
+                    <h3>Projeto</h3>
+                    <p>Desenvolvemos o projeto personalizado de acordo com suas necessidades.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">03</div>
+                    <h3>Produção</h3>
+                    <p>Fabricamos seus móveis com materiais de alta qualidade e precisão.</p>
+                </div>
+                <div class="process__step">
+                    <div class="process__number">04</div>
+                    <h3>Entrega &amp; Montagem</h3>
+                    <p>Entregamos e montamos tudo no local com acabamento impecável.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="section section--testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Avaliações</span>
+                <h2 class="section__title">O que nossos <em>clientes</em> dizem</h2>
+                <p class="section__subtitle">⭐ 4.7 de 5 — 15 avaliações no Google</p>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-card__text">"Excelente trabalho, superou nossas expectativas. Recomendo!"</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">C</div>
+                        <span>Cliente Google</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-card__text">"Profissionais competentes, material de primeira e entrega no prazo."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">C</div>
+                        <span>Cliente Google</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-card__text">"Muito satisfeito com o resultado. Acabamento perfeito e design moderno."</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">C</div>
+                        <span>Cliente Google</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__cta">
+                <a href="https://www.google.com/maps/search/?api=1&query=Marcenaria%20em%20Maca%C3%A9%20RJ%20-%20Module%20Interiores&query_place_id=ChIJ0fbLQjcxlgAR1bQHHif8RQg" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Ver todas no Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container cta-banner__inner">
+            <div class="cta-banner__text">
+                <h2>Pronto para transformar seu ambiente?</h2>
+                <p>Entre em contato e solicite seu orçamento sem compromisso.</p>
+            </div>
+            <a href="#contato" class="btn btn--primary btn--lg">Fale Conosco</a>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section section--contact" id="contato">
+        <div class="container">
+            <div class="section__header">
+                <span class="section__tag">Contato</span>
+                <h2 class="section__title">Fale <em>conosco</em></h2>
+                <p class="section__subtitle">Estamos prontos para atender você</p>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <div class="contact__card">
+                        <div class="contact__card-icon">📍</div>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Aroeira, Macaé — RJ<br>CEP 27910-100</p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">📞</div>
+                        <div>
+                            <h4>Telefone / WhatsApp</h4>
+                            <p><a href="https://wa.me/5522997697822">(22) 99769-7822</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">🕐</div>
+                        <div>
+                            <h4>Horário</h4>
+                            <p>Seg — Sex: 8h às 18h<br>Sáb: 8h às 12h</p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">📍</div>
+                        <div>
+                            <h4>Google Maps</h4>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=Marcenaria%20em%20Maca%C3%A9%20RJ%20-%20Module%20Interiores&query_place_id=ChIJ0fbLQjcxlgAR1bQHHif8RQg" target="_blank" rel="noopener noreferrer">Ver no mapa</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__whatsapp">
+                    <div class="contact__whatsapp-card">
+                        <div class="contact__whatsapp-icon">💬</div>
+                        <h3>Peça seu orçamento pelo WhatsApp</h3>
+                        <p>Clique no botão abaixo e fale diretamente com nossa equipe.</p>
+                        <a href="https://wa.me/5522997697822" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--lg">
+                            <span>WhatsApp</span> (22) 99769-7822
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#" class="header__logo">
+                        <span class="header__logo-icon">M</span>
+                        <div class="header__logo-text">
+                            <span class="header__brand">Module</span>
+                            <span class="header__sub">Interiores</span>
+                        </div>
+                    </a>
+                    <p class="footer__desc">Marcenaria e Móveis Planejados em Macaé — RJ. Qualidade, design e compromisso com o seu projeto.</p>
+                </div>
+                <div class="footer__links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#servicos">Cozinhas Planejadas</a></li>
+                        <li><a href="#servicos">Dormitórios</a></li>
+                        <li><a href="#servicos">Salas de Estar</a></li>
+                        <li><a href="#servicos">Home Office</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <h4>Contato</h4>
+                    <p>📞 <a href="https://wa.me/5522997697822">(22) 99769-7822</a></p>
+                    <p>📍 Aroeira, Macaé — RJ</p>
+                    <p>CEP 27910-100</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Module Interiores. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" aria-label="Fechar">&times;</button>
+        <img class="lightbox__img" id="lightboxImg" src="" alt="Imagem ampliada">
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5522997697822" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
