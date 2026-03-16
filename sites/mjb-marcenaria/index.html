@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MJB Marcenaria – Móveis planejados e marcenaria personalizada em Niterói/RJ. Qualidade e acabamento sob medida." />
+  <title>MJB Marcenaria – Móveis Planejados em Niterói-RJ</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- =====================
+       MOBILE MENU
+       ===================== -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-head">
+        <div class="logo">
+          <div class="logo-mark">MJB</div>
+          <div class="logo-text">
+            <span class="logo-name">MJB Marcenaria</span>
+            <span class="logo-sub">Niterói – RJ</span>
+          </div>
+        </div>
+        <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">&#x2715;</button>
+      </div>
+      <nav class="mobile-nav" aria-label="Navegação mobile">
+        <a href="#inicio">
+          <span class="nav-icon">🏠</span> Início
+        </a>
+        <a href="#sobre">
+          <span class="nav-icon">🪵</span> Sobre
+        </a>
+        <a href="#servicos">
+          <span class="nav-icon">🔨</span> Serviços
+        </a>
+        <a href="#portfolio">
+          <span class="nav-icon">🖼️</span> Portfólio
+        </a>
+        <a href="#avaliacoes">
+          <span class="nav-icon">⭐</span> Avaliações
+        </a>
+        <a href="#contato">
+          <span class="nav-icon">📍</span> Contato
+        </a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="https://wa.me/5521997302883" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <div class="mobile-contact-row">
+          <span>📞</span>
+          <a href="tel:+5521997302883">(21) 99730-2883</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================
+       HEADER
+       ===================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#inicio" class="logo" aria-label="MJB Marcenaria – Ir para o início">
+          <div class="logo-mark">MJB</div>
+          <div class="logo-text">
+            <span class="logo-name">MJB Marcenaria</span>
+            <span class="logo-sub">Móveis Planejados</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Navegação principal">
+          <div class="nav-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#avaliacoes">Avaliações</a>
+            <a href="#contato">Contato</a>
+          </div>
+          <a href="https://wa.me/5521997302883" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Fale Conosco
+          </a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================
+       HERO
+       ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <!-- Left: Text -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            Marcenaria Sob Medida · Niterói – RJ
+          </div>
+          <h1 class="hero-title">
+            Móveis que contam<br>
+            <em>a sua história</em>
+          </h1>
+          <p class="hero-desc">
+            Transformamos madeira em ambientes únicos. Cada projeto é desenvolvido com atenção aos detalhes, qualidade artesanal e acabamento impecável.
+          </p>
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              Ver Portfólio
+            </a>
+            <a href="#contato" class="btn btn-outline">
+              Solicitar Orçamento
+            </a>
+          </div>
+        </div>
+        <!-- Right: Visual -->
+        <div class="hero-visual">
+          <div class="hero-visual-accent" aria-hidden="true"></div>
+          <div class="hero-visual-frame"
+               data-lightbox="assets/maps/maps-05.webp"
+               data-lightbox-alt="Projeto de marcenaria MJB"
+               role="button"
+               aria-label="Ampliar imagem do portfólio">
+            <div class="hero-visual-badge">
+              <span class="hero-visual-dot" aria-hidden="true"></span>
+              Projeto Realizado
+            </div>
+            <img
+              class="hero-visual-img"
+              src="assets/maps/maps-05.webp"
+              alt="Projeto de marcenaria e móveis planejados"
+              loading="eager"
+            />
+            <div class="hero-visual-overlay" aria-hidden="true"></div>
+            <div class="hero-visual-caption">
+              <div class="hero-visual-caption-text">Móveis Planejados</div>
+              <div class="hero-visual-caption-title">Acabamento artesanal sob medida</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <div class="scroll-mouse"></div>
+      <span>Role para baixo</span>
+    </div>
+    <div class="hero-stats" aria-label="Destaques">
+      <div class="container">
+        <div class="hero-stats-inner">
+          <div class="stat">
+            <span class="stat-num">4.8</span>
+            <span class="stat-label">⭐ Avaliação Google</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">48+</span>
+            <span class="stat-label">Avaliações Verificadas</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">Niterói</span>
+            <span class="stat-label">Fonseca – RJ</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Sob Medida</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       SOBRE
+       ===================== -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Image -->
+        <div class="about-img-wrap" data-animate>
+          <div class="about-img-frame"
+               data-lightbox="assets/maps/maps-02.webp"
+               data-lightbox-alt="Trabalho de marcenaria MJB"
+               role="button"
+               aria-label="Ampliar imagem">
+            <img
+              class="about-img"
+              src="assets/maps/maps-02.webp"
+              alt="Trabalho de marcenaria artesanal"
+              loading="lazy"
+            />
+            <div class="about-img-accent" aria-hidden="true"></div>
+          </div>
+          <div class="about-img-badge" aria-label="Avaliação">
+            <span class="about-img-badge-icon" aria-hidden="true">⭐</span>
+            <div class="about-img-badge-text">
+              <strong>4.8 / 5.0</strong>
+              <span>Google Reviews</span>
+            </div>
+          </div>
+        </div>
+        <!-- Text -->
+        <div data-animate data-animate-delay="2">
+          <span class="section-tag">Quem Somos</span>
+          <div class="gold-divider"></div>
+          <h2 class="section-title">A arte da madeira,<br>trabalhada com cuidado</h2>
+          <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 16px;">
+            A <strong style="color: var(--text);">MJB Marcenaria</strong> é especializada em marcenaria e móveis planejados, atendendo clientes em Niterói e região. Nosso trabalho une técnica apurada e atenção personalizada para transformar cada ambiente com projetos únicos.
+          </p>
+          <p style="color: var(--text-muted); line-height: 1.8;">
+            Cada peça é projetada e executada com o máximo de cuidado para que o resultado final supere as expectativas — do planejamento ao acabamento final.
+          </p>
+          <div class="about-features">
+            <div class="about-feat">
+              <span class="about-feat-icon" aria-hidden="true">📐</span>
+              Projetos totalmente sob medida
+            </div>
+            <div class="about-feat">
+              <span class="about-feat-icon" aria-hidden="true">🪵</span>
+              Materiais selecionados e acabamento de qualidade
+            </div>
+            <div class="about-feat">
+              <span class="about-feat-icon" aria-hidden="true">🔍</span>
+              Atenção a cada detalhe do projeto
+            </div>
+            <div class="about-feat">
+              <span class="about-feat-icon" aria-hidden="true">📍</span>
+              Localizado no Fonseca, Niterói – RJ
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       SERVIÇOS
+       ===================== -->
+  <section class="section section-alt" id="servicos">
+    <div class="container">
+      <div class="section-header center" data-animate>
+        <span class="section-tag">O Que Fazemos</span>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">Nossos Serviços</h2>
+        <p class="section-subtitle">
+          Soluções completas em marcenaria e mobiliário planejado para residências e estabelecimentos.
+        </p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-animate data-animate-delay="1">
+          <span class="service-num" aria-hidden="true">01</span>
+          <div class="service-icon" aria-hidden="true">🪑</div>
+          <h3>Móveis Planejados</h3>
+          <p>Armários, guarda-roupas, cozinhas e ambientes completos desenvolvidos sob medida, aproveitando cada centímetro do espaço disponível.</p>
+        </div>
+        <div class="service-card" data-animate data-animate-delay="2">
+          <span class="service-num" aria-hidden="true">02</span>
+          <div class="service-icon" aria-hidden="true">🔨</div>
+          <h3>Marcenaria Sob Medida</h3>
+          <p>Peças únicas confeccionadas com atenção artesanal — de painéis e revestimentos a detalhes especiais que valorizam o ambiente.</p>
+        </div>
+        <div class="service-card" data-animate data-animate-delay="3">
+          <span class="service-num" aria-hidden="true">03</span>
+          <div class="service-icon" aria-hidden="true">📐</div>
+          <h3>Projeto Personalizado</h3>
+          <p>Desenvolvemos o projeto do zero, de acordo com o estilo e as necessidades de cada cliente, garantindo funcionalidade e estética harmonizada.</p>
+        </div>
+        <div class="service-card" data-animate data-animate-delay="1">
+          <span class="service-num" aria-hidden="true">04</span>
+          <div class="service-icon" aria-hidden="true">🛏️</div>
+          <h3>Dormitórios & Closets</h3>
+          <p>Criação de ambientes de descanso com guarda-roupas, cabeceiras, cômodas e closets projetados para cada espaço e perfil.</p>
+        </div>
+        <div class="service-card" data-animate data-animate-delay="2">
+          <span class="service-num" aria-hidden="true">05</span>
+          <div class="service-icon" aria-hidden="true">🍽️</div>
+          <h3>Cozinhas & Áreas Gourmet</h3>
+          <p>Cozinhas planejadas com aproveitamento inteligente, acabamentos duráveis e estética refinada para o coração da sua casa.</p>
+        </div>
+        <div class="service-card" data-animate data-animate-delay="3">
+          <span class="service-num" aria-hidden="true">06</span>
+          <div class="service-icon" aria-hidden="true">🏢</div>
+          <h3>Ambientes Corporativos</h3>
+          <p>Mobiliário profissional para escritórios, recepções e espaços comerciais, unindo praticidade e identidade visual.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       PORTFÓLIO
+       ===================== -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="section-header center" data-animate>
+        <span class="section-tag">Nossos Trabalhos</span>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">Portfólio</h2>
+        <p class="section-subtitle">
+          Uma seleção de projetos realizados. Clique nas imagens para visualizar em detalhe.
+        </p>
+      </div>
+
+      <div class="portfolio-filter" role="group" aria-label="Filtrar portfólio">
+        <button class="filter-btn active" type="button">Todos</button>
+        <button class="filter-btn" type="button">Marcenaria</button>
+        <button class="filter-btn" type="button">Planejados</button>
+        <button class="filter-btn" type="button">Projetos</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Real images (used generically) -->
+        <div class="portfolio-item"
+             data-lightbox="assets/maps/maps-03.webp"
+             data-lightbox-alt="Projeto de marcenaria"
+             role="button"
+             tabindex="0"
+             aria-label="Ver imagem ampliada – Projeto 1"
+             data-animate data-animate-delay="1">
+          <img class="portfolio-img" src="assets/maps/maps-03.webp" alt="Projeto de marcenaria" loading="lazy" />
+          <div class="portfolio-overlay" aria-hidden="true">
+            <div class="portfolio-overlay-content">
+              <span class="portfolio-zoom-icon">🔍</span>
+              Visualizar
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-lightbox="assets/maps/maps-04.webp"
+             data-lightbox-alt="Trabalho em madeira"
+             role="button"
+             tabindex="0"
+             aria-label="Ver imagem ampliada – Projeto 2"
+             data-animate data-animate-delay="2">
+          <img class="portfolio-img" src="assets/maps/maps-04.webp" alt="Trabalho em madeira" loading="lazy" />
+          <div class="portfolio-overlay" aria-hidden="true">
+            <div class="portfolio-overlay-content">
+              <span class="portfolio-zoom-icon">🔍</span>
+              Visualizar
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-lightbox="assets/maps/maps-05.webp"
+             data-lightbox-alt="Móvel planejado"
+             role="button"
+             tabindex="0"
+             aria-label="Ver imagem ampliada – Projeto 3"
+             data-animate data-animate-delay="3">
+          <img class="portfolio-img" src="assets/maps/maps-05.webp" alt="Móvel planejado" loading="lazy" />
+          <div class="portfolio-overlay" aria-hidden="true">
+            <div class="portfolio-overlay-content">
+              <span class="portfolio-zoom-icon">🔍</span>
+              Visualizar
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-lightbox="assets/maps/maps-06.webp"
+             data-lightbox-alt="Projeto de marcenaria personalizado"
+             role="button"
+             tabindex="0"
+             aria-label="Ver imagem ampliada – Projeto 4"
+             data-animate data-animate-delay="1">
+          <img class="portfolio-img" src="assets/maps/maps-06.webp" alt="Projeto de marcenaria personalizado" loading="lazy" />
+          <div class="portfolio-overlay" aria-hidden="true">
+            <div class="portfolio-overlay-content">
+              <span class="portfolio-zoom-icon">🔍</span>
+              Visualizar
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-lightbox="assets/maps/maps-07.webp"
+             data-lightbox-alt="Acabamento em madeira"
+             role="button"
+             tabindex="0"
+             aria-label="Ver imagem ampliada – Projeto 5"
+             data-animate data-animate-delay="2">
+          <img class="portfolio-img" src="assets/maps/maps-07.webp" alt="Acabamento em madeira" loading="lazy" />
+          <div class="portfolio-overlay" aria-hidden="true">
+            <div class="portfolio-overlay-content">
+              <span class="portfolio-zoom-icon">🔍</span>
+              Visualizar
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-lightbox="assets/maps/maps-08.webp"
+             data-lightbox-alt="Detalhes de marcenaria"
+             role="button"
+             tabindex="0"
+             aria-label="Ver imagem ampliada – Projeto 6"
+             data-animate data-animate-delay="3">
+          <img class="portfolio-img" src="assets/maps/maps-08.webp" alt="Detalhes de marcenaria" loading="lazy" />
+          <div class="portfolio-overlay" aria-hidden="true">
+            <div class="portfolio-overlay-content">
+              <span class="portfolio-zoom-icon">🔍</span>
+              Visualizar
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-lightbox="assets/maps/maps-09.webp"
+             data-lightbox-alt="Projeto de móvel sob medida"
+             role="button"
+             tabindex="0"
+             aria-label="Ver imagem ampliada – Projeto 7"
+             data-animate data-animate-delay="1">
+          <img class="portfolio-img" src="assets/maps/maps-09.webp" alt="Projeto de móvel sob medida" loading="lazy" />
+          <div class="portfolio-overlay" aria-hidden="true">
+            <div class="portfolio-overlay-content">
+              <span class="portfolio-zoom-icon">🔍</span>
+              Visualizar
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item"
+             data-lightbox="assets/maps/maps-10.webp"
+             data-lightbox-alt="Marcenaria de qualidade"
+             role="button"
+             tabindex="0"
+             aria-label="Ver imagem ampliada – Projeto 8"
+             data-animate data-animate-delay="2">
+          <img class="portfolio-img" src="assets/maps/maps-10.webp" alt="Marcenaria de qualidade" loading="lazy" />
+          <div class="portfolio-overlay" aria-hidden="true">
+            <div class="portfolio-overlay-content">
+              <span class="portfolio-zoom-icon">🔍</span>
+              Visualizar
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item" aria-label="Preview – em breve" data-animate data-animate-delay="3">
+          <div class="portfolio-placeholder">
+            <div class="portfolio-placeholder-icon" aria-hidden="true">🏠</div>
+            <span>Preview</span>
+          </div>
+        </div>
+
+        <!-- Placeholder items -->
+        <div class="portfolio-item" aria-label="Preview – em breve" data-animate data-animate-delay="1">
+          <div class="portfolio-placeholder">
+            <div class="portfolio-placeholder-icon" aria-hidden="true">🪵</div>
+            <span>Preview</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" aria-label="Preview – em breve" data-animate data-animate-delay="2">
+          <div class="portfolio-placeholder tall">
+            <div class="portfolio-placeholder-icon" aria-hidden="true">🔨</div>
+            <span>Preview</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" aria-label="Preview – em breve" data-animate data-animate-delay="3">
+          <div class="portfolio-placeholder">
+            <div class="portfolio-placeholder-icon" aria-hidden="true">📐</div>
+            <span>Preview</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" aria-label="Preview – em breve" data-animate data-animate-delay="1">
+          <div class="portfolio-placeholder tall">
+            <div class="portfolio-placeholder-icon" aria-hidden="true">🛏️</div>
+            <span>Preview</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" aria-label="Preview – em breve" data-animate data-animate-delay="2">
+          <div class="portfolio-placeholder">
+            <div class="portfolio-placeholder-icon" aria-hidden="true">🍽️</div>
+            <span>Preview</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item" aria-label="Preview – em breve" data-animate data-animate-delay="3">
+          <div class="portfolio-placeholder">
+            <div class="portfolio-placeholder-icon" aria-hidden="true">🏠</div>
+            <span>Preview</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 52px;" data-animate>
+        <a href="https://wa.me/5521997302883?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20da%20MJB%20Marcenaria."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-outline">
+          Ver mais projetos &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       AVALIAÇÕES
+       ===================== -->
+  <section class="section section-alt" id="avaliacoes">
+    <div class="container">
+      <div class="section-header center" data-animate>
+        <span class="section-tag">Avaliações</span>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">O que dizem os clientes</h2>
+        <p class="section-subtitle">
+          A satisfação dos nossos clientes reflete o compromisso com qualidade e dedicação em cada projeto.
+        </p>
+      </div>
+
+      <div class="rating-hero" data-animate>
+        <div class="rating-count-badge" aria-label="48 avaliações verificadas">48 Avaliações Verificadas</div>
+        <div class="rating-hero-num" aria-label="Nota 4.8">4.8</div>
+        <div class="rating-stars-lg" role="img" aria-label="5 estrelas">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p>Avaliação média no <strong style="color: var(--text);">Google Maps</strong> com base nas opiniões de clientes atendidos.</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=MJB%20Marcenaria&query_place_id=ChIJ6Tmi_cqFmQARCdSRVc6jFq8"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="google-cta"
+           aria-label="Ver avaliações no Google Maps">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          Ver no Google Maps
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       CONTATO
+       ===================== -->
+  <section class="section" id="contato">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <span class="section-tag">Fale Conosco</span>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">Entre em Contato</h2>
+        <p class="section-subtitle">
+          Estamos prontos para receber seu projeto e transformar suas ideias em realidade.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-animate>
+          <!-- Phone -->
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📞</div>
+            <div class="contact-item-body">
+              <h4>Telefone / WhatsApp</h4>
+              <a href="tel:+5521997302883">(21) 99730-2883</a>
+              <br>
+              <a href="https://wa.me/5521997302883?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento."
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="contact-map-cta">
+                Conversar no WhatsApp
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- Address -->
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+            <div class="contact-item-body">
+              <h4>Endereço</h4>
+              <p>R. Riodades, 239 – Fonseca<br>Niterói – RJ, 24130-247</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=MJB%20Marcenaria&query_place_id=ChIJ6Tmi_cqFmQARCdSRVc6jFq8"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="contact-map-cta">
+                Ver no mapa
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+          <!-- CTA -->
+          <div style="margin-top: 8px;">
+            <a href="https://wa.me/5521997302883?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20um%20projeto%20de%20marcenaria."
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-primary"
+               style="width: 100%; justify-content: center; padding: 16px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Solicitar Orçamento pelo WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Map Visual -->
+        <div class="contact-map-wrap" data-animate data-animate-delay="2">
+          <div class="map-visual">
+            <div class="map-visual-inner">
+              <div class="map-pin" aria-hidden="true">
+                <span class="map-pin-inner">🪵</span>
+              </div>
+              <h3>MJB Marcenaria</h3>
+              <p>R. Riodades, 239 – Fonseca, Niterói – RJ</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=MJB%20Marcenaria&query_place_id=ChIJ6Tmi_cqFmQARCdSRVc6jFq8"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-outline"
+                 style="margin-top: 8px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Abrir no Google Maps
+              </a>
+            </div>
+          </div>
+          <div class="contact-item" style="margin-top: 0;">
+            <div class="contact-icon" aria-hidden="true">⏰</div>
+            <div class="contact-item-body">
+              <h4>Atendimento</h4>
+              <p style="font-size: 0.88rem;">Entre em contato para confirmar horários de funcionamento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       FOOTER
+       ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-mark">MJB</div>
+            <div class="logo-text">
+              <span class="logo-name">MJB Marcenaria</span>
+              <span class="logo-sub">Móveis Planejados</span>
+            </div>
+          </div>
+          <p>Marcenaria e móveis planejados sob medida em Niterói, com qualidade artesanal e atenção a cada detalhe do seu projeto.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/5521997302883" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp MJB Marcenaria">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=MJB%20Marcenaria&query_place_id=ChIJ6Tmi_cqFmQARCdSRVc6jFq8"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="Google Maps MJB Marcenaria">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li>
+              <a href="tel:+5521997302883">(21) 99730-2883</a>
+            </li>
+            <li>
+              <a href="https://wa.me/5521997302883" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/search/?api=1&query=MJB%20Marcenaria&query_place_id=ChIJ6Tmi_cqFmQARCdSRVc6jFq8"
+                 target="_blank" rel="noopener noreferrer">Fonseca, Niterói – RJ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 MJB Marcenaria · Todos os direitos reservados.</span>
+        <span>Feito com ❤️ em <a href="#inicio">Niterói – RJ</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================
+       WHATSAPP FLOAT
+       ===================== -->
+  <a
+    href="https://wa.me/5521997302883?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Conversar pelo WhatsApp">
+    <span class="whatsapp-float-tooltip">Fale pelo WhatsApp</span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- =====================
+       SCROLL TO TOP BUTTON
+       ===================== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- =====================
+       LIGHTBOX
+       ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar imagem">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar imagem">&#x2715;</button>
+    <div class="lightbox-img-wrap">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
