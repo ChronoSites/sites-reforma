@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S L Marcenaria | Móveis Planejados em Niterói RJ</title>
+    <meta name="description" content="SL Marcenaria - A arte de transformar sonhos em realidade! Móveis planejados sob medida em Niterói, RJ.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#home" class="logo">
+                <span class="logo-icon">&#9670;</span>
+                <div class="logo-text">
+                    <span class="logo-name">S L Marcenaria</span>
+                    <span class="logo-sub">Móveis Planejados</span>
+                </div>
+            </a>
+            <nav class="nav-desktop" id="navDesktop">
+                <a href="#home">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <a href="https://wa.me/5521987414542" target="_blank" rel="noopener" class="btn-header-cta">Orçamento</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#home" class="logo" onclick="closeMobileMenu()">
+                <span class="logo-icon">&#9670;</span>
+                <div class="logo-text">
+                    <span class="logo-name">S L Marcenaria</span>
+                    <span class="logo-sub">Móveis Planejados</span>
+                </div>
+            </a>
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">&times;</button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="#home" onclick="closeMobileMenu()">Início</a>
+            <a href="#sobre" onclick="closeMobileMenu()">Sobre</a>
+            <a href="#servicos" onclick="closeMobileMenu()">Serviços</a>
+            <a href="#galeria" onclick="closeMobileMenu()">Galeria</a>
+            <a href="#diferenciais" onclick="closeMobileMenu()">Diferenciais</a>
+            <a href="#contato" onclick="closeMobileMenu()">Contato</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="https://wa.me/5521987414542" target="_blank" rel="noopener" class="btn-mobile-cta">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.111.553 4.145 1.6 5.946L.057 23.764l5.978-1.527A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.504-5.283-1.458l-.379-.225-3.93 1.005 1.05-3.83-.247-.393A9.786 9.786 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+                Fale Conosco
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="assets/S_L_Marcenaria___Niter_i_RJ_005.jpg" alt="SL Marcenaria">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">Marcenaria de Alto Padrão</span>
+            <h1 class="hero-title">A arte de transformar<br><span>sonhos em realidade</span></h1>
+            <p class="hero-subtitle">Móveis planejados sob medida com qualidade, sofisticação e o acabamento perfeito para o seu ambiente.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5521987414542" target="_blank" rel="noopener" class="btn btn-primary">Solicitar Orçamento</a>
+                <a href="#galeria" class="btn btn-outline">Ver Projetos</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Role para baixo</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="section section-about" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="about-img-main">
+                        <img src="assets/S_L_Marcenaria___Niter_i_RJ_003.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    </div>
+                    <div class="about-img-accent">
+                        <img src="assets/S_L_Marcenaria___Niter_i_RJ_005.jpg" alt="Detalhe de acabamento" class="lightbox-img">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-label">Sobre Nós</span>
+                    <h2 class="section-title">S L Marcenaria</h2>
+                    <p class="about-description">A SL Marcenaria é especializada em móveis planejados sob medida, localizada em Niterói, RJ. Com dedicação e paixão pelo que fazemos, transformamos ambientes com peças exclusivas que unem funcionalidade e elegância.</p>
+                    <p class="about-description">Cada projeto é pensado para atender às necessidades e desejos dos nossos clientes, com materiais de qualidade e acabamento impecável.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">&#9670;</span>
+                            <span class="stat-text">Projetos Sob Medida</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">&#9670;</span>
+                            <span class="stat-text">Materiais de Qualidade</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">&#9670;</span>
+                            <span class="stat-text">Acabamento Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section section-services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">O Que Fazemos</span>
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-desc">Soluções completas em marcenaria para todos os ambientes da sua casa ou empresa.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/S_L_Marcenaria___Niter_i_RJ_007.jpg" alt="Cozinhas planejadas" class="lightbox-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Cozinhas Planejadas</h3>
+                        <p>Cozinhas funcionais e elegantes, projetadas para aproveitar cada centímetro do seu espaço.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/S_L_Marcenaria___Niter_i_RJ_009.jpg" alt="Dormitórios" class="lightbox-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Dormitórios</h3>
+                        <p>Guarda-roupas, closets e cabeceiras que transformam seu quarto em um refúgio de conforto.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/S_L_Marcenaria___Niter_i_RJ_011.jpg" alt="Salas e Home Theaters" class="lightbox-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Salas e Home Theaters</h3>
+                        <p>Painéis, estantes e racks que harmonizam tecnologia e design no seu living.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/S_L_Marcenaria___Niter_i_RJ_013.jpg" alt="Banheiros" class="lightbox-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Banheiros</h3>
+                        <p>Gabinetes e armários que otimizam o espaço com sofisticação e praticidade.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/S_L_Marcenaria___Niter_i_RJ_015.jpg" alt="Escritórios" class="lightbox-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Escritórios</h3>
+                        <p>Ambientes de trabalho organizados e produtivos com móveis planejados sob medida.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/S_L_Marcenaria___Niter_i_RJ_017.jpg" alt="Áreas Gourmet" class="lightbox-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Áreas Gourmet</h3>
+                        <p>Espaços para lazer e entretenimento com acabamento de alta qualidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="section section-gallery" id="galeria">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfólio</span>
+                <h2 class="section-title">Nossos Projetos</h2>
+                <p class="section-desc">Conheça alguns dos nossos trabalhos e veja a qualidade que entregamos.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item-wide">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_002.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_004.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_006.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_008.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item gallery-item-tall">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_010.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_012.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item gallery-item-wide">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_014.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_016.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_018.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item gallery-item-tall">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_019.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_020.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_021.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item gallery-item-wide">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_022.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/S_L_Marcenaria___Niter_i_RJ_023.jpg" alt="Projeto SL Marcenaria" class="lightbox-img">
+                    <div class="gallery-overlay"><span>Ver Projeto</span></div>
+                </div>
+                <!-- Placeholder images -->
+                <div class="gallery-item gallery-placeholder">
+                    <div class="placeholder-content"><span>Preview</span></div>
+                    <div class="gallery-overlay"><span>Em breve</span></div>
+                </div>
+                <div class="gallery-item gallery-placeholder gallery-item-tall">
+                    <div class="placeholder-content"><span>Preview</span></div>
+                    <div class="gallery-overlay"><span>Em breve</span></div>
+                </div>
+                <div class="gallery-item gallery-placeholder">
+                    <div class="placeholder-content"><span>Preview</span></div>
+                    <div class="gallery-overlay"><span>Em breve</span></div>
+                </div>
+                <div class="gallery-item gallery-placeholder gallery-item-wide">
+                    <div class="placeholder-content"><span>Preview</span></div>
+                    <div class="gallery-overlay"><span>Em breve</span></div>
+                </div>
+                <div class="gallery-item gallery-placeholder">
+                    <div class="placeholder-content"><span>Preview</span></div>
+                    <div class="gallery-overlay"><span>Em breve</span></div>
+                </div>
+                <div class="gallery-item gallery-placeholder">
+                    <div class="placeholder-content"><span>Preview</span></div>
+                    <div class="gallery-overlay"><span>Em breve</span></div>
+                </div>
+                <div class="gallery-item gallery-placeholder gallery-item-wide">
+                    <div class="placeholder-content"><span>Preview</span></div>
+                    <div class="gallery-overlay"><span>Em breve</span></div>
+                </div>
+                <div class="gallery-item gallery-placeholder">
+                    <div class="placeholder-content"><span>Preview</span></div>
+                    <div class="gallery-overlay"><span>Em breve</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="section section-features" id="diferenciais">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Por Que Nos Escolher</span>
+                <h2 class="section-title">Nossos Diferenciais</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Qualidade Garantida</h3>
+                    <p>Utilizamos materiais de primeira linha e técnicas avançadas de fabricação.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h3>Projeto Personalizado</h3>
+                    <p>Cada móvel é projetado exclusivamente para o seu espaço e estilo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Pontualidade</h3>
+                    <p>Comprometimento com prazos de entrega e instalação.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                    <h3>Atendimento Dedicado</h3>
+                    <p>Acompanhamento completo do projeto, da concepção à instalação final.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-cta">
+        <div class="cta-bg">
+            <img src="assets/S_L_Marcenaria___Niter_i_RJ_002.jpg" alt="">
+        </div>
+        <div class="cta-overlay"></div>
+        <div class="container cta-content">
+            <h2>Pronto para transformar seu ambiente?</h2>
+            <p>Entre em contato conosco e solicite seu orçamento sem compromisso.</p>
+            <a href="https://wa.me/5521987414542" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.111.553 4.145 1.6 5.946L.057 23.764l5.978-1.527A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.504-5.283-1.458l-.379-.225-3.93 1.005 1.05-3.83-.247-.393A9.786 9.786 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+                Fale Conosco pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section section-contact" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Fale Conosco</span>
+                <h2 class="section-title">Contato</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Niterói, RJ — Brasil</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Telefone / WhatsApp</h4>
+                            <p>(21) 98741-4542</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>lucianasergioslmarcenaria@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Facebook</h4>
+                            <p><a href="https://www.facebook.com/sobmedidasslmarcenaria/" target="_blank" rel="noopener">@sobmedidasslmarcenaria</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Site</h4>
+                            <p><a href="https://slmarcenariafabrica.com.br" target="_blank" rel="noopener">slmarcenariafabrica.com.br</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117227.39358043064!2d-43.17!3d-22.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x998bfb04b0c4b5%3A0x29a0e04e6e6d0f15!2sNiter%C3%B3i%2C%20State%20of%20Rio%20de%20Janeiro!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização SL Marcenaria"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-icon">&#9670;</span>
+                        <div class="logo-text">
+                            <span class="logo-name">S L Marcenaria</span>
+                            <span class="logo-sub">Móveis Planejados</span>
+                        </div>
+                    </a>
+                    <p>A arte de transformar sonhos em realidade. Móveis planejados sob medida em Niterói, RJ.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <a href="#home">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#galeria">Galeria</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>(21) 98741-4542</p>
+                    <p>lucianasergioslmarcenaria@gmail.com</p>
+                    <p>Niterói, RJ — Brasil</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 S L Marcenaria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5521987414542" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.111.553 4.145 1.6 5.946L.057 23.764l5.978-1.527A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.87 0-3.694-.504-5.283-1.458l-.379-.225-3.93 1.005 1.05-3.83-.247-.393A9.786 9.786 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Fechar">&times;</button>
+        <img src="" alt="" class="lightbox-image" id="lightboxImage">
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
